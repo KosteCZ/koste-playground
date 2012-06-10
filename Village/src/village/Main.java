@@ -30,6 +30,7 @@ public class Main {
         //game.play();
         
         game.loadDefaultMap();
+        game.loadMapImages();
 
         game.paintBitmap();
 
