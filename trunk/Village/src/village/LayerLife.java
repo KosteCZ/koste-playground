@@ -5,8 +5,7 @@
 
 package village;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.awt.Graphics;
 
 /**
  *
@@ -20,6 +19,10 @@ public class LayerLife extends Layer {
         super(size, width, height);
 //        listOfWorkers = new ArrayList<Worker>();
 //        position = new Worker[width][height];
+    }
+
+    public void paint(Graphics g) {
+        //paintGrass(g);
     }
 
 /*    public boolean safeAddBuilding(Worker worker) {

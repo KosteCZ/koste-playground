@@ -2,7 +2,6 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package village;
 
 import java.awt.Graphics;
@@ -51,7 +50,6 @@ public abstract class MapElement {
 //    public BufferedImage getImg() {
 //        return img;
 //    }
-
     public int getX() {
         return x;
     }
@@ -74,20 +72,38 @@ public abstract class MapElement {
 
     public boolean loadImageFromFile() {
         try {
-            System.out.println("Name: "+name);
-            img = ImageIO.read(new File(name+".png"));
+            System.out.println("Name: " + name);
+            img = ImageIO.read(new File(name + ".png"));
         } catch (IOException e) {
             return false;
         }
         return true;
     }
 
-    void paint(Graphics g) {
-        g.drawImage(img, x*size, y*size, null);
+    public static BufferedImage[] splitImage(BufferedImage img, int cols, int rows, Graphics g) {
+        int w = img.getWidth() / cols;
+        int h = img.getHeight() / rows;
+        int num = 0;
+        BufferedImage imgs[] = new BufferedImage[w * h];
+        for (int y = 0; y < rows; y++) {
+            for (int x = 0; x < cols; x++) {
+                imgs[num] = new BufferedImage(w, h, 1); //1 <- img.getType()
+                // Tell the graphics to draw only one block of the image
+                //imgs[num] = img.getSubimage(x, y, w, h);
+                imgs[num] = img.getSubimage(w * x, h * y, w, h);
+                //Graphics2D g = imgs[num].createGraphics();
+                //g.drawImage(img, 0, 0, w, h, w * x, h * y, w * x + w, h * y + h, null);
+                //g.dispose();
+                num++;
+            }
+        }
+        return imgs;
     }
 
+    void paint(Graphics g) {
+        g.drawImage(img, x * size, y * size, null);
+    }
 //    void paint(Graphics g, int x, int y) {
 //        g.drawImage(img, x, y, null);
 //    }
-
 }

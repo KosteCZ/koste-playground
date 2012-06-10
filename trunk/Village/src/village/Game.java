@@ -27,7 +27,12 @@ public class Game {
     }
 
     public void loadDefaultMap() {
-        map.setDefaultMap1();
+        map.setDefaultMap2();
+//        map.makeUnmodifiableCollections();
+    }
+
+    public void loadMapImages() {
+        map.loadImages();
 //        map.makeUnmodifiableCollections();
     }
 
@@ -38,8 +43,9 @@ public class Game {
         g.setFont(new Font("Arial", Font.BOLD, 20));*/
 //        g.drawRect(10, 10, 1 + WIDTH, 1 + HEIGHT);
         for (MapElement element : map.getListOfElements()) {
-            element.paint(g);
+            //element.paint(g);
         }
+        map.paint(g);
         //for (Building building : map.getListOfBuildings()) {
         //    building.paint(g);
         //}
@@ -85,37 +91,37 @@ public class Game {
         return true;
     }
 
-    public boolean paintWater(Graphics g) {
-        BufferedImage img;
-        try {
-            img = ImageIO.read(new File("water.png"));
-        } catch (IOException e) {
-            return false;
-        }
-        //g.drawImage(img, 0, 0, null);
-        BufferedImage bs[] = splitImage(img, 4, 4, g);
-        for (int i = 0; i < bs.length; i++) {
-            g.drawImage(bs[i], 50 + (i % 6) * 100, 50 + (i / 6) * 100, null);
-        }
-        //g.drawImage(bs[(marioCounter % 6) + 6], 110+3*marioCounter, 303, null);
-        return true;
-    }
+    //public boolean paintWater(Graphics g) {
+    //    BufferedImage img;
+    //    try {
+    //        img = ImageIO.read(new File("water.png"));
+    //    } catch (IOException e) {
+    //        return false;
+    //    }
+    //    //g.drawImage(img, 0, 0, null);
+    //    BufferedImage bs[] = splitImage(img, 4, 4, g);
+    //    for (int i = 0; i < bs.length; i++) {
+    //        g.drawImage(bs[i], 50 + (i % 6) * 100, 50 + (i / 6) * 100, null);
+    //    }
+    //    //g.drawImage(bs[(marioCounter % 6) + 6], 110+3*marioCounter, 303, null);
+    //    return true;
+    //}
 
-    public boolean paintRoads(Graphics g) {
-        BufferedImage img;
-        try {
-            img = ImageIO.read(new File("road1b.png"));
-        } catch (IOException e) {
-            return false;
-        }
-        //g.drawImage(img, 0, 0, null);
-        BufferedImage bs[] = splitImage(img, 4, 4, g);
-        for (int i = 0; i < bs.length; i++) {
-            g.drawImage(bs[i], 100 + (i % 6) * 100, 50 + (i / 6) * 100, null);
-        }
-        //g.drawImage(bs[(marioCounter % 6) + 6], 110+3*marioCounter, 303, null);
-        return true;
-    }
+    //public boolean paintRoads(Graphics g) {
+    //    BufferedImage img;
+    //    try {
+    //        img = ImageIO.read(new File("road1b.png"));
+    //    } catch (IOException e) {
+    //        return false;
+    //    }
+    //    //g.drawImage(img, 0, 0, null);
+    //    BufferedImage bs[] = splitImage(img, 4, 4, g);
+    //    for (int i = 0; i < bs.length; i++) {
+    //        g.drawImage(bs[i], 100 + (i % 6) * 100, 50 + (i / 6) * 100, null);
+    //    }
+    //    //g.drawImage(bs[(marioCounter % 6) + 6], 110+3*marioCounter, 303, null);
+    //    return true;
+    //}
 
     public static BufferedImage[] splitImage(BufferedImage img, int cols, int rows, Graphics g) {
         int w = img.getWidth() / cols;
@@ -145,7 +151,7 @@ public class Game {
     void paint(Graphics g) {
         g.drawImage(bimg, 0, 0, null);
         paintMario(g);
-        paintWater(g);
-        paintRoads(g);
+ //       paintWater(g);
+ //       paintRoads(g);
     }
 }
