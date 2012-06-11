@@ -2,7 +2,6 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package village;
 
 import java.awt.Graphics;
@@ -14,7 +13,6 @@ import java.awt.Graphics;
 public class LayerLife extends Layer {
 
 //    private List<Worker> listOfWorkers;
-
     public LayerLife(int size, int width, int height) {
         super(size, width, height);
 //        listOfWorkers = new ArrayList<Worker>();
@@ -22,28 +20,15 @@ public class LayerLife extends Layer {
     }
 
     public void paint(Graphics g) {
-        //paintGrass(g);
+        paintWorkers(g);
     }
 
-/*    public boolean safeAddBuilding(Worker worker) {
-        if (position[worker.getX()][worker.getY()] == null) {
-            listOfWorkers.add(worker);
-            position[worker.getX()][worker.getY()] = worker;
-            return true;
+    public boolean paintWorkers(Graphics g) {
+        for (MapElement element : listOfElements) {
+//            if (!(element instanceof Worker)) {
+            g.drawImage(element.getImg(), element.getX() * element.getSize(), element.getY() * element.getSize(), null);
         }
-        return false;
+//        }
+        return true;
     }
-
-    public void addWorker(Worker worker) {
-        if (position[worker.getX()][worker.getY()] != null) {
-            listOfWorkers.remove(position[worker.getX()][worker.getY()]);
-        }
-        listOfWorkers.add(worker);
-        position[worker.getX()][worker.getY()] = worker;
-    }
-
-    public List<Worker> getListOfWorkers() {
-        return listOfWorkers;
-    }
-*/
 }

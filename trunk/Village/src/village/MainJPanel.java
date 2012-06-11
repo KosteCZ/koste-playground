@@ -47,6 +47,12 @@ public class MainJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                formMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -58,6 +64,14 @@ public class MainJPanel extends javax.swing.JPanel {
             .addGap(0, 300, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void formMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseClicked
+        int helpX = (evt.getX() - 0) / 25;
+        int helpY = (evt.getY() - 0) / 25;
+        System.out.println("X, Y: "+helpX+", "+helpY);
+        //game.getPlayer().build(helpX, helpY);
+        game.addActionToListOfToDoActions(new Action(new BuildingRoad(helpX, helpY, game.getMap().SIZE), ActionType.BUILD));
+    }//GEN-LAST:event_formMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

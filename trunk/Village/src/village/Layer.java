@@ -55,7 +55,7 @@ public abstract class Layer {
         return listOfElements;
     }
 
-    public static BufferedImage[] splitImage(BufferedImage img, int cols, int rows, Graphics g) {
+    public static BufferedImage[] splitImage(BufferedImage img, int cols, int rows) {
         int w = img.getWidth() / cols;
         int h = img.getHeight() / rows;
         int num = 0;
@@ -75,6 +75,38 @@ public abstract class Layer {
         return imgs;
     }
 
+    public int hash4NeighbourElements(MapElement element, Class c) {
+        int number = 0;
+        //Class c = BuildingRoad.class;
+        //c.isInstance(position.....);
+        if (element.getX() > 0) {
+            //if (position[element.getX() - 1][element.getY()] instanceof BuildingRoad) {
+            if (c.isInstance(position[element.getX() - 1][element.getY()])) {
+                number += 4;
+            }
+        }
+        if (element.getX() < getWidth() - 1) {
+//            if (position[element.getX() + 1][element.getY()] instanceof BuildingRoad) {
+            if (c.isInstance(position[element.getX() + 1][element.getY()])) {
+                number += 1;
+            }
+        }
+        if (element.getY() > 0) {
+ //           if (position[element.getX()][element.getY() - 1] instanceof BuildingRoad) {
+            if (c.isInstance(position[element.getX()][element.getY() - 1])) {
+                number += 2;
+            }
+        }
+        if (element.getY() < getHeight() - 1) {
+//            if (position[element.getX()][element.getY() + 1] instanceof BuildingRoad) {
+            if (c.isInstance(position[element.getX()][element.getY() + 1])) {
+                number += 8;
+            }
+        }
+        //System.out.print(number);
+        return number; //15;
+    }
+    
     public int getHeight() {
         return height;
     }
@@ -83,6 +115,10 @@ public abstract class Layer {
         return width;
     }
 
+    public boolean loadImages(){
+        return true;
+    }
+    
     abstract void paint(Graphics g);
 
 }

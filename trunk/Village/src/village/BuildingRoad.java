@@ -15,9 +15,9 @@ import javax.imageio.ImageIO;
  *
  * @author Honza
  */
-public class bRoad extends Building {
+public class BuildingRoad extends Building {
 
-    public bRoad(int x, int y, int size) {
+    public BuildingRoad(int x, int y, int size) {
         super(x, y, size);
 //        name = "Road";
     }
