@@ -9,6 +9,7 @@ import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import javax.imageio.ImageIO;
 
 /**
@@ -19,11 +20,15 @@ public class Game {
 
     private BufferedImage bimg;
     private Map map;
+    private Player player;
+    private ArrayList<Action> listOfToDoActions;
     private int marioCounter = 0;
     private boolean marioGoesLeft = false;
 
     public Game() /*throws FileNotFoundException, IOException*/ {
         map = new Map(25, 25);
+        player = new Player(map);
+        listOfToDoActions = new ArrayList();
     }
 
     public void loadDefaultMap() {
@@ -58,6 +63,32 @@ public class Game {
         for (Vertex vertex : map.getListOfVertices()) {
         vertex.paint(g);
         }*/
+    }
+
+    public ArrayList<Action> getListOfToDoActions() {
+        return listOfToDoActions;
+    }
+
+    public void addActionToListOfToDoActions(Action action) {
+        listOfToDoActions.add(action);
+    }
+
+    public void executeActions() {
+        for (Action action : listOfToDoActions) {
+            switch (action.getType()) {
+                case BUILD:
+                    if (map.getLayerConstructions().position[action.getElement().getX()][action.getElement().getY()] == null) {
+                        if (map.getLayerTerrain().position[action.getElement().getX()][action.getElement().getY()] == null) {
+                            action.getElement().loadImageFromFile();
+                            //MapElement element = new bRoad(x, y, map.SIZE);
+                            map.getLayerConstructions().addElement(action.getElement());
+                            //System.out.println("");
+                            break;
+                        }
+                    }
+            }
+        }
+        listOfToDoActions.removeAll(listOfToDoActions);
     }
 
     public boolean paintMario(Graphics g) {
@@ -106,7 +137,6 @@ public class Game {
     //    //g.drawImage(bs[(marioCounter % 6) + 6], 110+3*marioCounter, 303, null);
     //    return true;
     //}
-
     //public boolean paintRoads(Graphics g) {
     //    BufferedImage img;
     //    try {
@@ -122,7 +152,6 @@ public class Game {
     //    //g.drawImage(bs[(marioCounter % 6) + 6], 110+3*marioCounter, 303, null);
     //    return true;
     //}
-
     public static BufferedImage[] splitImage(BufferedImage img, int cols, int rows, Graphics g) {
         int w = img.getWidth() / cols;
         int h = img.getHeight() / rows;
@@ -151,7 +180,16 @@ public class Game {
     void paint(Graphics g) {
         g.drawImage(bimg, 0, 0, null);
         paintMario(g);
- //       paintWater(g);
- //       paintRoads(g);
+        executeActions();
+        //       paintWater(g);
+        //       paintRoads(g);
+    }
+
+    public Map getMap() {
+        return map;
+    }
+
+    public Player getPlayer() {
+        return player;
     }
 }

@@ -40,6 +40,7 @@ public class Main {
             @Override
             public synchronized void run() {
                 while (true) {
+                    game.paintBitmap();
                     frame.repaint();
                     try {
                         sleep(40);

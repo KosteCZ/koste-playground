@@ -25,19 +25,8 @@ public class Map {
     private LayerConstructions layerConstructions;
     private LayerTerrain layerTerrain;
     private LayerGround layerGround;
+    private LayerCursor layerCursor;
     private ArrayList<Layer> listOfLayers = new ArrayList<Layer>();
-
-    public Map() {
-        //position = new int[height][height];
-        layerGround = new LayerGround(SIZE, width, height);
-        layerTerrain = new LayerTerrain(SIZE, width, height);
-        layerConstructions = new LayerConstructions(SIZE, width, height);
-        layerLife = new LayerLife(SIZE, width, height);
-        listOfLayers.add(layerGround);
-        listOfLayers.add(layerTerrain);
-        listOfLayers.add(layerConstructions);
-        listOfLayers.add(layerLife);
-    }
 
     public Map(int width, int height) {
         this.height = height;
@@ -47,10 +36,12 @@ public class Map {
         layerTerrain = new LayerTerrain(SIZE, width, height);
         layerConstructions = new LayerConstructions(SIZE, width, height);
         layerLife = new LayerLife(SIZE, width, height);
+        layerCursor = new LayerCursor(SIZE, width, height);
         listOfLayers.add(layerGround);
         listOfLayers.add(layerTerrain);
         listOfLayers.add(layerConstructions);
         listOfLayers.add(layerLife);
+        listOfLayers.add(layerCursor);
     }
 
     public void setDefaultMap1() {
@@ -87,17 +78,17 @@ public class Map {
         listOfBuildings.add(b);
         }
          */ for (int i = 1; i < (layerConstructions.position.length - 1); i++) {
-            Building b = new bRoad(12, i, SIZE);
+            Building b = new BuildingRoad(12, i, SIZE);
             b.loadImageFromFile();
             layerConstructions.addElement(b);
         }
         for (int i = 1; i < (layerConstructions.position.length - 1); i++) {
-            Building b = new bRoad(i, 14, SIZE);
+            Building b = new BuildingRoad(i, 14, SIZE);
             b.loadImageFromFile();
             layerConstructions.addElement(b);
         }
         for (int i = 7; i < (layerConstructions.position.length - 7); i++) {
-            Building b = new bRoad(i, 8, SIZE);
+            Building b = new BuildingRoad(i, 8, SIZE);
             b.loadImageFromFile();
             layerConstructions.addElement(b);
         }
@@ -210,24 +201,39 @@ public class Map {
         listOfBuildings.add(b);
         }
          */ for (int i = 1; i < (layerConstructions.position.length - 1); i++) {
-            Building b = new bRoad(12, i, SIZE);
+            Building b = new BuildingRoad(12, i, SIZE);
             b.loadImageFromFile();
-//            layerConstructions.addElement(b);
+            if (layerTerrain.position[12][i] == null) {
+                layerConstructions.addElement(b);
+            }
         }
         for (int i = 1; i < (layerConstructions.position.length - 1); i++) {
-            Building b = new bRoad(i, 14, SIZE);
+            Building b = new BuildingRoad(i, 14, SIZE);
             b.loadImageFromFile();
-            layerConstructions.addElement(b);
+            if (layerTerrain.position[i][14] == null) {
+                layerConstructions.addElement(b);
+            }
         }
         for (int i = 7; i < (layerConstructions.position.length - 7); i++) {
-            Building b = new bRoad(i, 8, SIZE);
+            Building b = new BuildingRoad(i, 8, SIZE);
             b.loadImageFromFile();
-//            layerConstructions.addElement(b);
+            if (layerTerrain.position[i][8] == null) {
+                layerConstructions.addElement(b);
+            }
+        }
+        for (int i = 0; i < position.length; i++) {
+            for (int j = 0; j < position[0].length; j++) {
+                CursorUnselected c = new CursorUnselected(i, j, SIZE);
+                c.loadImageFromFile();
+                layerCursor.addElement(c);
+            }
         }
 
-        Building b = new bWarehouse(7, 12, SIZE);
-        b.loadImageFromFile();
-        layerConstructions.addElement(b);
+        //if (layerTerrain.position[7][12] == null) {
+            Building b = new bWarehouse(7, 12, SIZE);
+            b.loadImageFromFile();
+            layerConstructions.addElement(b);
+        //}
         Worker worker = new Worker(8, 14, SIZE);
         worker.loadImageFromFile();
         layerLife.addElement(worker);
@@ -305,8 +311,24 @@ public class Map {
     }
 
     void loadImages() {
+        for (Layer layer : listOfLayers) {
+            layer.loadImages();
+        }
         for (MapElement element : getListOfElements()) {
             element.loadImageFromFile();
         }
     }
+
+    public LayerLife getLayerLife() {
+        return layerLife;
+    }
+
+    public LayerConstructions getLayerConstructions() {
+        return layerConstructions;
+    }
+
+    public LayerTerrain getLayerTerrain() {
+        return layerTerrain;
+    }
+
 }
