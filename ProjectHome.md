@@ -1,0 +1,1 @@
+More or less personal SVN. Author: KosteCZ
