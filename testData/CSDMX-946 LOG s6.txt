@@ -1,0 +1,977 @@
+2016-01-08 10:04:32.331  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] com.emc.xcp.rest.core.process.controller.ProcessController - startProcess: User: cen78663, Process: cs_cs_sp_record_save
+2016-01-08 10:04:32.335  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452243872335, User: cen78663
+2016-01-08 10:04:32.335  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243872335, User: cen78663 ... saveRecordWrapper start.
+2016-01-08 10:04:32.335  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243872335, User: cen78663 ... getWorkUnitIdFromRObjectId start.
+2016-01-08 10:04:32.339  WARN [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - workunit converted from r_object_id 080293968004a48b to work_unit_id HR0_50005141
+2016-01-08 10:04:32.339  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243872335, User: cen78663 ... getWorkUnitIdFromRObjectId end [100].
+2016-01-08 10:04:32.339  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243872335, User: cen78663 ... getWorkUnitIdFromRObjectId start.
+2016-01-08 10:04:32.341  WARN [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - workunit converted from r_object_id  to work_unit_id null
+2016-01-08 10:04:32.341  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243872335, User: cen78663 ... getWorkUnitIdFromRObjectId end [100].
+2016-01-08 10:04:32.344  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Adding dynamic group cs_superusers_dynamic into session for User: cen78663.
+2016-01-08 10:04:32.350  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Removing dynamic group cs_superusers_dynamic from session for User: cen78663.
+2016-01-08 10:04:32.352  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243872335, User: cen78663 ... saveRecord start.
+2016-01-08 10:04:32.352  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - SaveRecordInput [boxId=, boxTypeName=, csLocalities=HR0_50005141, dateIn=null, events=null, isMigration=false, objectRecord=CsRecord [duid=CS41000001206190, dateOfSignature=null, refNumber=, pageNo1=1, sheetNo=0, closeDate=null, shreddingChar=, retentionPeriodAnalog=0, retentionPeriodDigi=0, retentionPeriodStart=null, recordForm=, statRec=Zaevidovaný, statPlace=Na poboèce, closeType=null, shrSuggAnalogDate=null, shrSuggDigiDate=null, shrApprAnalogDate=null, shrApprDigiDate=null, isDuidPrinted=false, isScanNotify=false, statRecChange=null, statPlaceChange=null, inputDate=null, checkFlag=false, documentType=null, dateOfRegistration=null, digitalRecordLevel=null, shreddingProcessedAnalogDate=null, shreddingProcessedDigitalDate=null, boxId=null, boxOrderNo=0, aclName=null, folderId=null, internalHashCode=0], objectRecordType=CsRecordType [recordTypeId=100012, recordTypeName=null, objectType=null, pageNoReq=false, pageNoDef=0, sheetNoReq=false, sheetNoDef=0, dateOfSingnatureReq=false, shreddingChar=null, retentionPeriodAnalog=0, retentionPeriodDigi=0, retentionPeriodCancel=0, retentionPeriodDiscard=0, elSignScanReq=false, isControlledPrint=false, contentlessDaysNo=0, registeredDaysNo=0, digitalRecordLevel=null, digitalRecordSign=false, firstStat=null, triggerEventStart=0, checkPct=0, autoStorno=false, isExternal=false, isOneOfCollection=false, convertToPdfa=false, isScanReq=false, securityLevel=null, customTypeName=null, defaultRecordForm=null], objectSpis=[], orderNo=null, posId=, userName=cen78663, workUnitEvidId=null, isWithoutCheck=false]
+2016-01-08 10:04:32.353  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243872335, User: cen78663 ... saveRecord end [10 getSession].
+2016-01-08 10:04:32.353  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.helper.SessionHelper - ID_EXT: 1452243872335, User: cen78663 ... reassignUser start.
+2016-01-08 10:04:32.353  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.helper.SessionHelper - reassignUser: User will not be reassigned. Session User: cen78663. Context: CsContext [requestId=1452243872335, requestedUser=cen78663, repositorName=espis, durationTracker=null, adHocObjects={}]. Session Transaction Active: true
+2016-01-08 10:04:32.354  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.helper.SessionHelper - ID_EXT: 1452243872335, User: cen78663 ... reassignUser end [100].
+2016-01-08 10:04:32.354  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243872335, User: cen78663 ... saveRecord end [11 reassign user].
+2016-01-08 10:04:32.355  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Adding dynamic group cs_superusers_dynamic into session for User: cen78663.
+2016-01-08 10:04:32.357  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboRecordUtils - ID_EXT: 1452243872335, User: cen78663 ... refreshObjectRecordType start.
+2016-01-08 10:04:32.357  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboRecordUtils - ID_EXT: 1452243872335, User: cen78663 ... getRecordTypeByRecordTypeId start.
+2016-01-08 10:04:32.493  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboRecordUtils - ID_EXT: 1452243872335, User: cen78663 ... constructRecordTypeFromCollection start.
+2016-01-08 10:04:32.494  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboRecordUtils - ID_EXT: 1452243872335, User: cen78663 ... constructRecordTypeFromCollection end [100].
+2016-01-08 10:04:32.494  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboRecordUtils - ID_EXT: 1452243872335, User: cen78663 ... getRecordTypeByRecordTypeId end [100].
+2016-01-08 10:04:32.494  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboRecordUtils - ID_EXT: 1452243872335, User: cen78663 ... refreshObjectRecordType end [100].
+2016-01-08 10:04:32.495  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboRecordUtils - ID_EXT: 1452243872335, User: cen78663 ... validateSaveRecordInput start.
+2016-01-08 10:04:32.495  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboRecordUtils - SaveRecordInput variables SaveRecordInput [boxId=, boxTypeName=, csLocalities=HR0_50005141, dateIn=null, events=null, isMigration=false, objectRecord=CsRecord [duid=CS41000001206190, dateOfSignature=null, refNumber=, pageNo1=1, sheetNo=0, closeDate=null, shreddingChar=, retentionPeriodAnalog=0, retentionPeriodDigi=0, retentionPeriodStart=null, recordForm=, statRec=Zaevidovaný, statPlace=Na poboèce, closeType=null, shrSuggAnalogDate=null, shrSuggDigiDate=null, shrApprAnalogDate=null, shrApprDigiDate=null, isDuidPrinted=false, isScanNotify=false, statRecChange=null, statPlaceChange=null, inputDate=null, checkFlag=false, documentType=null, dateOfRegistration=null, digitalRecordLevel=null, shreddingProcessedAnalogDate=null, shreddingProcessedDigitalDate=null, boxId=null, boxOrderNo=0, aclName=null, folderId=null, internalHashCode=0], objectRecordType=null, objectSpis=[], orderNo=null, posId=, userName=cen78663, workUnitEvidId=null, isWithoutCheck=false]
+2016-01-08 10:04:32.496  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboRecordUtils - ID_EXT: 1452243872335, User: cen78663 ... validateSaveRecordInput end [10 validateSaveRecordInput start].
+2016-01-08 10:04:32.496  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboRecordUtils - ID_EXT: 1452243872335, User: cen78663 ... duidExists start.
+2016-01-08 10:04:32.499  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboRecordUtils - ID_EXT: 1452243872335, User: cen78663 ... duidExists end [100].
+2016-01-08 10:04:32.499  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboRecordUtils - ID_EXT: 1452243872335, User: cen78663 ... validateSaveRecordInput end [20 validateSaveRecordInput duidexist].
+2016-01-08 10:04:32.501  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboRecordUtils - ID_EXT: 1452243872335, User: cen78663 ... getRecordTypeByRecordTypeId start.
+2016-01-08 10:04:32.540  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Adding dynamic group cs_superusers_dynamic into session for User: bm029210.
+2016-01-08 10:04:32.548  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Removing dynamic group cs_superusers_dynamic from session for User: bm029210.
+2016-01-08 10:04:32.647  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboRecordUtils - ID_EXT: 1452243872335, User: cen78663 ... constructRecordTypeFromCollection start.
+2016-01-08 10:04:32.647  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboRecordUtils - ID_EXT: 1452243872335, User: cen78663 ... constructRecordTypeFromCollection end [100].
+2016-01-08 10:04:32.647  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboRecordUtils - ID_EXT: 1452243872335, User: cen78663 ... getRecordTypeByRecordTypeId end [100].
+2016-01-08 10:04:32.658  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243872335, User: cen78663 ... lockObject start.
+2016-01-08 10:04:32.658  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - lockObject: input: ObjectLockerInput [boAbsObjectId=08029396834edd67, joinName=, waitIntervalSec=0, boAbsObjectIds=[]]
+2016-01-08 10:04:32.662  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243872335, User: cen78663 ... lockObject end [100].
+2016-01-08 10:04:32.663  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboRecordUtils - ID_EXT: 1452243872335, User: cen78663 ... hasCheckEditRights start.
+2016-01-08 10:04:32.663  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboRecordUtils - ID_EXT: 1452243872335, User: cen78663 ... hasCheckEditRights end [100].
+2016-01-08 10:04:32.667  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboRecordTypeUtils - ID_EXT: 1452243872335, User: cen78663 ... getRecordTypeIdByDuid start.
+2016-01-08 10:04:32.670  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboRecordTypeUtils - ID_EXT: 1452243872335, User: cen78663 ... getRecordTypeIdByDuid end [100].
+2016-01-08 10:04:32.670  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Removing dynamic group cs_superusers_dynamic from session for User: cen78663.
+2016-01-08 10:04:32.671 ERROR [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] com.documentum.bps.outbound.bof.runtime.BOFClient - Exception thrown by the underlying method: public cz.ness.documentum.cskld.sbo.dto.recordsbo.SaveRecordWrapperOutput cz.ness.documentum.cskld.module.impl.CsRecordExt.saveRecordWrapper(cz.ness.documentum.cskld.sbo.dto.recordsbo.SaveRecordWrapperInput) throws com.documentum.fc.common.DfException
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.GeneratedMethodAccessor659.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.documentum.bps.outbound.bof.runtime.BOFClient.invokeMethod(BOFClient.java:112)
+	at com.documentum.bps.outbound.bof.runtime.BofModuleService.executeServiceOperation(BofModuleService.java:133)
+	at com.documentum.bps.outbound.AbstractService.executeServiceInternal(AbstractService.java:122)
+	at com.documentum.bps.outbound.AbstractService.execute(AbstractService.java:79)
+	at com.documentum.bpm.engine.utils.InvokeOutboundService.executeService(InvokeOutboundService.java:116)
+	at com.documentum.bpm.engine.utils.InvokeOutboundService.invokeService(InvokeOutboundService.java:71)
+	at com.documentum.bpm.engine.model.activity.OutboundActivityTaskHandler.executeWorkitem(OutboundActivityTaskHandler.java:48)
+	at com.documentum.bpm.engine.runtime.AutomaticWorkitemHandler.executeService(AutomaticWorkitemHandler.java:256)
+	at com.documentum.bpm.engine.runtime.AutomaticWorkitemHandler.execute(AutomaticWorkitemHandler.java:119)
+	at com.documentum.bpm.engine.runtime.ProcessEngineImpl.recursiveAutomaticWorkitemExecution(ProcessEngineImpl.java:422)
+	at com.documentum.bpm.engine.runtime.ProcessEngineImpl.executeSync(ProcessEngineImpl.java:273)
+	at com.documentum.bpm.engine.runtime.ProcessEngineImpl.startWorkflowSynchronously(ProcessEngineImpl.java:226)
+	at com.documentum.bpm.engine.StatelessEngine.executeInternal(StatelessEngine.java:101)
+	at com.documentum.bpm.engine.StatelessEngine.execute(StatelessEngine.java:79)
+	at com.emc.xcp.rest.core.process.commons.StatelessWorkflowEngineWrapper.execute(StatelessWorkflowEngineWrapper.java:45)
+	at com.emc.xcp.rest.core.process.dao.impl.ProcessDaoImpl.startStatelessProcess(ProcessDaoImpl.java:190)
+	at com.emc.xcp.rest.core.process.dao.impl.ProcessDaoImpl.startProcess(ProcessDaoImpl.java:110)
+	at com.emc.xcp.rest.core.process.service.impl.ProcessServiceImpl.startProcess(ProcessServiceImpl.java:22)
+	at com.emc.xcp.rest.core.process.controller.ProcessController.startProcess(ProcessController.java:100)
+	at sun.reflect.GeneratedMethodAccessor188.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:219)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:745)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:686)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:856)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:936)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:838)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:751)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:812)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:844)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:242)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:216)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:132)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:338)
+	at weblogic.servlet.internal.TailFilter.doFilter(TailFilter.java:25)
+	at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:74)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:74)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:118)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:84)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:103)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:54)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:45)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at com.emc.xcp.rest.security.filter.BasicAuthFilter.doFilter(BasicAuthFilter.java:51)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at com.emc.xcp.rest.security.filter.SpnegoAuthFilter.doFilter(SpnegoAuthFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:183)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:87)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:192)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:160)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:259)
+	at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:74)
+	at com.emc.xcp.rest.security.filter.RepositoryInfoFilter.doFilter(RepositoryInfoFilter.java:33)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:259)
+	at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:74)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:74)
+	at com.emc.xcp.ui.LocaleFilter.doFilter(LocaleFilter.java:26)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:259)
+	at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:74)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at com.emc.xcp.ui.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:43)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:74)
+	at weblogic.servlet.internal.RequestEventsFilter.doFilter(RequestEventsFilter.java:27)
+	at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:74)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3296)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3262)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.provider.WlsSubjectHandle.run(WlsSubjectHandle.java:57)
+	at weblogic.servlet.internal.WebAppServletContext.doSecuredExecute(WebAppServletContext.java:2171)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2097)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2075)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1513)
+	at weblogic.servlet.provider.ContainerSupportProviderImpl$WlsRequestExecutor.run(ContainerSupportProviderImpl.java:254)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+Caused by: java.lang.NullPointerException
+	at cz.ness.documentum.cskld.sbo.utils.CsSboRecordUtils.validateSaveRecordInput(CsSboRecordUtils.java:208)
+	at cz.ness.documentum.cskld.sbo.impl.CsSboRecord.saveRecord(CsSboRecord.java:773)
+	at cz.ness.documentum.cskld.sbo.impl.CsSboRecord.saveRecordWrapper(CsSboRecord.java:1911)
+	at cz.ness.documentum.cskld.module.impl.CsRecordExt.saveRecordWrapper(CsRecordExt.java:130)
+	... 107 more
+2016-01-08 10:04:32.673 ERROR [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] com.documentum.bps.outbound.bof.runtime.BofModuleService - Error in executing service
+java.lang.RuntimeException: Could not invoke the method 'saveRecordWrapper' from interface 'class cz.ness.documentum.cskld.module.impl.CsRecordExt' from BOF module 'cs_CsRecordExt'
+	at com.documentum.bps.outbound.bof.runtime.BOFClient.invokeMethod(BOFClient.java:121)
+	at com.documentum.bps.outbound.bof.runtime.BofModuleService.executeServiceOperation(BofModuleService.java:133)
+	at com.documentum.bps.outbound.AbstractService.executeServiceInternal(AbstractService.java:122)
+	at com.documentum.bps.outbound.AbstractService.execute(AbstractService.java:79)
+	at com.documentum.bpm.engine.utils.InvokeOutboundService.executeService(InvokeOutboundService.java:116)
+	at com.documentum.bpm.engine.utils.InvokeOutboundService.invokeService(InvokeOutboundService.java:71)
+	at com.documentum.bpm.engine.model.activity.OutboundActivityTaskHandler.executeWorkitem(OutboundActivityTaskHandler.java:48)
+	at com.documentum.bpm.engine.runtime.AutomaticWorkitemHandler.executeService(AutomaticWorkitemHandler.java:256)
+	at com.documentum.bpm.engine.runtime.AutomaticWorkitemHandler.execute(AutomaticWorkitemHandler.java:119)
+	at com.documentum.bpm.engine.runtime.ProcessEngineImpl.recursiveAutomaticWorkitemExecution(ProcessEngineImpl.java:422)
+	at com.documentum.bpm.engine.runtime.ProcessEngineImpl.executeSync(ProcessEngineImpl.java:273)
+	at com.documentum.bpm.engine.runtime.ProcessEngineImpl.startWorkflowSynchronously(ProcessEngineImpl.java:226)
+	at com.documentum.bpm.engine.StatelessEngine.executeInternal(StatelessEngine.java:101)
+	at com.documentum.bpm.engine.StatelessEngine.execute(StatelessEngine.java:79)
+	at com.emc.xcp.rest.core.process.commons.StatelessWorkflowEngineWrapper.execute(StatelessWorkflowEngineWrapper.java:45)
+	at com.emc.xcp.rest.core.process.dao.impl.ProcessDaoImpl.startStatelessProcess(ProcessDaoImpl.java:190)
+	at com.emc.xcp.rest.core.process.dao.impl.ProcessDaoImpl.startProcess(ProcessDaoImpl.java:110)
+	at com.emc.xcp.rest.core.process.service.impl.ProcessServiceImpl.startProcess(ProcessServiceImpl.java:22)
+	at com.emc.xcp.rest.core.process.controller.ProcessController.startProcess(ProcessController.java:100)
+	at sun.reflect.GeneratedMethodAccessor188.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:219)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:745)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:686)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:856)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:936)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:838)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:751)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:812)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:844)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:242)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:216)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:132)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:338)
+	at weblogic.servlet.internal.TailFilter.doFilter(TailFilter.java:25)
+	at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:74)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:74)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:118)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:84)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:103)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:54)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:45)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at com.emc.xcp.rest.security.filter.BasicAuthFilter.doFilter(BasicAuthFilter.java:51)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at com.emc.xcp.rest.security.filter.SpnegoAuthFilter.doFilter(SpnegoAuthFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:183)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:87)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:192)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:160)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:259)
+	at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:74)
+	at com.emc.xcp.rest.security.filter.RepositoryInfoFilter.doFilter(RepositoryInfoFilter.java:33)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:259)
+	at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:74)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:74)
+	at com.emc.xcp.ui.LocaleFilter.doFilter(LocaleFilter.java:26)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:259)
+	at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:74)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at com.emc.xcp.ui.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:43)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:74)
+	at weblogic.servlet.internal.RequestEventsFilter.doFilter(RequestEventsFilter.java:27)
+	at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:74)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3296)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3262)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.provider.WlsSubjectHandle.run(WlsSubjectHandle.java:57)
+	at weblogic.servlet.internal.WebAppServletContext.doSecuredExecute(WebAppServletContext.java:2171)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2097)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2075)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1513)
+	at weblogic.servlet.provider.ContainerSupportProviderImpl$WlsRequestExecutor.run(ContainerSupportProviderImpl.java:254)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.GeneratedMethodAccessor659.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.documentum.bps.outbound.bof.runtime.BOFClient.invokeMethod(BOFClient.java:112)
+	... 103 more
+Caused by: java.lang.NullPointerException
+	at cz.ness.documentum.cskld.sbo.utils.CsSboRecordUtils.validateSaveRecordInput(CsSboRecordUtils.java:208)
+	at cz.ness.documentum.cskld.sbo.impl.CsSboRecord.saveRecord(CsSboRecord.java:773)
+	at cz.ness.documentum.cskld.sbo.impl.CsSboRecord.saveRecordWrapper(CsSboRecord.java:1911)
+	at cz.ness.documentum.cskld.module.impl.CsRecordExt.saveRecordWrapper(CsRecordExt.java:130)
+	... 107 more
+2016-01-08 10:04:32.964  INFO [xCP]  [[ACTIVE] ExecuteThread: '22' for queue: 'weblogic.kernel.Default (self-tuning)'] com.emc.xcp.rest.core.process.controller.ProcessController - startProcess: User: cen13430, Process: cs_cs_sp_record_find_by_duid
+2016-01-08 10:04:32.967  INFO [xCP]  [[ACTIVE] ExecuteThread: '22' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452243872967, User: cen13430
+2016-01-08 10:04:32.968  INFO [xCP]  [[ACTIVE] ExecuteThread: '22' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243872967, User: cen13430 ... findByDuid start.
+2016-01-08 10:04:32.969  INFO [xCP]  [[ACTIVE] ExecuteThread: '22' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Adding dynamic group cs_superusers_dynamic into session for User: cen13430.
+2016-01-08 10:04:32.979  INFO [xCP]  [[ACTIVE] ExecuteThread: '22' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243872967, User: cen13430 ... validateNumberSeries start.
+2016-01-08 10:04:32.982  INFO [xCP]  [[ACTIVE] ExecuteThread: '22' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243872967, User: cen13430 ... validateNumberSeries end [100].
+2016-01-08 10:04:32.982  INFO [xCP]  [[ACTIVE] ExecuteThread: '22' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Removing dynamic group cs_superusers_dynamic from session for User: cen13430.
+2016-01-08 10:04:32.983  INFO [xCP]  [[ACTIVE] ExecuteThread: '22' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243872967, User: cen13430 ... findByDuid end [100].
+2016-01-08 10:04:33.050  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] com.emc.xcp.rest.core.process.controller.ProcessController - startProcess: User: cen13430, Process: cs_cs_sp_box_record_attach
+2016-01-08 10:04:33.053  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452243873053, User: cen13430
+2016-01-08 10:04:33.053  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboBox - ID_EXT: 1452243873053, User: cen13430 ... attachRecordSBO start.
+2016-01-08 10:04:33.054  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Adding dynamic group cs_superusers_dynamic into session for User: cen13430.
+2016-01-08 10:04:33.069  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243873053, User: cen13430 ... findByDuid start.
+2016-01-08 10:04:33.075  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243873053, User: cen13430 ... validateNumberSeries start.
+2016-01-08 10:04:33.077  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243873053, User: cen13430 ... validateNumberSeries end [100].
+2016-01-08 10:04:33.109  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243873053, User: cen13430 ... findByDuid end [100].
+2016-01-08 10:04:33.116  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243873053, User: cen13430 ... lockObject start.
+2016-01-08 10:04:33.116  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - lockObject: input: ObjectLockerInput [boAbsObjectId=08029396862a54d9, joinName=, waitIntervalSec=0, boAbsObjectIds=[]]
+2016-01-08 10:04:33.118  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243873053, User: cen13430 ... lockObject end [100].
+2016-01-08 10:04:33.118  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243873053, User: cen13430 ... recReqStateProc start.
+2016-01-08 10:04:33.119  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243873053, User: cen13430 ... setRecordState start.
+2016-01-08 10:04:33.122  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243873053, User: cen13430 ... lockObject start.
+2016-01-08 10:04:33.122  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - lockObject: input: ObjectLockerInput [boAbsObjectId=08029396862a54d9, joinName=, waitIntervalSec=0, boAbsObjectIds=[]]
+2016-01-08 10:04:33.123  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243873053, User: cen13430 ... lockObject end [100].
+2016-01-08 10:04:33.173  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243873053, User: cen13430 ... createOkErrorOutput start.
+2016-01-08 10:04:33.173  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243873053, User: cen13430 ... createErroOutput start.
+2016-01-08 10:04:33.173  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - ID_EXT: 1452243873053, User: cen13430 ... getErrorMessage start.
+2016-01-08 10:04:33.174  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - getErrorMessage: ID_EXT: 1452243873053, User: cen13430, get errId EMC-0074
+2016-01-08 10:04:33.174  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - ID_EXT: 1452243873053, User: cen13430 ... getErrorMessage end [100].
+2016-01-08 10:04:33.174  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243873053, User: cen13430 ... createErroOutput end [100].
+2016-01-08 10:04:33.175  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243873053, User: cen13430 ... createOkErrorOutput end [100].
+2016-01-08 10:04:33.175  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243873053, User: cen13430 ... setRecordState end [70].
+2016-01-08 10:04:33.183  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboBox - ID_EXT: 1452243873053, User: cen13430 ... addRecordToBoxSBO start.
+2016-01-08 10:04:33.190  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243873053, User: cen13430 ... lockObject start.
+2016-01-08 10:04:33.190  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - lockObject: input: ObjectLockerInput [boAbsObjectId=08029396862a54d9, joinName=, waitIntervalSec=0, boAbsObjectIds=[]]
+2016-01-08 10:04:33.192  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243873053, User: cen13430 ... lockObject end [100].
+2016-01-08 10:04:33.194  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243873053, User: cen13430 ... lockObject start.
+2016-01-08 10:04:33.195  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - lockObject: input: ObjectLockerInput [boAbsObjectId=0802939684d79e30, joinName=, waitIntervalSec=0, boAbsObjectIds=[]]
+2016-01-08 10:04:33.197  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243873053, User: cen13430 ... lockObject end [100].
+2016-01-08 10:04:33.200  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452243873200, User: cen13430
+2016-01-08 10:04:33.201  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboDQLUtils - ID_EXT: 1452243873200, User: cen13430 ... createRelations start.
+2016-01-08 10:04:33.212  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboDQLUtils - createRelations: Relation cs_record__box between parent 08029396862a54d9 and child 0802939684d79e30 created with id 370293968fee312f
+2016-01-08 10:04:33.213  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboDQLUtils - ID_EXT: 1452243873200, User: cen13430 ... createRelations end [100].
+2016-01-08 10:04:33.266  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboBox - ID_EXT: 1452243873053, User: cen13430 ... addRecordToBoxSBO end [100].
+2016-01-08 10:04:33.273  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452243873273, User: cen13430
+2016-01-08 10:04:33.274  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRelation - ID_EXT: 1452243873273, User: cen13430 ... relationSaveHistory start.
+2016-01-08 10:04:33.274  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243873273, User: cen13430 ... createOkErrorOutput start.
+2016-01-08 10:04:33.275  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243873273, User: cen13430 ... createErroOutput start.
+2016-01-08 10:04:33.275  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - ID_EXT: 1452243873273, User: cen13430 ... getErrorMessage start.
+2016-01-08 10:04:33.275  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - getErrorMessage: ID_EXT: 1452243873273, User: cen13430, get errId EMC-0113
+2016-01-08 10:04:33.275  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - ID_EXT: 1452243873273, User: cen13430 ... getErrorMessage end [100].
+2016-01-08 10:04:33.276  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243873273, User: cen13430 ... createErroOutput end [100].
+2016-01-08 10:04:33.276  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243873273, User: cen13430 ... createOkErrorOutput end [100].
+2016-01-08 10:04:33.280  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRelation - ID_EXT: 1452243873273, User: cen13430 ... relationSaveHistory end [100].
+2016-01-08 10:04:33.282  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243873053, User: cen13430 ... recReqStateProc end [100].
+2016-01-08 10:04:33.283  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Removing dynamic group cs_superusers_dynamic from session for User: cen13430.
+2016-01-08 10:04:33.284  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboBox - ID_EXT: 1452243873053, User: cen13430 ... attachRecordSBO end [200].
+2016-01-08 10:04:33.315  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] com.emc.xcp.rest.core.process.controller.ProcessController - startProcess: User: a4079033, Process: cs_cs_sp_record_find_by_duid
+2016-01-08 10:04:33.319  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452243873319, User: a4079033
+2016-01-08 10:04:33.319  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243873319, User: a4079033 ... findByDuid start.
+2016-01-08 10:04:33.320  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Adding dynamic group cs_superusers_dynamic into session for User: a4079033.
+2016-01-08 10:04:33.350  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243873319, User: a4079033 ... validateNumberSeries start.
+2016-01-08 10:04:33.353  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243873319, User: a4079033 ... validateNumberSeries end [100].
+2016-01-08 10:04:33.354  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Removing dynamic group cs_superusers_dynamic from session for User: a4079033.
+2016-01-08 10:04:33.355  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243873319, User: a4079033 ... findByDuid end [100].
+2016-01-08 10:04:33.370  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] com.emc.xcp.rest.core.process.controller.ProcessController - startProcess: User: a4079033, Process: cs_cs_sp_box_record_attach
+2016-01-08 10:04:33.373  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452243873373, User: a4079033
+2016-01-08 10:04:33.374  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboBox - ID_EXT: 1452243873373, User: a4079033 ... attachRecordSBO start.
+2016-01-08 10:04:33.377  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Adding dynamic group cs_superusers_dynamic into session for User: a4079033.
+2016-01-08 10:04:33.391  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243873373, User: a4079033 ... findByDuid start.
+2016-01-08 10:04:33.396  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243873373, User: a4079033 ... validateNumberSeries start.
+2016-01-08 10:04:33.398  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243873373, User: a4079033 ... validateNumberSeries end [100].
+2016-01-08 10:04:33.401  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243873373, User: a4079033 ... findByDuid end [100].
+2016-01-08 10:04:33.411  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243873373, User: a4079033 ... lockObject start.
+2016-01-08 10:04:33.411  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - lockObject: input: ObjectLockerInput [boAbsObjectId=08029396862028cb, joinName=, waitIntervalSec=0, boAbsObjectIds=[]]
+2016-01-08 10:04:33.412  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243873373, User: a4079033 ... lockObject end [100].
+2016-01-08 10:04:33.413  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243873373, User: a4079033 ... recReqStateProc start.
+2016-01-08 10:04:33.414  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243873373, User: a4079033 ... setRecordState start.
+2016-01-08 10:04:33.417  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243873373, User: a4079033 ... lockObject start.
+2016-01-08 10:04:33.417  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - lockObject: input: ObjectLockerInput [boAbsObjectId=08029396862028cb, joinName=, waitIntervalSec=0, boAbsObjectIds=[]]
+2016-01-08 10:04:33.418  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243873373, User: a4079033 ... lockObject end [100].
+2016-01-08 10:04:33.419  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243873373, User: a4079033 ... setRecordState end [100].
+2016-01-08 10:04:33.423  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboBox - ID_EXT: 1452243873373, User: a4079033 ... addRecordToBoxSBO start.
+2016-01-08 10:04:33.429  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243873373, User: a4079033 ... lockObject start.
+2016-01-08 10:04:33.429  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - lockObject: input: ObjectLockerInput [boAbsObjectId=08029396862028cb, joinName=, waitIntervalSec=0, boAbsObjectIds=[]]
+2016-01-08 10:04:33.430  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243873373, User: a4079033 ... lockObject end [100].
+2016-01-08 10:04:33.435  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243873373, User: a4079033 ... lockObject start.
+2016-01-08 10:04:33.435  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - lockObject: input: ObjectLockerInput [boAbsObjectId=0802939682b5b1c5, joinName=, waitIntervalSec=0, boAbsObjectIds=[]]
+2016-01-08 10:04:33.437  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243873373, User: a4079033 ... lockObject end [100].
+2016-01-08 10:04:33.441  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452243873441, User: a4079033
+2016-01-08 10:04:33.441  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboDQLUtils - ID_EXT: 1452243873441, User: a4079033 ... createRelations start.
+2016-01-08 10:04:33.463  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboDQLUtils - createRelations: Relation cs_record__box between parent 08029396862028cb and child 0802939682b5b1c5 created with id 370293968fee3130
+2016-01-08 10:04:33.463  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboDQLUtils - ID_EXT: 1452243873441, User: a4079033 ... createRelations end [100].
+2016-01-08 10:04:33.508  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboBox - ID_EXT: 1452243873373, User: a4079033 ... addRecordToBoxSBO end [100].
+2016-01-08 10:04:33.515  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452243873514, User: a4079033
+2016-01-08 10:04:33.515  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRelation - ID_EXT: 1452243873514, User: a4079033 ... relationSaveHistory start.
+2016-01-08 10:04:33.516  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243873514, User: a4079033 ... createOkErrorOutput start.
+2016-01-08 10:04:33.516  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243873514, User: a4079033 ... createErroOutput start.
+2016-01-08 10:04:33.517  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - ID_EXT: 1452243873514, User: a4079033 ... getErrorMessage start.
+2016-01-08 10:04:33.517  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - getErrorMessage: ID_EXT: 1452243873514, User: a4079033, get errId EMC-0113
+2016-01-08 10:04:33.518  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - ID_EXT: 1452243873514, User: a4079033 ... getErrorMessage end [100].
+2016-01-08 10:04:33.518  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243873514, User: a4079033 ... createErroOutput end [100].
+2016-01-08 10:04:33.519  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243873514, User: a4079033 ... createOkErrorOutput end [100].
+2016-01-08 10:04:33.525  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRelation - ID_EXT: 1452243873514, User: a4079033 ... relationSaveHistory end [100].
+2016-01-08 10:04:33.527  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243873373, User: a4079033 ... recReqStateProc end [100].
+2016-01-08 10:04:33.527  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Removing dynamic group cs_superusers_dynamic from session for User: a4079033.
+2016-01-08 10:04:33.529  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboBox - ID_EXT: 1452243873373, User: a4079033 ... attachRecordSBO end [200].
+2016-01-08 10:04:34.586  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] com.emc.xcp.rest.core.process.controller.ProcessController - startProcess: User: bm021888, Process: cs_cs_sp_record_find_by_duid
+2016-01-08 10:04:34.588  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452243874588, User: bm021888
+2016-01-08 10:04:34.589  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243874588, User: bm021888 ... findByDuid start.
+2016-01-08 10:04:34.590  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Adding dynamic group cs_superusers_dynamic into session for User: bm021888.
+2016-01-08 10:04:34.601  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243874588, User: bm021888 ... validateNumberSeries start.
+2016-01-08 10:04:34.604  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243874588, User: bm021888 ... validateNumberSeries end [100].
+2016-01-08 10:04:34.604  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Removing dynamic group cs_superusers_dynamic from session for User: bm021888.
+2016-01-08 10:04:34.605  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243874588, User: bm021888 ... findByDuid end [100].
+2016-01-08 10:04:34.673  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] com.emc.xcp.rest.core.process.controller.ProcessController - startProcess: User: bm021888, Process: cs_cs_sp_box_record_attach
+2016-01-08 10:04:34.676  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452243874676, User: bm021888
+2016-01-08 10:04:34.676  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboBox - ID_EXT: 1452243874676, User: bm021888 ... attachRecordSBO start.
+2016-01-08 10:04:34.677  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Adding dynamic group cs_superusers_dynamic into session for User: bm021888.
+2016-01-08 10:04:34.692  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243874676, User: bm021888 ... findByDuid start.
+2016-01-08 10:04:34.697  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243874676, User: bm021888 ... validateNumberSeries start.
+2016-01-08 10:04:34.699  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243874676, User: bm021888 ... validateNumberSeries end [100].
+2016-01-08 10:04:34.705  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243874676, User: bm021888 ... findByDuid end [100].
+2016-01-08 10:04:34.713  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243874676, User: bm021888 ... lockObject start.
+2016-01-08 10:04:34.713  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - lockObject: input: ObjectLockerInput [boAbsObjectId=08029396862a5eb7, joinName=, waitIntervalSec=0, boAbsObjectIds=[]]
+2016-01-08 10:04:34.715  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243874676, User: bm021888 ... lockObject end [100].
+2016-01-08 10:04:34.715  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243874676, User: bm021888 ... recReqStateProc start.
+2016-01-08 10:04:34.716  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243874676, User: bm021888 ... setRecordState start.
+2016-01-08 10:04:34.719  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243874676, User: bm021888 ... lockObject start.
+2016-01-08 10:04:34.719  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - lockObject: input: ObjectLockerInput [boAbsObjectId=08029396862a5eb7, joinName=, waitIntervalSec=0, boAbsObjectIds=[]]
+2016-01-08 10:04:34.721  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243874676, User: bm021888 ... lockObject end [100].
+2016-01-08 10:04:34.786  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243874676, User: bm021888 ... createOkErrorOutput start.
+2016-01-08 10:04:34.786  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243874676, User: bm021888 ... createErroOutput start.
+2016-01-08 10:04:34.787  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - ID_EXT: 1452243874676, User: bm021888 ... getErrorMessage start.
+2016-01-08 10:04:34.787  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - getErrorMessage: ID_EXT: 1452243874676, User: bm021888, get errId EMC-0074
+2016-01-08 10:04:34.787  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - ID_EXT: 1452243874676, User: bm021888 ... getErrorMessage end [100].
+2016-01-08 10:04:34.788  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243874676, User: bm021888 ... createErroOutput end [100].
+2016-01-08 10:04:34.788  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243874676, User: bm021888 ... createOkErrorOutput end [100].
+2016-01-08 10:04:34.788  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243874676, User: bm021888 ... setRecordState end [70].
+2016-01-08 10:04:34.798  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboBox - ID_EXT: 1452243874676, User: bm021888 ... addRecordToBoxSBO start.
+2016-01-08 10:04:34.806  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243874676, User: bm021888 ... lockObject start.
+2016-01-08 10:04:34.806  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - lockObject: input: ObjectLockerInput [boAbsObjectId=08029396862a5eb7, joinName=, waitIntervalSec=0, boAbsObjectIds=[]]
+2016-01-08 10:04:34.808  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243874676, User: bm021888 ... lockObject end [100].
+2016-01-08 10:04:34.812  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243874676, User: bm021888 ... lockObject start.
+2016-01-08 10:04:34.812  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - lockObject: input: ObjectLockerInput [boAbsObjectId=0802939682b16f1a, joinName=, waitIntervalSec=0, boAbsObjectIds=[]]
+2016-01-08 10:04:34.814  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243874676, User: bm021888 ... lockObject end [100].
+2016-01-08 10:04:34.818  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452243874818, User: bm021888
+2016-01-08 10:04:34.818  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboDQLUtils - ID_EXT: 1452243874818, User: bm021888 ... createRelations start.
+2016-01-08 10:04:34.837  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboDQLUtils - createRelations: Relation cs_record__box between parent 08029396862a5eb7 and child 0802939682b16f1a created with id 370293968fee3131
+2016-01-08 10:04:34.838  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboDQLUtils - ID_EXT: 1452243874818, User: bm021888 ... createRelations end [100].
+2016-01-08 10:04:34.908  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboBox - ID_EXT: 1452243874676, User: bm021888 ... addRecordToBoxSBO end [100].
+2016-01-08 10:04:34.917  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452243874917, User: bm021888
+2016-01-08 10:04:34.918  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRelation - ID_EXT: 1452243874917, User: bm021888 ... relationSaveHistory start.
+2016-01-08 10:04:34.918  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243874917, User: bm021888 ... createOkErrorOutput start.
+2016-01-08 10:04:34.919  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243874917, User: bm021888 ... createErroOutput start.
+2016-01-08 10:04:34.919  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - ID_EXT: 1452243874917, User: bm021888 ... getErrorMessage start.
+2016-01-08 10:04:34.919  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - getErrorMessage: ID_EXT: 1452243874917, User: bm021888, get errId EMC-0113
+2016-01-08 10:04:34.920  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - ID_EXT: 1452243874917, User: bm021888 ... getErrorMessage end [100].
+2016-01-08 10:04:34.920  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243874917, User: bm021888 ... createErroOutput end [100].
+2016-01-08 10:04:34.920  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243874917, User: bm021888 ... createOkErrorOutput end [100].
+2016-01-08 10:04:34.924  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRelation - ID_EXT: 1452243874917, User: bm021888 ... relationSaveHistory end [100].
+2016-01-08 10:04:34.927  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243874676, User: bm021888 ... recReqStateProc end [100].
+2016-01-08 10:04:34.927  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Removing dynamic group cs_superusers_dynamic from session for User: bm021888.
+2016-01-08 10:04:34.929  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboBox - ID_EXT: 1452243874676, User: bm021888 ... attachRecordSBO end [200].
+2016-01-08 10:04:35.080  INFO [xCP]  [[ACTIVE] ExecuteThread: '9' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Adding dynamic group cs_superusers_dynamic into session for User: cb017238.
+2016-01-08 10:04:35.089  INFO [xCP]  [[ACTIVE] ExecuteThread: '9' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Removing dynamic group cs_superusers_dynamic from session for User: cb017238.
+2016-01-08 10:04:35.742  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] com.emc.xcp.rest.core.process.controller.ProcessController - startProcess: User: su025622, Process: cs_cs_sp_duid_validation
+2016-01-08 10:04:35.745  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452243875745, User: su025622
+2016-01-08 10:04:35.745  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243875745, User: su025622 ... duidValidation start.
+2016-01-08 10:04:35.746  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Adding dynamic group cs_superusers_dynamic into session for User: su025622.
+2016-01-08 10:04:35.751  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243875745, User: su025622 ... validateNumberSeries start.
+2016-01-08 10:04:35.755  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243875745, User: su025622 ... validateNumberSeries end [100].
+2016-01-08 10:04:35.758  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Removing dynamic group cs_superusers_dynamic from session for User: su025622.
+2016-01-08 10:04:35.760  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243875745, User: su025622 ... duidValidation end [100].
+2016-01-08 10:04:35.835  INFO [xCP]  [[ACTIVE] ExecuteThread: '4' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.xcp.services.util.user.NessUtilUser - hasUserAccessToPage end. User: su025622 has access to page cs:cs_record/cs_pb_rekevid_novy/
+2016-01-08 10:04:36.181  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] com.emc.xcp.rest.core.process.controller.ProcessController - startProcess: User: bm021768, Process: cs_cs_sp_record_find_by_duid
+2016-01-08 10:04:36.184  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452243876184, User: bm021768
+2016-01-08 10:04:36.184  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243876184, User: bm021768 ... findByDuid start.
+2016-01-08 10:04:36.187  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Adding dynamic group cs_superusers_dynamic into session for User: bm021768.
+2016-01-08 10:04:36.224  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243876184, User: bm021768 ... validateNumberSeries start.
+2016-01-08 10:04:36.228  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243876184, User: bm021768 ... validateNumberSeries end [100].
+2016-01-08 10:04:36.228  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Removing dynamic group cs_superusers_dynamic from session for User: bm021768.
+2016-01-08 10:04:36.229  INFO [xCP]  [[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243876184, User: bm021768 ... findByDuid end [100].
+2016-01-08 10:04:36.251  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] com.emc.xcp.rest.core.process.controller.ProcessController - startProcess: User: bm021768, Process: cs_cs_sp_box_record_attach
+2016-01-08 10:04:36.255  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452243876255, User: bm021768
+2016-01-08 10:04:36.256  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboBox - ID_EXT: 1452243876255, User: bm021768 ... attachRecordSBO start.
+2016-01-08 10:04:36.260  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Adding dynamic group cs_superusers_dynamic into session for User: bm021768.
+2016-01-08 10:04:36.282  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243876255, User: bm021768 ... findByDuid start.
+2016-01-08 10:04:36.288  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243876255, User: bm021768 ... validateNumberSeries start.
+2016-01-08 10:04:36.290  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243876255, User: bm021768 ... validateNumberSeries end [100].
+2016-01-08 10:04:36.296  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243876255, User: bm021768 ... findByDuid end [100].
+2016-01-08 10:04:36.302  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243876255, User: bm021768 ... createFatalErrorOutput start.
+2016-01-08 10:04:36.303  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243876255, User: bm021768 ... createErroOutput start.
+2016-01-08 10:04:36.303  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - ID_EXT: 1452243876255, User: bm021768 ... getErrorMessage start.
+2016-01-08 10:04:36.303  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - getErrorMessage: ID_EXT: 1452243876255, User: bm021768, get errId EMC-0059
+2016-01-08 10:04:36.304  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - ID_EXT: 1452243876255, User: bm021768 ... getErrorMessage end [100].
+2016-01-08 10:04:36.304  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243876255, User: bm021768 ... createErroOutput end [100].
+2016-01-08 10:04:36.305  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243876255, User: bm021768 ... createFatalErrorOutput end [100].
+2016-01-08 10:04:36.305  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - ID_EXT: 1452243876255, User: bm021768 ... getErrorMessage start.
+2016-01-08 10:04:36.305  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - getErrorMessage: ID_EXT: 1452243876255, User: bm021768, get errId EMC-0132
+2016-01-08 10:04:36.306  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - ID_EXT: 1452243876255, User: bm021768 ... getErrorMessage end [100].
+2016-01-08 10:04:36.315  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboBox - ID_EXT: 1452243876255, User: bm021768 ... attachRecordSBO end [50].
+2016-01-08 10:04:36.315  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Removing dynamic group cs_superusers_dynamic from session for User: bm021768.
+2016-01-08 10:04:36.613  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.xcp.services.util.user.NessUtilUser - hasUserAccessToPage end. User: cen38635 has access to page cs:application/cs_pa_home_page
+2016-01-08 10:04:36.810  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] com.emc.xcp.rest.core.process.controller.ProcessController - startProcess: User: cen38635, Process: cs_cs_sp_get_setup_val
+2016-01-08 10:04:36.813  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452243876813, User: cen38635
+2016-01-08 10:04:36.827  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Adding dynamic group cs_superusers_dynamic into session for User: cen38635.
+2016-01-08 10:04:36.835  INFO [xCP]  [[ACTIVE] ExecuteThread: '16' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Removing dynamic group cs_superusers_dynamic from session for User: cen38635.
+2016-01-08 10:04:36.935  INFO [xCP]  [[ACTIVE] ExecuteThread: '9' for queue: 'weblogic.kernel.Default (self-tuning)'] com.emc.xcp.rest.core.process.controller.ProcessController - startProcess: User: np020479, Process: cs_cs_sp_record_find_by_duid
+2016-01-08 10:04:36.938  INFO [xCP]  [[ACTIVE] ExecuteThread: '9' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452243876938, User: np020479
+2016-01-08 10:04:36.938  INFO [xCP]  [[ACTIVE] ExecuteThread: '9' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243876938, User: np020479 ... findByDuid start.
+2016-01-08 10:04:36.946  INFO [xCP]  [[ACTIVE] ExecuteThread: '9' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Adding dynamic group cs_superusers_dynamic into session for User: np020479.
+2016-01-08 10:04:36.957  INFO [xCP]  [[ACTIVE] ExecuteThread: '9' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243876938, User: np020479 ... validateNumberSeries start.
+2016-01-08 10:04:36.959  INFO [xCP]  [[ACTIVE] ExecuteThread: '9' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243876938, User: np020479 ... validateNumberSeries end [100].
+2016-01-08 10:04:36.960  INFO [xCP]  [[ACTIVE] ExecuteThread: '9' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Removing dynamic group cs_superusers_dynamic from session for User: np020479.
+2016-01-08 10:04:36.961  INFO [xCP]  [[ACTIVE] ExecuteThread: '9' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243876938, User: np020479 ... findByDuid end [100].
+2016-01-08 10:04:37.090  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] com.emc.xcp.rest.core.process.controller.ProcessController - startProcess: User: np020479, Process: cs_cs_sp_box_record_attach
+2016-01-08 10:04:37.093  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452243877093, User: np020479
+2016-01-08 10:04:37.093  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboBox - ID_EXT: 1452243877093, User: np020479 ... attachRecordSBO start.
+2016-01-08 10:04:37.094  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Adding dynamic group cs_superusers_dynamic into session for User: np020479.
+2016-01-08 10:04:37.107  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243877093, User: np020479 ... findByDuid start.
+2016-01-08 10:04:37.113  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243877093, User: np020479 ... validateNumberSeries start.
+2016-01-08 10:04:37.115  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243877093, User: np020479 ... validateNumberSeries end [100].
+2016-01-08 10:04:37.122  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243877093, User: np020479 ... findByDuid end [100].
+2016-01-08 10:04:37.131  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243877093, User: np020479 ... lockObject start.
+2016-01-08 10:04:37.131  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - lockObject: input: ObjectLockerInput [boAbsObjectId=08029396862bcdec, joinName=, waitIntervalSec=0, boAbsObjectIds=[]]
+2016-01-08 10:04:37.133  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243877093, User: np020479 ... lockObject end [100].
+2016-01-08 10:04:37.133  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243877093, User: np020479 ... recReqStateProc start.
+2016-01-08 10:04:37.134  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243877093, User: np020479 ... setRecordState start.
+2016-01-08 10:04:37.137  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243877093, User: np020479 ... lockObject start.
+2016-01-08 10:04:37.137  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - lockObject: input: ObjectLockerInput [boAbsObjectId=08029396862bcdec, joinName=, waitIntervalSec=0, boAbsObjectIds=[]]
+2016-01-08 10:04:37.139  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243877093, User: np020479 ... lockObject end [100].
+2016-01-08 10:04:37.166  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243877093, User: np020479 ... createOkErrorOutput start.
+2016-01-08 10:04:37.167  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243877093, User: np020479 ... createErroOutput start.
+2016-01-08 10:04:37.167  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - ID_EXT: 1452243877093, User: np020479 ... getErrorMessage start.
+2016-01-08 10:04:37.167  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - getErrorMessage: ID_EXT: 1452243877093, User: np020479, get errId EMC-0074
+2016-01-08 10:04:37.167  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - ID_EXT: 1452243877093, User: np020479 ... getErrorMessage end [100].
+2016-01-08 10:04:37.167  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243877093, User: np020479 ... createErroOutput end [100].
+2016-01-08 10:04:37.168  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243877093, User: np020479 ... createOkErrorOutput end [100].
+2016-01-08 10:04:37.168  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243877093, User: np020479 ... setRecordState end [70].
+2016-01-08 10:04:37.177  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboBox - ID_EXT: 1452243877093, User: np020479 ... addRecordToBoxSBO start.
+2016-01-08 10:04:37.184  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243877093, User: np020479 ... lockObject start.
+2016-01-08 10:04:37.184  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - lockObject: input: ObjectLockerInput [boAbsObjectId=08029396862bcdec, joinName=, waitIntervalSec=0, boAbsObjectIds=[]]
+2016-01-08 10:04:37.186  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243877093, User: np020479 ... lockObject end [100].
+2016-01-08 10:04:37.189  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243877093, User: np020479 ... lockObject start.
+2016-01-08 10:04:37.189  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - lockObject: input: ObjectLockerInput [boAbsObjectId=080293968334aa86, joinName=, waitIntervalSec=0, boAbsObjectIds=[]]
+2016-01-08 10:04:37.191  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243877093, User: np020479 ... lockObject end [100].
+2016-01-08 10:04:37.195  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452243877194, User: np020479
+2016-01-08 10:04:37.195  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboDQLUtils - ID_EXT: 1452243877194, User: np020479 ... createRelations start.
+2016-01-08 10:04:37.213  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboDQLUtils - createRelations: Relation cs_record__box between parent 08029396862bcdec and child 080293968334aa86 created with id 370293968fee3132
+2016-01-08 10:04:37.213  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboDQLUtils - ID_EXT: 1452243877194, User: np020479 ... createRelations end [100].
+2016-01-08 10:04:37.292  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboBox - ID_EXT: 1452243877093, User: np020479 ... addRecordToBoxSBO end [100].
+2016-01-08 10:04:37.303  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452243877303, User: np020479
+2016-01-08 10:04:37.304  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRelation - ID_EXT: 1452243877303, User: np020479 ... relationSaveHistory start.
+2016-01-08 10:04:37.304  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243877303, User: np020479 ... createOkErrorOutput start.
+2016-01-08 10:04:37.305  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243877303, User: np020479 ... createErroOutput start.
+2016-01-08 10:04:37.306  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - ID_EXT: 1452243877303, User: np020479 ... getErrorMessage start.
+2016-01-08 10:04:37.306  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - getErrorMessage: ID_EXT: 1452243877303, User: np020479, get errId EMC-0113
+2016-01-08 10:04:37.306  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - ID_EXT: 1452243877303, User: np020479 ... getErrorMessage end [100].
+2016-01-08 10:04:37.307  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243877303, User: np020479 ... createErroOutput end [100].
+2016-01-08 10:04:37.308  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243877303, User: np020479 ... createOkErrorOutput end [100].
+2016-01-08 10:04:37.321  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRelation - ID_EXT: 1452243877303, User: np020479 ... relationSaveHistory end [100].
+2016-01-08 10:04:37.323  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243877093, User: np020479 ... recReqStateProc end [100].
+2016-01-08 10:04:37.324  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Removing dynamic group cs_superusers_dynamic from session for User: np020479.
+2016-01-08 10:04:37.325  INFO [xCP]  [[ACTIVE] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboBox - ID_EXT: 1452243877093, User: np020479 ... attachRecordSBO end [200].
+2016-01-08 10:04:37.507  INFO [xCP]  [[ACTIVE] ExecuteThread: '22' for queue: 'weblogic.kernel.Default (self-tuning)'] com.emc.xcp.rest.core.process.controller.ProcessController - startProcess: User: cen13430, Process: cs_cs_sp_record_find_by_duid
+2016-01-08 10:04:37.510  INFO [xCP]  [[ACTIVE] ExecuteThread: '22' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452243877510, User: cen13430
+2016-01-08 10:04:37.510  INFO [xCP]  [[ACTIVE] ExecuteThread: '22' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243877510, User: cen13430 ... findByDuid start.
+2016-01-08 10:04:37.511  INFO [xCP]  [[ACTIVE] ExecuteThread: '22' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Adding dynamic group cs_superusers_dynamic into session for User: cen13430.
+2016-01-08 10:04:37.521  INFO [xCP]  [[ACTIVE] ExecuteThread: '22' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243877510, User: cen13430 ... validateNumberSeries start.
+2016-01-08 10:04:37.523  INFO [xCP]  [[ACTIVE] ExecuteThread: '22' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243877510, User: cen13430 ... validateNumberSeries end [100].
+2016-01-08 10:04:37.524  INFO [xCP]  [[ACTIVE] ExecuteThread: '22' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Removing dynamic group cs_superusers_dynamic from session for User: cen13430.
+2016-01-08 10:04:37.525  INFO [xCP]  [[ACTIVE] ExecuteThread: '22' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243877510, User: cen13430 ... findByDuid end [100].
+2016-01-08 10:04:37.625  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] com.emc.xcp.rest.core.process.controller.ProcessController - startProcess: User: cen13430, Process: cs_cs_sp_box_record_attach
+2016-01-08 10:04:37.627  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452243877627, User: cen13430
+2016-01-08 10:04:37.628  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboBox - ID_EXT: 1452243877627, User: cen13430 ... attachRecordSBO start.
+2016-01-08 10:04:37.629  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Adding dynamic group cs_superusers_dynamic into session for User: cen13430.
+2016-01-08 10:04:37.642  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243877627, User: cen13430 ... findByDuid start.
+2016-01-08 10:04:37.648  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243877627, User: cen13430 ... validateNumberSeries start.
+2016-01-08 10:04:37.650  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243877627, User: cen13430 ... validateNumberSeries end [100].
+2016-01-08 10:04:37.657  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243877627, User: cen13430 ... findByDuid end [100].
+2016-01-08 10:04:37.665  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243877627, User: cen13430 ... lockObject start.
+2016-01-08 10:04:37.665  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - lockObject: input: ObjectLockerInput [boAbsObjectId=08029396862a5cdb, joinName=, waitIntervalSec=0, boAbsObjectIds=[]]
+2016-01-08 10:04:37.667  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243877627, User: cen13430 ... lockObject end [100].
+2016-01-08 10:04:37.667  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243877627, User: cen13430 ... recReqStateProc start.
+2016-01-08 10:04:37.668  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243877627, User: cen13430 ... setRecordState start.
+2016-01-08 10:04:37.670  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243877627, User: cen13430 ... lockObject start.
+2016-01-08 10:04:37.670  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - lockObject: input: ObjectLockerInput [boAbsObjectId=08029396862a5cdb, joinName=, waitIntervalSec=0, boAbsObjectIds=[]]
+2016-01-08 10:04:37.672  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243877627, User: cen13430 ... lockObject end [100].
+2016-01-08 10:04:37.702  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243877627, User: cen13430 ... createOkErrorOutput start.
+2016-01-08 10:04:37.702  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243877627, User: cen13430 ... createErroOutput start.
+2016-01-08 10:04:37.703  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - ID_EXT: 1452243877627, User: cen13430 ... getErrorMessage start.
+2016-01-08 10:04:37.703  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - getErrorMessage: ID_EXT: 1452243877627, User: cen13430, get errId EMC-0074
+2016-01-08 10:04:37.703  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - ID_EXT: 1452243877627, User: cen13430 ... getErrorMessage end [100].
+2016-01-08 10:04:37.703  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243877627, User: cen13430 ... createErroOutput end [100].
+2016-01-08 10:04:37.703  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243877627, User: cen13430 ... createOkErrorOutput end [100].
+2016-01-08 10:04:37.704  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243877627, User: cen13430 ... setRecordState end [70].
+2016-01-08 10:04:37.713  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboBox - ID_EXT: 1452243877627, User: cen13430 ... addRecordToBoxSBO start.
+2016-01-08 10:04:37.721  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243877627, User: cen13430 ... lockObject start.
+2016-01-08 10:04:37.721  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - lockObject: input: ObjectLockerInput [boAbsObjectId=08029396862a5cdb, joinName=, waitIntervalSec=0, boAbsObjectIds=[]]
+2016-01-08 10:04:37.724  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243877627, User: cen13430 ... lockObject end [100].
+2016-01-08 10:04:37.726  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243877627, User: cen13430 ... lockObject start.
+2016-01-08 10:04:37.726  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - lockObject: input: ObjectLockerInput [boAbsObjectId=0802939684d79e30, joinName=, waitIntervalSec=0, boAbsObjectIds=[]]
+2016-01-08 10:04:37.728  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243877627, User: cen13430 ... lockObject end [100].
+2016-01-08 10:04:37.731  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452243877731, User: cen13430
+2016-01-08 10:04:37.732  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboDQLUtils - ID_EXT: 1452243877731, User: cen13430 ... createRelations start.
+2016-01-08 10:04:37.745  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboDQLUtils - createRelations: Relation cs_record__box between parent 08029396862a5cdb and child 0802939684d79e30 created with id 370293968fee3133
+2016-01-08 10:04:37.746  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboDQLUtils - ID_EXT: 1452243877731, User: cen13430 ... createRelations end [100].
+2016-01-08 10:04:37.806  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboBox - ID_EXT: 1452243877627, User: cen13430 ... addRecordToBoxSBO end [100].
+2016-01-08 10:04:37.814  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452243877814, User: cen13430
+2016-01-08 10:04:37.814  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRelation - ID_EXT: 1452243877814, User: cen13430 ... relationSaveHistory start.
+2016-01-08 10:04:37.815  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243877814, User: cen13430 ... createOkErrorOutput start.
+2016-01-08 10:04:37.815  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243877814, User: cen13430 ... createErroOutput start.
+2016-01-08 10:04:37.815  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - ID_EXT: 1452243877814, User: cen13430 ... getErrorMessage start.
+2016-01-08 10:04:37.815  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - getErrorMessage: ID_EXT: 1452243877814, User: cen13430, get errId EMC-0113
+2016-01-08 10:04:37.816  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - ID_EXT: 1452243877814, User: cen13430 ... getErrorMessage end [100].
+2016-01-08 10:04:37.816  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243877814, User: cen13430 ... createErroOutput end [100].
+2016-01-08 10:04:37.816  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243877814, User: cen13430 ... createOkErrorOutput end [100].
+2016-01-08 10:04:37.820  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRelation - ID_EXT: 1452243877814, User: cen13430 ... relationSaveHistory end [100].
+2016-01-08 10:04:37.821  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243877627, User: cen13430 ... recReqStateProc end [100].
+2016-01-08 10:04:37.822  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Removing dynamic group cs_superusers_dynamic from session for User: cen13430.
+2016-01-08 10:04:37.823  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboBox - ID_EXT: 1452243877627, User: cen13430 ... attachRecordSBO end [200].
+2016-01-08 10:04:37.870  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] com.emc.xcp.rest.core.process.controller.ProcessController - startProcess: User: su025709, Process: cs_cs_sp_record_find_by_duid
+2016-01-08 10:04:37.873  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452243877873, User: su025709
+2016-01-08 10:04:37.874  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243877873, User: su025709 ... findByDuid start.
+2016-01-08 10:04:37.878  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Adding dynamic group cs_superusers_dynamic into session for User: su025709.
+2016-01-08 10:04:37.912  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243877873, User: su025709 ... validateNumberSeries start.
+2016-01-08 10:04:37.915  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243877873, User: su025709 ... validateNumberSeries end [100].
+2016-01-08 10:04:37.915  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Removing dynamic group cs_superusers_dynamic from session for User: su025709.
+2016-01-08 10:04:37.916  INFO [xCP]  [[ACTIVE] ExecuteThread: '31' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243877873, User: su025709 ... findByDuid end [100].
+2016-01-08 10:04:37.932  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] com.emc.xcp.rest.core.process.controller.ProcessController - startProcess: User: su025709, Process: cs_cs_sp_box_record_attach
+2016-01-08 10:04:37.935  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452243877935, User: su025709
+2016-01-08 10:04:37.936  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboBox - ID_EXT: 1452243877935, User: su025709 ... attachRecordSBO start.
+2016-01-08 10:04:37.940  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Adding dynamic group cs_superusers_dynamic into session for User: su025709.
+2016-01-08 10:04:37.961  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243877935, User: su025709 ... findByDuid start.
+2016-01-08 10:04:37.966  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243877935, User: su025709 ... validateNumberSeries start.
+2016-01-08 10:04:37.969  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243877935, User: su025709 ... validateNumberSeries end [100].
+2016-01-08 10:04:38.007  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243877935, User: su025709 ... findByDuid end [100].
+2016-01-08 10:04:38.015  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243877935, User: su025709 ... lockObject start.
+2016-01-08 10:04:38.015  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - lockObject: input: ObjectLockerInput [boAbsObjectId=08029396862bfca5, joinName=, waitIntervalSec=0, boAbsObjectIds=[]]
+2016-01-08 10:04:38.017  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243877935, User: su025709 ... lockObject end [100].
+2016-01-08 10:04:38.017  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243877935, User: su025709 ... recReqStateProc start.
+2016-01-08 10:04:38.018  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243877935, User: su025709 ... setRecordState start.
+2016-01-08 10:04:38.021  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243877935, User: su025709 ... lockObject start.
+2016-01-08 10:04:38.021  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - lockObject: input: ObjectLockerInput [boAbsObjectId=08029396862bfca5, joinName=, waitIntervalSec=0, boAbsObjectIds=[]]
+2016-01-08 10:04:38.023  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243877935, User: su025709 ... lockObject end [100].
+2016-01-08 10:04:38.069  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243877935, User: su025709 ... createOkErrorOutput start.
+2016-01-08 10:04:38.069  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243877935, User: su025709 ... createErroOutput start.
+2016-01-08 10:04:38.070  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - ID_EXT: 1452243877935, User: su025709 ... getErrorMessage start.
+2016-01-08 10:04:38.070  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - getErrorMessage: ID_EXT: 1452243877935, User: su025709, get errId EMC-0074
+2016-01-08 10:04:38.070  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - ID_EXT: 1452243877935, User: su025709 ... getErrorMessage end [100].
+2016-01-08 10:04:38.071  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243877935, User: su025709 ... createErroOutput end [100].
+2016-01-08 10:04:38.071  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243877935, User: su025709 ... createOkErrorOutput end [100].
+2016-01-08 10:04:38.071  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243877935, User: su025709 ... setRecordState end [70].
+2016-01-08 10:04:38.080  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboBox - ID_EXT: 1452243877935, User: su025709 ... addRecordToBoxSBO start.
+2016-01-08 10:04:38.087  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243877935, User: su025709 ... lockObject start.
+2016-01-08 10:04:38.087  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - lockObject: input: ObjectLockerInput [boAbsObjectId=08029396862bfca5, joinName=, waitIntervalSec=0, boAbsObjectIds=[]]
+2016-01-08 10:04:38.089  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243877935, User: su025709 ... lockObject end [100].
+2016-01-08 10:04:38.096  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243877935, User: su025709 ... lockObject start.
+2016-01-08 10:04:38.096  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - lockObject: input: ObjectLockerInput [boAbsObjectId=0802939682b595b1, joinName=, waitIntervalSec=0, boAbsObjectIds=[]]
+2016-01-08 10:04:38.098  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243877935, User: su025709 ... lockObject end [100].
+2016-01-08 10:04:38.102  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452243878102, User: su025709
+2016-01-08 10:04:38.103  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboDQLUtils - ID_EXT: 1452243878102, User: su025709 ... createRelations start.
+2016-01-08 10:04:38.118  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboDQLUtils - createRelations: Relation cs_record__box between parent 08029396862bfca5 and child 0802939682b595b1 created with id 370293968fee3134
+2016-01-08 10:04:38.119  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboDQLUtils - ID_EXT: 1452243878102, User: su025709 ... createRelations end [100].
+2016-01-08 10:04:38.308  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboBox - ID_EXT: 1452243877935, User: su025709 ... addRecordToBoxSBO end [100].
+2016-01-08 10:04:38.318  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452243878318, User: su025709
+2016-01-08 10:04:38.319  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRelation - ID_EXT: 1452243878318, User: su025709 ... relationSaveHistory start.
+2016-01-08 10:04:38.319  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243878318, User: su025709 ... createOkErrorOutput start.
+2016-01-08 10:04:38.320  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243878318, User: su025709 ... createErroOutput start.
+2016-01-08 10:04:38.320  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - ID_EXT: 1452243878318, User: su025709 ... getErrorMessage start.
+2016-01-08 10:04:38.320  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - getErrorMessage: ID_EXT: 1452243878318, User: su025709, get errId EMC-0113
+2016-01-08 10:04:38.321  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - ID_EXT: 1452243878318, User: su025709 ... getErrorMessage end [100].
+2016-01-08 10:04:38.322  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243878318, User: su025709 ... createErroOutput end [100].
+2016-01-08 10:04:38.322  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243878318, User: su025709 ... createOkErrorOutput end [100].
+2016-01-08 10:04:38.340  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRelation - ID_EXT: 1452243878318, User: su025709 ... relationSaveHistory end [100].
+2016-01-08 10:04:38.342  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243877935, User: su025709 ... recReqStateProc end [100].
+2016-01-08 10:04:38.342  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Removing dynamic group cs_superusers_dynamic from session for User: su025709.
+2016-01-08 10:04:38.344  INFO [xCP]  [[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboBox - ID_EXT: 1452243877935, User: su025709 ... attachRecordSBO end [200].
+2016-01-08 10:04:38.401  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] com.emc.xcp.rest.core.process.controller.ProcessController - startProcess: User: ul019086, Process: cs_cs_sp_find_produkt
+2016-01-08 10:04:38.405  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452243878405, User: ul019086
+2016-01-08 10:04:38.406  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboSpis - ID_EXT: 1452243878405, User: ul019086 ... findProduct start.
+2016-01-08 10:04:38.409  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Adding dynamic group cs_superusers_dynamic into session for User: ul019086.
+2016-01-08 10:04:38.414  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboSpisUtils - ID_EXT: 1452243878405, User: ul019086 ... validateFindProductInput start.
+2016-01-08 10:04:38.415  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboSpisUtils - ID_EXT: 1452243878405, User: ul019086 ... validateFindProductId start.
+2016-01-08 10:04:38.418  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboSpisUtils - ID_EXT: 1452243878405, User: ul019086 ... validateFindProductId end [100].
+2016-01-08 10:04:38.422  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboSpisUtils - ID_EXT: 1452243878405, User: ul019086 ... validateFindProductInput end [100].
+2016-01-08 10:04:38.423  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsPersOrgService - ID_EXT: 1452243878405, User: ul019086 ... searchProduct start.
+2016-01-08 10:04:38.444  WARN [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.helper.HeaderHandler - MSG:<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header><mw:MWHeader xmlns:mw="http://schemas.csas.cz/mw/"><mw:msguid>873300121656</mw:msguid><mw:trnsrc>87</mw:trnsrc><mw:trnsrcname>espis</mw:trnsrcname><mw:trnuser>ul019086</mw:trnuser></mw:MWHeader></SOAP-ENV:Header><S:Body><ns0:searchProductInstancePositionRequest xmlns:ns0="http://csas.cz/services/CgpService/v02_04" xmlns:ns10="http://csas.cz/CDM/v02/Products/Deposits" xmlns:ns14="http://csas.cz/BOM/v02/service/Technical" xmlns:ns2="http://csas.cz/CDM/v02/CrossDomain/ITSupport" xmlns:ns3="http://csas.cz/CDM/v02/Products/Loans" xmlns:ns4="http://csas.cz/CDM/v02/Steering/Party" xmlns:ns7="http://csas.cz/CDM/v02/Products" xmlns:ns9="http://csas.cz/CDM/v02/Products/Cards"><ns0:evidenceNumberSearchString>543831169</ns0:evidenceNumberSearchString><ns0:includeClosedInstances>true</ns0:includeClosedInstances><ns0:includeDeletedRelations>true</ns0:includeDeletedRelations><ns0:includeNotAliveInstances>true</ns0:includeNotAliveInstances><ns0:productRelationship><ns7:relationshipType>espis</ns7:relationshipType></ns0:productRelationship></ns0:searchProductInstancePositionRequest></S:Body></S:Envelope>.
+2016-01-08 10:04:38.605  WARN [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsPersOrgService - Search product instance dump:SearchProduct [cluid=2001-08-16-00.25.10.578470, productRelationType=42, bProductID=SB0_45254, fProductID=CPT_74, contractNumber=000000-0543831169/0800, productStatus=false, csInternalId=SB1.0000000543831169, organizationName=, registrationNumber=, instanceFirstName=Blanka, instanceLastName=Hujerová, instanceBirthNumber=7857022756, instanceDegree=, instanceAdditionalDegree=, sourceSystem=SB].
+2016-01-08 10:04:38.605  WARN [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsPersOrgService - RTODS default choose:SearchProduct [cluid=2001-08-16-00.25.10.578470, productRelationType=42, bProductID=SB0_45254, fProductID=CPT_74, contractNumber=000000-0543831169/0800, productStatus=false, csInternalId=SB1.0000000543831169, organizationName=, registrationNumber=, instanceFirstName=Blanka, instanceLastName=Hujerová, instanceBirthNumber=7857022756, instanceDegree=, instanceAdditionalDegree=, sourceSystem=SB].
+2016-01-08 10:04:38.606  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsPersOrgService - ID_EXT: 1452243878405, User: ul019086 ... searchProduct end [100].
+2016-01-08 10:04:38.606  WARN [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboSpis - searchProductInput = SearchProductInput [cluid=null, ProductInstDescr=543831169, TechnicalAgreementId=null, pageNumber=0, pageSize=0, productSourceSystem=null]
+2016-01-08 10:04:38.606  WARN [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboSpis - searchProductOutput = SearchProductOutput [searchProducts=[SearchProduct [cluid=2001-08-16-00.25.10.578470, productRelationType=42, bProductID=SB0_45254, fProductID=CPT_74, contractNumber=000000-0543831169/0800, productStatus=false, csInternalId=SB1.0000000543831169, organizationName=, registrationNumber=, instanceFirstName=Blanka, instanceLastName=Hujerová, instanceBirthNumber=7857022756, instanceDegree=, instanceAdditionalDegree=, sourceSystem=SB]]]
+2016-01-08 10:04:38.606  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboSpisUtils - ID_EXT: 1452243878405, User: ul019086 ... makeProduct start.
+2016-01-08 10:04:38.606  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboSpisUtils - ID_EXT: 1452243878405, User: ul019086 ... getProductObjId start.
+2016-01-08 10:04:38.608  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboSpisUtils - ID_EXT: 1452243878405, User: ul019086 ... getProductObjId end [100].
+2016-01-08 10:04:38.608  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboSpisUtils - ID_EXT: 1452243878405, User: ul019086 ... getExistingProduct start.
+2016-01-08 10:04:38.630  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboSpisUtils - ID_EXT: 1452243878405, User: ul019086 ... getExistingProduct end [10].
+2016-01-08 10:04:38.631  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243878405, User: ul019086 ... lockObject start.
+2016-01-08 10:04:38.631  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - lockObject: input: ObjectLockerInput [boAbsObjectId=0802939685fbd14d, joinName=, waitIntervalSec=0, boAbsObjectIds=[]]
+2016-01-08 10:04:38.633  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243878405, User: ul019086 ... lockObject end [100].
+2016-01-08 10:04:38.633  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboSpisUtils - ID_EXT: 1452243878405, User: ul019086 ... makeProduct end [100].
+2016-01-08 10:04:38.633  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Removing dynamic group cs_superusers_dynamic from session for User: ul019086.
+2016-01-08 10:04:38.634  INFO [xCP]  [[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboSpis - ID_EXT: 1452243878405, User: ul019086 ... findProduct end [100].
+2016-01-08 10:04:38.643  INFO [xCP]  [[ACTIVE] ExecuteThread: '14' for queue: 'weblogic.kernel.Default (self-tuning)'] com.emc.xcp.rest.core.process.controller.ProcessController - startProcess: User: cen38635, Process: cs_cs_sp_search_rec_stm_by_duid
+2016-01-08 10:04:38.645  INFO [xCP]  [[ACTIVE] ExecuteThread: '14' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452243878645, User: cen38635
+2016-01-08 10:04:38.645  INFO [xCP]  [[ACTIVE] ExecuteThread: '14' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243878645, User: cen38635 ... validateNumberSeries start.
+2016-01-08 10:04:38.660  INFO [xCP]  [[ACTIVE] ExecuteThread: '14' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Adding dynamic group cs_superusers_dynamic into session for User: cen38635.
+2016-01-08 10:04:38.664  INFO [xCP]  [[ACTIVE] ExecuteThread: '14' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Removing dynamic group cs_superusers_dynamic from session for User: cen38635.
+2016-01-08 10:04:38.666  INFO [xCP]  [[ACTIVE] ExecuteThread: '14' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Adding dynamic group cs_superusers_dynamic into session for User: cen38635.
+2016-01-08 10:04:38.671  INFO [xCP]  [[ACTIVE] ExecuteThread: '14' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Removing dynamic group cs_superusers_dynamic from session for User: cen38635.
+2016-01-08 10:04:38.673  INFO [xCP]  [[ACTIVE] ExecuteThread: '14' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243878645, User: cen38635 ... validateNumberSeries end [100].
+2016-01-08 10:04:38.708  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] com.emc.xcp.rest.core.process.controller.ProcessController - startProcess: User: cen78663, Process: cs_cs_sp_record_save
+2016-01-08 10:04:38.711  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452243878711, User: cen78663
+2016-01-08 10:04:38.711  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243878711, User: cen78663 ... saveRecordWrapper start.
+2016-01-08 10:04:38.711  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243878711, User: cen78663 ... getWorkUnitIdFromRObjectId start.
+2016-01-08 10:04:38.715  WARN [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - workunit converted from r_object_id 080293968004a48b to work_unit_id HR0_50005141
+2016-01-08 10:04:38.716  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243878711, User: cen78663 ... getWorkUnitIdFromRObjectId end [100].
+2016-01-08 10:04:38.716  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243878711, User: cen78663 ... getWorkUnitIdFromRObjectId start.
+2016-01-08 10:04:38.718  WARN [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - workunit converted from r_object_id  to work_unit_id null
+2016-01-08 10:04:38.719  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243878711, User: cen78663 ... getWorkUnitIdFromRObjectId end [100].
+2016-01-08 10:04:38.720  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Adding dynamic group cs_superusers_dynamic into session for User: cen78663.
+2016-01-08 10:04:38.726  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Removing dynamic group cs_superusers_dynamic from session for User: cen78663.
+2016-01-08 10:04:38.728  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243878711, User: cen78663 ... saveRecord start.
+2016-01-08 10:04:38.728  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - SaveRecordInput [boxId=, boxTypeName=, csLocalities=HR0_50005141, dateIn=null, events=null, isMigration=false, objectRecord=CsRecord [duid=CS41000001206190, dateOfSignature=null, refNumber=, pageNo1=1, sheetNo=0, closeDate=null, shreddingChar=, retentionPeriodAnalog=0, retentionPeriodDigi=0, retentionPeriodStart=null, recordForm=, statRec=Zaevidovaný, statPlace=Na poboèce, closeType=null, shrSuggAnalogDate=null, shrSuggDigiDate=null, shrApprAnalogDate=null, shrApprDigiDate=null, isDuidPrinted=false, isScanNotify=false, statRecChange=null, statPlaceChange=null, inputDate=null, checkFlag=false, documentType=null, dateOfRegistration=null, digitalRecordLevel=null, shreddingProcessedAnalogDate=null, shreddingProcessedDigitalDate=null, boxId=null, boxOrderNo=0, aclName=null, folderId=null, internalHashCode=0], objectRecordType=CsRecordType [recordTypeId=100012, recordTypeName=null, objectType=null, pageNoReq=false, pageNoDef=0, sheetNoReq=false, sheetNoDef=0, dateOfSingnatureReq=false, shreddingChar=null, retentionPeriodAnalog=0, retentionPeriodDigi=0, retentionPeriodCancel=0, retentionPeriodDiscard=0, elSignScanReq=false, isControlledPrint=false, contentlessDaysNo=0, registeredDaysNo=0, digitalRecordLevel=null, digitalRecordSign=false, firstStat=null, triggerEventStart=0, checkPct=0, autoStorno=false, isExternal=false, isOneOfCollection=false, convertToPdfa=false, isScanReq=false, securityLevel=null, customTypeName=null, defaultRecordForm=null], objectSpis=[], orderNo=null, posId=, userName=cen78663, workUnitEvidId=null, isWithoutCheck=false]
+2016-01-08 10:04:38.728  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243878711, User: cen78663 ... saveRecord end [10 getSession].
+2016-01-08 10:04:38.729  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.helper.SessionHelper - ID_EXT: 1452243878711, User: cen78663 ... reassignUser start.
+2016-01-08 10:04:38.729  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.helper.SessionHelper - reassignUser: User will not be reassigned. Session User: cen78663. Context: CsContext [requestId=1452243878711, requestedUser=cen78663, repositorName=espis, durationTracker=null, adHocObjects={}]. Session Transaction Active: true
+2016-01-08 10:04:38.729  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.helper.SessionHelper - ID_EXT: 1452243878711, User: cen78663 ... reassignUser end [100].
+2016-01-08 10:04:38.730  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243878711, User: cen78663 ... saveRecord end [11 reassign user].
+2016-01-08 10:04:38.731  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Adding dynamic group cs_superusers_dynamic into session for User: cen78663.
+2016-01-08 10:04:38.732  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboRecordUtils - ID_EXT: 1452243878711, User: cen78663 ... refreshObjectRecordType start.
+2016-01-08 10:04:38.733  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboRecordUtils - ID_EXT: 1452243878711, User: cen78663 ... getRecordTypeByRecordTypeId start.
+2016-01-08 10:04:38.787  INFO [xCP]  [[ACTIVE] ExecuteThread: '4' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.xcp.services.util.user.NessUtilUser - hasUserAccessToPage end. User: cen38635 has access to page cs:cs_record/08029396862a484c/cs_pb_rec_detail
+2016-01-08 10:04:38.890  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboRecordUtils - ID_EXT: 1452243878711, User: cen78663 ... constructRecordTypeFromCollection start.
+2016-01-08 10:04:38.890  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboRecordUtils - ID_EXT: 1452243878711, User: cen78663 ... constructRecordTypeFromCollection end [100].
+2016-01-08 10:04:38.890  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboRecordUtils - ID_EXT: 1452243878711, User: cen78663 ... getRecordTypeByRecordTypeId end [100].
+2016-01-08 10:04:38.891  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboRecordUtils - ID_EXT: 1452243878711, User: cen78663 ... refreshObjectRecordType end [100].
+2016-01-08 10:04:38.891  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboRecordUtils - ID_EXT: 1452243878711, User: cen78663 ... validateSaveRecordInput start.
+2016-01-08 10:04:38.891  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboRecordUtils - SaveRecordInput variables SaveRecordInput [boxId=, boxTypeName=, csLocalities=HR0_50005141, dateIn=null, events=null, isMigration=false, objectRecord=CsRecord [duid=CS41000001206190, dateOfSignature=null, refNumber=, pageNo1=1, sheetNo=0, closeDate=null, shreddingChar=, retentionPeriodAnalog=0, retentionPeriodDigi=0, retentionPeriodStart=null, recordForm=, statRec=Zaevidovaný, statPlace=Na poboèce, closeType=null, shrSuggAnalogDate=null, shrSuggDigiDate=null, shrApprAnalogDate=null, shrApprDigiDate=null, isDuidPrinted=false, isScanNotify=false, statRecChange=null, statPlaceChange=null, inputDate=null, checkFlag=false, documentType=null, dateOfRegistration=null, digitalRecordLevel=null, shreddingProcessedAnalogDate=null, shreddingProcessedDigitalDate=null, boxId=null, boxOrderNo=0, aclName=null, folderId=null, internalHashCode=0], objectRecordType=null, objectSpis=[], orderNo=null, posId=, userName=cen78663, workUnitEvidId=null, isWithoutCheck=false]
+2016-01-08 10:04:38.891  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboRecordUtils - ID_EXT: 1452243878711, User: cen78663 ... validateSaveRecordInput end [10 validateSaveRecordInput start].
+2016-01-08 10:04:38.892  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboRecordUtils - ID_EXT: 1452243878711, User: cen78663 ... duidExists start.
+2016-01-08 10:04:38.894  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboRecordUtils - ID_EXT: 1452243878711, User: cen78663 ... duidExists end [100].
+2016-01-08 10:04:38.894  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboRecordUtils - ID_EXT: 1452243878711, User: cen78663 ... validateSaveRecordInput end [20 validateSaveRecordInput duidexist].
+2016-01-08 10:04:38.896  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboRecordUtils - ID_EXT: 1452243878711, User: cen78663 ... getRecordTypeByRecordTypeId start.
+2016-01-08 10:04:38.909  INFO [xCP]  [[ACTIVE] ExecuteThread: '4' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.xcp.services.util.user.NessUtilUser - hasUserAccessToPage end. User: cen38635 has access to page cs:cs_record/business-objects%2Fcs_record%2F08029396862a484c/cs_pb_rec_detail
+2016-01-08 10:04:39.049  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboRecordUtils - ID_EXT: 1452243878711, User: cen78663 ... constructRecordTypeFromCollection start.
+2016-01-08 10:04:39.049  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboRecordUtils - ID_EXT: 1452243878711, User: cen78663 ... constructRecordTypeFromCollection end [100].
+2016-01-08 10:04:39.049  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboRecordUtils - ID_EXT: 1452243878711, User: cen78663 ... getRecordTypeByRecordTypeId end [100].
+2016-01-08 10:04:39.053  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243878711, User: cen78663 ... lockObject start.
+2016-01-08 10:04:39.053  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - lockObject: input: ObjectLockerInput [boAbsObjectId=08029396834edd67, joinName=, waitIntervalSec=0, boAbsObjectIds=[]]
+2016-01-08 10:04:39.056  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452243878711, User: cen78663 ... lockObject end [100].
+2016-01-08 10:04:39.057  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboRecordUtils - ID_EXT: 1452243878711, User: cen78663 ... hasCheckEditRights start.
+2016-01-08 10:04:39.057  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboRecordUtils - ID_EXT: 1452243878711, User: cen78663 ... hasCheckEditRights end [100].
+2016-01-08 10:04:39.064  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboRecordTypeUtils - ID_EXT: 1452243878711, User: cen78663 ... getRecordTypeIdByDuid start.
+2016-01-08 10:04:39.066  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboRecordTypeUtils - ID_EXT: 1452243878711, User: cen78663 ... getRecordTypeIdByDuid end [100].
+2016-01-08 10:04:39.066  INFO [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Removing dynamic group cs_superusers_dynamic from session for User: cen78663.
+2016-01-08 10:04:39.068 ERROR [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] com.documentum.bps.outbound.bof.runtime.BOFClient - Exception thrown by the underlying method: public cz.ness.documentum.cskld.sbo.dto.recordsbo.SaveRecordWrapperOutput cz.ness.documentum.cskld.module.impl.CsRecordExt.saveRecordWrapper(cz.ness.documentum.cskld.sbo.dto.recordsbo.SaveRecordWrapperInput) throws com.documentum.fc.common.DfException
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.GeneratedMethodAccessor659.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.documentum.bps.outbound.bof.runtime.BOFClient.invokeMethod(BOFClient.java:112)
+	at com.documentum.bps.outbound.bof.runtime.BofModuleService.executeServiceOperation(BofModuleService.java:133)
+	at com.documentum.bps.outbound.AbstractService.executeServiceInternal(AbstractService.java:122)
+	at com.documentum.bps.outbound.AbstractService.execute(AbstractService.java:79)
+	at com.documentum.bpm.engine.utils.InvokeOutboundService.executeService(InvokeOutboundService.java:116)
+	at com.documentum.bpm.engine.utils.InvokeOutboundService.invokeService(InvokeOutboundService.java:71)
+	at com.documentum.bpm.engine.model.activity.OutboundActivityTaskHandler.executeWorkitem(OutboundActivityTaskHandler.java:48)
+	at com.documentum.bpm.engine.runtime.AutomaticWorkitemHandler.executeService(AutomaticWorkitemHandler.java:256)
+	at com.documentum.bpm.engine.runtime.AutomaticWorkitemHandler.execute(AutomaticWorkitemHandler.java:119)
+	at com.documentum.bpm.engine.runtime.ProcessEngineImpl.recursiveAutomaticWorkitemExecution(ProcessEngineImpl.java:422)
+	at com.documentum.bpm.engine.runtime.ProcessEngineImpl.executeSync(ProcessEngineImpl.java:273)
+	at com.documentum.bpm.engine.runtime.ProcessEngineImpl.startWorkflowSynchronously(ProcessEngineImpl.java:226)
+	at com.documentum.bpm.engine.StatelessEngine.executeInternal(StatelessEngine.java:101)
+	at com.documentum.bpm.engine.StatelessEngine.execute(StatelessEngine.java:79)
+	at com.emc.xcp.rest.core.process.commons.StatelessWorkflowEngineWrapper.execute(StatelessWorkflowEngineWrapper.java:45)
+	at com.emc.xcp.rest.core.process.dao.impl.ProcessDaoImpl.startStatelessProcess(ProcessDaoImpl.java:190)
+	at com.emc.xcp.rest.core.process.dao.impl.ProcessDaoImpl.startProcess(ProcessDaoImpl.java:110)
+	at com.emc.xcp.rest.core.process.service.impl.ProcessServiceImpl.startProcess(ProcessServiceImpl.java:22)
+	at com.emc.xcp.rest.core.process.controller.ProcessController.startProcess(ProcessController.java:100)
+	at sun.reflect.GeneratedMethodAccessor188.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:219)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:745)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:686)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:856)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:936)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:838)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:751)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:812)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:844)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:242)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:216)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:132)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:338)
+	at weblogic.servlet.internal.TailFilter.doFilter(TailFilter.java:25)
+	at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:74)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:74)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:118)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:84)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:103)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:54)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:45)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at com.emc.xcp.rest.security.filter.BasicAuthFilter.doFilter(BasicAuthFilter.java:51)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at com.emc.xcp.rest.security.filter.SpnegoAuthFilter.doFilter(SpnegoAuthFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:183)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:87)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:192)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:160)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:259)
+	at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:74)
+	at com.emc.xcp.rest.security.filter.RepositoryInfoFilter.doFilter(RepositoryInfoFilter.java:33)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:259)
+	at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:74)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:74)
+	at com.emc.xcp.ui.LocaleFilter.doFilter(LocaleFilter.java:26)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:259)
+	at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:74)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at com.emc.xcp.ui.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:43)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:74)
+	at weblogic.servlet.internal.RequestEventsFilter.doFilter(RequestEventsFilter.java:27)
+	at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:74)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3296)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3262)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.provider.WlsSubjectHandle.run(WlsSubjectHandle.java:57)
+	at weblogic.servlet.internal.WebAppServletContext.doSecuredExecute(WebAppServletContext.java:2171)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2097)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2075)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1513)
+	at weblogic.servlet.provider.ContainerSupportProviderImpl$WlsRequestExecutor.run(ContainerSupportProviderImpl.java:254)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+Caused by: java.lang.NullPointerException
+	at cz.ness.documentum.cskld.sbo.utils.CsSboRecordUtils.validateSaveRecordInput(CsSboRecordUtils.java:208)
+	at cz.ness.documentum.cskld.sbo.impl.CsSboRecord.saveRecord(CsSboRecord.java:773)
+	at cz.ness.documentum.cskld.sbo.impl.CsSboRecord.saveRecordWrapper(CsSboRecord.java:1911)
+	at cz.ness.documentum.cskld.module.impl.CsRecordExt.saveRecordWrapper(CsRecordExt.java:130)
+	... 107 more
+2016-01-08 10:04:39.069 ERROR [xCP]  [[ACTIVE] ExecuteThread: '24' for queue: 'weblogic.kernel.Default (self-tuning)'] com.documentum.bps.outbound.bof.runtime.BofModuleService - Error in executing service
+java.lang.RuntimeException: Could not invoke the method 'saveRecordWrapper' from interface 'class cz.ness.documentum.cskld.module.impl.CsRecordExt' from BOF module 'cs_CsRecordExt'
+	at com.documentum.bps.outbound.bof.runtime.BOFClient.invokeMethod(BOFClient.java:121)
+	at com.documentum.bps.outbound.bof.runtime.BofModuleService.executeServiceOperation(BofModuleService.java:133)
+	at com.documentum.bps.outbound.AbstractService.executeServiceInternal(AbstractService.java:122)
+	at com.documentum.bps.outbound.AbstractService.execute(AbstractService.java:79)
+	at com.documentum.bpm.engine.utils.InvokeOutboundService.executeService(InvokeOutboundService.java:116)
+	at com.documentum.bpm.engine.utils.InvokeOutboundService.invokeService(InvokeOutboundService.java:71)
+	at com.documentum.bpm.engine.model.activity.OutboundActivityTaskHandler.executeWorkitem(OutboundActivityTaskHandler.java:48)
+	at com.documentum.bpm.engine.runtime.AutomaticWorkitemHandler.executeService(AutomaticWorkitemHandler.java:256)
+	at com.documentum.bpm.engine.runtime.AutomaticWorkitemHandler.execute(AutomaticWorkitemHandler.java:119)
+	at com.documentum.bpm.engine.runtime.ProcessEngineImpl.recursiveAutomaticWorkitemExecution(ProcessEngineImpl.java:422)
+	at com.documentum.bpm.engine.runtime.ProcessEngineImpl.executeSync(ProcessEngineImpl.java:273)
+	at com.documentum.bpm.engine.runtime.ProcessEngineImpl.startWorkflowSynchronously(ProcessEngineImpl.java:226)
+	at com.documentum.bpm.engine.StatelessEngine.executeInternal(StatelessEngine.java:101)
+	at com.documentum.bpm.engine.StatelessEngine.execute(StatelessEngine.java:79)
+	at com.emc.xcp.rest.core.process.commons.StatelessWorkflowEngineWrapper.execute(StatelessWorkflowEngineWrapper.java:45)
+	at com.emc.xcp.rest.core.process.dao.impl.ProcessDaoImpl.startStatelessProcess(ProcessDaoImpl.java:190)
+	at com.emc.xcp.rest.core.process.dao.impl.ProcessDaoImpl.startProcess(ProcessDaoImpl.java:110)
+	at com.emc.xcp.rest.core.process.service.impl.ProcessServiceImpl.startProcess(ProcessServiceImpl.java:22)
+	at com.emc.xcp.rest.core.process.controller.ProcessController.startProcess(ProcessController.java:100)
+	at sun.reflect.GeneratedMethodAccessor188.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:219)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:132)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:745)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:686)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:856)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:936)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:838)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:751)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:812)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:844)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:242)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:216)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:132)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:338)
+	at weblogic.servlet.internal.TailFilter.doFilter(TailFilter.java:25)
+	at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:74)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:74)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:330)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:118)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:84)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:103)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:54)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:45)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at com.emc.xcp.rest.security.filter.BasicAuthFilter.doFilter(BasicAuthFilter.java:51)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at com.emc.xcp.rest.security.filter.SpnegoAuthFilter.doFilter(SpnegoAuthFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:183)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:87)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:342)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:192)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:160)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:259)
+	at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:74)
+	at com.emc.xcp.rest.security.filter.RepositoryInfoFilter.doFilter(RepositoryInfoFilter.java:33)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:259)
+	at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:74)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:74)
+	at com.emc.xcp.ui.LocaleFilter.doFilter(LocaleFilter.java:26)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:259)
+	at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:74)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at com.emc.xcp.ui.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:43)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:74)
+	at weblogic.servlet.internal.RequestEventsFilter.doFilter(RequestEventsFilter.java:27)
+	at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:74)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3296)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3262)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:120)
+	at weblogic.servlet.provider.WlsSubjectHandle.run(WlsSubjectHandle.java:57)
+	at weblogic.servlet.internal.WebAppServletContext.doSecuredExecute(WebAppServletContext.java:2171)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2097)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2075)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1513)
+	at weblogic.servlet.provider.ContainerSupportProviderImpl$WlsRequestExecutor.run(ContainerSupportProviderImpl.java:254)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:256)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:221)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.GeneratedMethodAccessor659.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.documentum.bps.outbound.bof.runtime.BOFClient.invokeMethod(BOFClient.java:112)
+	... 103 more
+Caused by: java.lang.NullPointerException
+	at cz.ness.documentum.cskld.sbo.utils.CsSboRecordUtils.validateSaveRecordInput(CsSboRecordUtils.java:208)
+	at cz.ness.documentum.cskld.sbo.impl.CsSboRecord.saveRecord(CsSboRecord.java:773)
+	at cz.ness.documentum.cskld.sbo.impl.CsSboRecord.saveRecordWrapper(CsSboRecord.java:1911)
+	at cz.ness.documentum.cskld.module.impl.CsRecordExt.saveRecordWrapper(CsRecordExt.java:130)
+	... 107 more
+2016-01-08 10:04:39.527  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] com.emc.xcp.rest.core.process.controller.ProcessController - startProcess: User: a4079033, Process: cs_cs_sp_record_find_by_duid
+2016-01-08 10:04:39.530  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452243879530, User: a4079033
+2016-01-08 10:04:39.530  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243879530, User: a4079033 ... findByDuid start.
+2016-01-08 10:04:39.531  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Adding dynamic group cs_superusers_dynamic into session for User: a4079033.
+2016-01-08 10:04:39.558  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243879530, User: a4079033 ... validateNumberSeries start.
+2016-01-08 10:04:39.560  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452243879530, User: a4079033 ... validateNumberSeries end [100].
+2016-01-08 10:04:39.561  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.helper.DynamicGroupHelper - Removing dynamic group cs_superusers_dynamic from session for User: a4079033.
+2016-01-08 10:04:39.562  INFO [xCP]  [[ACTIVE] ExecuteThread: '20' for queue: 'weblogic.kernel.Default (self-tuning)'] cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452243879530, User: a4079033 ... findByDuid end [100].
