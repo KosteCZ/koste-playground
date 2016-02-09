@@ -1,6 +1,0 @@
- 10:09:19.931  INFO | cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452244159926, User: cen83090 ... createErroOutput end [100].
- 10:09:19.931  INFO | cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452244159926, User: cen83090 ... createErroOutput end [100].
- 10:09:19.931  INFO | cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452244159926, User: cen83090 ... createErroOutput end [100].
- 10:09:19.931  INFO | cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452244159926, User: cen83090 ... createOkErrorOutput end [100].
- 10:09:19.933  INFO | cz.ness.documentum.cskld.helper.DynamicGroupHelper - Removing dynamic group cs_superusers_dynamic from session for User: cen83090.
- 10:09:19.935  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboRelation - ID_EXT: 1452244159926, User: cen83090 ... relationSaveHistory end [100].
