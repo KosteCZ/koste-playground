@@ -1,0 +1,19 @@
+ 10:09:21.177  INFO | com.emc.xcp.rest.core.process.controller.ProcessController - startProcess: User: cen83360, Process: cs_cs_sp_search_rec_for_appl
+ 10:09:21.180  INFO | cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452244161180, User: cen83360
+ 10:09:21.186  INFO | cz.ness.documentum.cskld.helper.DynamicGroupHelper - Adding dynamic group cs_superusers_dynamic into session for User: cen83360.
+ 10:09:21.190  INFO | cz.ness.documentum.cskld.helper.DynamicGroupHelper - Removing dynamic group cs_superusers_dynamic from session for User: cen83360.
+ 10:09:21.197  INFO | cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452244161197, User: cen83360
+ 10:09:21.197  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboDQLUtils - ID_EXT: 1452244161197, User: cen83360 ... pagedRead start.
+ 10:09:21.309  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboDQLUtils - ID_EXT: 1452244161197, User: cen83360 ... pagedRead end [100].
+ 10:09:29.705  INFO | com.emc.xcp.rest.core.process.controller.ProcessController - startProcess: User: bv020866, Process: cs_cs_sp_duid_validation
+ 10:09:29.708  INFO | cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452244169708, User: bv020866
+ 10:09:29.708  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452244169708, User: bv020866 ... duidValidation start.
+ 10:09:29.711  INFO | cz.ness.documentum.cskld.helper.DynamicGroupHelper - Adding dynamic group cs_superusers_dynamic into session for User: bv020866.
+ 10:09:29.717  INFO | cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452244169708, User: bv020866 ... validateNumberSeries start.
+ 10:09:29.721  INFO | cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452244169708, User: bv020866 ... validateNumberSeries end [100].
+ 10:09:29.726  INFO | cz.ness.documentum.cskld.helper.DynamicGroupHelper - Removing dynamic group cs_superusers_dynamic from session for User: bv020866.
+ 10:09:29.727  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452244169708, User: bv020866 ... duidValidation end [100].
+ 10:09:32.874  INFO | cz.ness.documentum.cskld.helper.DynamicGroupHelper - Adding dynamic group cs_superusers_dynamic into session for User: cen81687.
+ 10:09:32.877  INFO | cz.ness.documentum.cskld.helper.DynamicGroupHelper - Removing dynamic group cs_superusers_dynamic from session for User: cen81687.
+ 10:09:37.228  INFO | cz.ness.documentum.cskld.helper.DynamicGroupHelper - Adding dynamic group cs_superusers_dynamic into session for User: op039544.
+ 10:09:37.235  INFO | cz.ness.documentum.cskld.helper.DynamicGroupHelper - Removing dynamic group cs_superusers_dynamic from session for User: op039544.

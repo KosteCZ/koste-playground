@@ -1,0 +1,121 @@
+ 10:08:54.945  INFO | com.emc.xcp.rest.core.process.controller.ProcessController - startProcess: User: cen80437, Process: cs_cs_sp_add_record_to_box
+ 10:08:54.948  INFO | cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452244134947, User: cen80437
+ 10:08:54.948  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboBox - ID_EXT: 1452244134947, User: cen80437 ... addRecordToBoxSBO start.
+ 10:08:54.949  INFO | cz.ness.documentum.cskld.helper.DynamicGroupHelper - Adding dynamic group cs_superusers_dynamic into session for User: cen80437.
+ 10:08:54.962  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452244134947, User: cen80437 ... lockObject start.
+ 10:08:54.962  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboLock - lockObject: input: ObjectLockerInput [boAbsObjectId=08029396861111e3, joinName=, waitIntervalSec=0, boAbsObjectIds=[]]
+ 10:08:54.965  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452244134947, User: cen80437 ... lockObject end [100].
+ 10:08:54.968  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452244134947, User: cen80437 ... lockObject start.
+ 10:08:54.968  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboLock - lockObject: input: ObjectLockerInput [boAbsObjectId=0802939682c0a5fe, joinName=, waitIntervalSec=0, boAbsObjectIds=[]]
+ 10:08:54.970  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452244134947, User: cen80437 ... lockObject end [100].
+ 10:08:55.014  INFO | cz.ness.documentum.cskld.helper.DynamicGroupHelper - Removing dynamic group cs_superusers_dynamic from session for User: cen80437.
+ 10:08:55.016  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboBox - ID_EXT: 1452244134947, User: cen80437 ... addRecordToBoxSBO end [100].
+ 10:08:55.027  INFO | cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452244135027, User: cen80437
+ 10:08:55.027  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboRelation - ID_EXT: 1452244135027, User: cen80437 ... relationSaveHistory start.
+ 10:08:55.028  INFO | cz.ness.documentum.cskld.helper.DynamicGroupHelper - Adding dynamic group cs_superusers_dynamic into session for User: cen80437.
+ 10:08:55.029  INFO | cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452244135027, User: cen80437 ... createOkErrorOutput start.
+ 10:08:55.030  INFO | cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452244135027, User: cen80437 ... createErroOutput start.
+ 10:08:55.030  INFO | cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - ID_EXT: 1452244135027, User: cen80437 ... getErrorMessage start.
+ 10:08:55.030  INFO | cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - getErrorMessage: ID_EXT: 1452244135027, User: cen80437, get errId EMC-0115
+ 10:08:55.030  INFO | cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - ID_EXT: 1452244135027, User: cen80437 ... getErrorMessage end [100].
+ 10:08:55.031  INFO | cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452244135027, User: cen80437 ... createErroOutput end [100].
+ 10:08:55.031  INFO | cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452244135027, User: cen80437 ... createOkErrorOutput end [100].
+ 10:08:55.035  INFO | cz.ness.documentum.cskld.helper.DynamicGroupHelper - Removing dynamic group cs_superusers_dynamic from session for User: cen80437.
+ 10:08:55.037  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboRelation - ID_EXT: 1452244135027, User: cen80437 ... relationSaveHistory end [100].
+ 10:09:02.395  INFO | cz.ness.xcp.services.util.user.NessUtilUser - hasUserAccessToPage end. User: ji017656 has access to page cs:cs_pa_boxevid_preprava/
+ 10:09:13.258  INFO | com.emc.xcp.rest.core.process.controller.ProcessController - startProcess: User: cen80437, Process: cs_cs_sp_add_record_to_box
+ 10:09:13.261  INFO | cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452244153261, User: cen80437
+ 10:09:13.261  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboBox - ID_EXT: 1452244153261, User: cen80437 ... addRecordToBoxSBO start.
+ 10:09:13.292  INFO | cz.ness.documentum.cskld.helper.DynamicGroupHelper - Adding dynamic group cs_superusers_dynamic into session for User: cen80437.
+ 10:09:13.304  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452244153261, User: cen80437 ... lockObject start.
+ 10:09:13.305  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboLock - lockObject: input: ObjectLockerInput [boAbsObjectId=080293968600b05b, joinName=, waitIntervalSec=0, boAbsObjectIds=[]]
+ 10:09:13.307  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452244153261, User: cen80437 ... lockObject end [100].
+ 10:09:13.310  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452244153261, User: cen80437 ... lockObject start.
+ 10:09:13.310  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboLock - lockObject: input: ObjectLockerInput [boAbsObjectId=0802939682c0a5fe, joinName=, waitIntervalSec=0, boAbsObjectIds=[]]
+ 10:09:13.312  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452244153261, User: cen80437 ... lockObject end [100].
+ 10:09:13.371  INFO | cz.ness.documentum.cskld.helper.DynamicGroupHelper - Removing dynamic group cs_superusers_dynamic from session for User: cen80437.
+ 10:09:13.373  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboBox - ID_EXT: 1452244153261, User: cen80437 ... addRecordToBoxSBO end [100].
+ 10:09:13.381  INFO | cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452244153380, User: cen80437
+ 10:09:13.381  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboRelation - ID_EXT: 1452244153380, User: cen80437 ... relationSaveHistory start.
+ 10:09:13.382  INFO | cz.ness.documentum.cskld.helper.DynamicGroupHelper - Adding dynamic group cs_superusers_dynamic into session for User: cen80437.
+ 10:09:13.383  INFO | cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452244153380, User: cen80437 ... createOkErrorOutput start.
+ 10:09:13.383  INFO | cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452244153380, User: cen80437 ... createErroOutput start.
+ 10:09:13.384  INFO | cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - ID_EXT: 1452244153380, User: cen80437 ... getErrorMessage start.
+ 10:09:13.384  INFO | cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - getErrorMessage: ID_EXT: 1452244153380, User: cen80437, get errId EMC-0115
+ 10:09:13.384  INFO | cz.ness.documentum.cskld.codetables.data.CsCMessageCodeTable - ID_EXT: 1452244153380, User: cen80437 ... getErrorMessage end [100].
+ 10:09:13.384  INFO | cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452244153380, User: cen80437 ... createErroOutput end [100].
+ 10:09:13.385  INFO | cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452244153380, User: cen80437 ... createOkErrorOutput end [100].
+ 10:09:13.389  INFO | cz.ness.documentum.cskld.helper.DynamicGroupHelper - Removing dynamic group cs_superusers_dynamic from session for User: cen80437.
+ 10:09:13.391  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboRelation - ID_EXT: 1452244153380, User: cen80437 ... relationSaveHistory end [100].
+ 10:09:14.255  INFO | cz.ness.xcp.services.util.user.NessUtilUser - hasUserAccessToPage end. User: bv020866 has access to page cs:application/cs_pa_evid_prt_code
+ 10:09:17.954  INFO | com.emc.xcp.rest.core.process.controller.ProcessController - startProcess: User: cen77895, Process: cs_cs_sp_record_find_by_duid
+ 10:09:17.957  INFO | cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452244157957, User: cen77895
+ 10:09:17.958  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452244157957, User: cen77895 ... findByDuid start.
+ 10:09:17.959  INFO | cz.ness.documentum.cskld.helper.DynamicGroupHelper - Adding dynamic group cs_superusers_dynamic into session for User: cen77895.
+ 10:09:17.968  INFO | cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452244157957, User: cen77895 ... validateNumberSeries start.
+ 10:09:17.970  INFO | cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452244157957, User: cen77895 ... validateNumberSeries end [100].
+ 10:09:17.971  INFO | cz.ness.documentum.cskld.helper.DynamicGroupHelper - Removing dynamic group cs_superusers_dynamic from session for User: cen77895.
+ 10:09:17.972  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452244157957, User: cen77895 ... findByDuid end [100].
+ 10:09:20.338  INFO | com.emc.xcp.rest.core.process.controller.ProcessController - startProcess: User: cen83360, Process: cs_cs_sp_status_next
+ 10:09:26.866  INFO | com.emc.xcp.rest.core.process.controller.ProcessController - startProcess: User: cen85552, Process: cs_cs_sp_find_produkt
+ 10:09:26.870  INFO | cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452244166869, User: cen85552
+ 10:09:26.870  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboSpis - ID_EXT: 1452244166869, User: cen85552 ... findProduct start.
+ 10:09:26.873  INFO | cz.ness.documentum.cskld.helper.DynamicGroupHelper - Adding dynamic group cs_superusers_dynamic into session for User: cen85552.
+ 10:09:26.879  INFO | cz.ness.documentum.cskld.sbo.utils.CsSboSpisUtils - ID_EXT: 1452244166869, User: cen85552 ... validateFindProductInput start.
+ 10:09:26.880  INFO | cz.ness.documentum.cskld.sbo.utils.CsSboSpisUtils - ID_EXT: 1452244166869, User: cen85552 ... validateFindProductId start.
+ 10:09:26.883  INFO | cz.ness.documentum.cskld.sbo.utils.CsSboSpisUtils - ID_EXT: 1452244166869, User: cen85552 ... validateFindProductId end [100].
+ 10:09:26.887  INFO | cz.ness.documentum.cskld.sbo.utils.CsSboSpisUtils - ID_EXT: 1452244166869, User: cen85552 ... validateFindProductInput end [100].
+ 10:09:26.888  INFO | cz.ness.documentum.cskld.sbo.impl.CsPersOrgService - ID_EXT: 1452244166869, User: cen85552 ... searchProduct start.
+ 10:09:26.927  WARN | cz.ness.documentum.cskld.sbo.helper.HeaderHandler - MSG:<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header><mw:MWHeader xmlns:mw="http://schemas.csas.cz/mw/"><mw:msguid>870600115982</mw:msguid><mw:trnsrc>87</mw:trnsrc><mw:trnsrcname>espis</mw:trnsrcname><mw:trnuser>cen85552</mw:trnuser></mw:MWHeader></SOAP-ENV:Header><S:Body><ns0:searchProductInstancePositionRequest xmlns:ns0="http://csas.cz/services/CgpService/v02_04" xmlns:ns12="http://csas.cz/BOM/v02/service/Technical" xmlns:ns13="http://csas.cz/CDM/v02/Products" xmlns:ns14="http://csas.cz/CDM/v02/Steering/Party" xmlns:ns3="http://csas.cz/CDM/v02/CrossDomain/ITSupport" xmlns:ns4="http://csas.cz/CDM/v02/Products/Deposits" xmlns:ns7="http://csas.cz/CDM/v02/Products/Loans" xmlns:ns9="http://csas.cz/CDM/v02/Products/Cards"><ns0:evidenceNumberSearchString>81111-1942200254</ns0:evidenceNumberSearchString><ns0:includeClosedInstances>true</ns0:includeClosedInstances><ns0:includeDeletedRelations>true</ns0:includeDeletedRelations><ns0:includeNotAliveInstances>true</ns0:includeNotAliveInstances><ns0:productRelationship><ns13:relationshipType>espis</ns13:relationshipType></ns0:productRelationship></ns0:searchProductInstancePositionRequest></S:Body></S:Envelope>.
+ 10:09:27.007  INFO | cz.ness.documentum.cskld.sbo.impl.CsPersOrgService - ID_EXT: 1452244166869, User: cen85552 ... searchProduct end [100].
+ 10:09:27.007  WARN | cz.ness.documentum.cskld.sbo.impl.CsSboSpis - searchProductInput = SearchProductInput [cluid=null, ProductInstDescr=81111-1942200254, TechnicalAgreementId=null, pageNumber=0, pageSize=0, productSourceSystem=null]
+ 10:09:27.008  WARN | cz.ness.documentum.cskld.sbo.impl.CsSboSpis - searchProductOutput = SearchProductOutput [searchProducts=[]]
+ 10:09:27.008  INFO | cz.ness.documentum.cskld.sbo.utils.CsSboSpisUtils - ID_EXT: 1452244166869, User: cen85552 ... createNewProductFromInput start.
+ 10:09:27.008  INFO | cz.ness.documentum.cskld.sbo.utils.CsSboSpisUtils - ID_EXT: 1452244166869, User: cen85552 ... spisExists start.
+ 10:09:27.010  INFO | cz.ness.documentum.cskld.sbo.utils.CsSboSpisUtils - ID_EXT: 1452244166869, User: cen85552 ... spisExists end [100].
+ 10:09:27.012  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboAcl - ID_EXT: 1452244166869, User: cen85552 ... setACL start.
+ 10:09:27.012  WARN | cz.ness.documentum.cskld.sbo.impl.CsSboAcl - setACL dump: get_acl_for_spis:[false], cluid:[null], store_unit:[null], vip_unit:[null], r_object_id:[null].
+ 10:09:27.012  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboAcl - ID_EXT: 1452244166869, User: cen85552 ... setACL end [50].
+ 10:09:27.058  INFO | cz.ness.documentum.cskld.sbo.utils.CsSboSpisUtils - ID_EXT: 1452244166869, User: cen85552 ... createNewProductFromInput end [100].
+ 10:09:27.058  INFO | cz.ness.documentum.cskld.helper.DynamicGroupHelper - Removing dynamic group cs_superusers_dynamic from session for User: cen85552.
+ 10:09:27.060  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboSpis - ID_EXT: 1452244166869, User: cen85552 ... findProduct end [100].
+ 10:09:27.103  INFO | cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452244167103, User: cen85552
+ 10:09:27.104  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboBoAbstract - ID_EXT: 1452244167103, User: cen85552 ... boAbstractModify start.
+ 10:09:27.184  INFO | cz.ness.documentum.cskld.helper.DynamicGroupHelper - Adding dynamic group cs_superusers_dynamic into session for User: cen85552.
+ 10:09:27.185  INFO | cz.ness.documentum.cskld.helper.DynamicGroupHelper - Removing dynamic group cs_superusers_dynamic from session for User: cen85552.
+ 10:09:27.352  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboBoAbstract - ID_EXT: 1452244167103, User: cen85552 ... boAbstractModify end [100].
+ 10:09:28.743  INFO | com.emc.xcp.rest.core.process.controller.ProcessController - startProcess: User: ji017656, Process: cs_cs_sp_is_box_in_pro
+ 10:09:28.747  INFO | cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452244168747, User: ji017656
+ 10:09:28.748  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboBox - ID_EXT: 1452244168747, User: ji017656 ... boxInProperStateSBO start.
+ 10:09:28.751  INFO | cz.ness.documentum.cskld.helper.DynamicGroupHelper - Adding dynamic group cs_superusers_dynamic into session for User: ji017656.
+ 10:09:29.075  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452244168747, User: ji017656 ... lockObject start.
+ 10:09:29.075  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboLock - lockObject: input: ObjectLockerInput [boAbsObjectId=0802939682bd30d8, joinName=, waitIntervalSec=0, boAbsObjectIds=[]]
+ 10:09:29.078  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452244168747, User: ji017656 ... lockObject end [100].
+ 10:09:29.079  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboBox - ID_EXT: 1452244168747, User: ji017656 ... boxSetTypeSBO start.
+ 10:09:29.092  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboBox - ID_EXT: 1452244168747, User: ji017656 ... boxSetTypeSBO end [100].
+ 10:09:29.092  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboBox - ID_EXT: 1452244168747, User: ji017656 ... boxSetStateSBO start.
+ 10:09:29.096  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452244168747, User: ji017656 ... lockObject start.
+ 10:09:29.096  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboLock - lockObject: input: ObjectLockerInput [boAbsObjectId=0802939682bd30d8, joinName=cs_record__box, waitIntervalSec=0, boAbsObjectIds=[]]
+ 10:09:29.105  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboLock - ID_EXT: 1452244168747, User: ji017656 ... lockObject end [100].
+ 10:09:29.169  INFO | cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452244169169, User: ji017656
+ 10:09:29.169  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboBox - ID_EXT: 1452244169169, User: ji017656 ... boxChangeStateSBO start.
+ 10:09:29.169  INFO | cz.ness.documentum.cskld.sbo.utils.CsSboBoxUtils - ID_EXT: 1452244169169, User: ji017656 ... getBoxRObjectIdByBoxId start.
+ 10:09:29.171  INFO | cz.ness.documentum.cskld.sbo.utils.CsSboBoxUtils - ID_EXT: 1452244169169, User: ji017656 ... getBoxRObjectIdByBoxId end [100].
+ 10:09:29.175  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboBox - ID_EXT: 1452244169169, User: ji017656 ... boxChangeStateSBO end [100].
+ 10:09:29.177  INFO | cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452244169177, User: ji017656
+ 10:09:29.178  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboBoAbstract - ID_EXT: 1452244169177, User: ji017656 ... boAbstractStatusHistory start.
+ 10:09:29.186  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboBoAbstract - ID_EXT: 1452244169177, User: ji017656 ... boAbstractStatusHistory end [100].
+ 10:09:29.191  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboBox - ID_EXT: 1452244168747, User: ji017656 ... boxSetStateSBO end [100].
+ 10:09:29.191  INFO | cz.ness.documentum.cskld.helper.DynamicGroupHelper - Removing dynamic group cs_superusers_dynamic from session for User: ji017656.
+ 10:09:29.192  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboBox - ID_EXT: 1452244168747, User: ji017656 ... boxInProperStateSBO end [200].
+ 10:09:33.962  INFO | com.emc.xcp.rest.core.process.controller.ProcessController - startProcess: User: bv020866, Process: cs_cs_sp_search_record
+ 10:09:33.966  INFO | cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452244173966, User: bv020866
+ 10:09:33.967  INFO | cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452244173966, User: bv020866 ... searchRecType start.
+ 10:09:33.970  INFO | cz.ness.documentum.cskld.helper.DynamicGroupHelper - Adding dynamic group cs_superusers_dynamic into session for User: bv020866.
+ 10:09:34.067  INFO | cz.ness.documentum.cskld.helper.DynamicGroupHelper - Removing dynamic group cs_superusers_dynamic from session for User: bv020866.
+ 10:09:34.069  INFO | cz.ness.documentum.cskld.sbo.utils.CsSboUtils - ID_EXT: 1452244173966, User: bv020866 ... searchRecType end [100].
+ 10:09:35.911  INFO | com.emc.xcp.rest.core.process.controller.ProcessController - startProcess: User: cen77895, Process: cs_cs_sp_duid_in_box
+ 10:09:35.914  INFO | cz.ness.documentum.cskld.impl.CsContext - New request context ID_EXT: 1452244175913, User: cen77895
+ 10:09:35.914  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452244175913, User: cen77895 ... duidInBox start.
+ 10:09:35.922  INFO | cz.ness.documentum.cskld.sbo.impl.CsSboRecord - ID_EXT: 1452244175913, User: cen77895 ... duidInBox end [100].
+ 10:09:39.171  INFO | cz.ness.xcp.services.util.user.NessUtilUser - hasUserAccessToPage end. User: cen83714 has access to page cs:cs_pa_home_page
