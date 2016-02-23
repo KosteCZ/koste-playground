@@ -1,0 +1,5 @@
+mouse clicks - storage 2 (zatím funguje jen pro storage 1)
+BE: práce s fazolema - krizeni, smazani
+FE: práce s fazolema - mazani, krizeni-tah mysi ze skladu na pole
+
+Fazole-poznámky? (String note)

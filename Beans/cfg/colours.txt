@@ -1,0 +1,29 @@
+#Bean colours
+
+#INNER
+
+#name	;#img_name	;#price	;#sell	;#dominance
+white	;in_white	;1		;1		;5
+yellow	;in_yellow	;2		;2		;10
+orange	;in_orange	;3		;3		;15
+red		;in_red		;5		;4		;12
+green	;in_green	;7		;5		;9
+blue	;in_blue	;8		;6		;18
+purple	;in_purple	;10		;8		;1
+grey	;in_grey	;20		;12		;7
+brown	;in_brown	;25		;14		;8
+black	;in_black	;4		;2		;20
+
+#OUTTER
+
+#name	;#img_name	;#price	;#sell	;#dominance
+white	;out_white	;1		;1		;5
+yellow	;out_yellow	;2		;2		;10
+orange	;out_orange	;3		;3		;15
+red		;out_red	;5		;4		;12
+green	;out_green	;7		;5		;9
+blue	;out_blue	;8		;6		;18
+purple	;out_purple	;10		;8		;1
+grey	;out_grey	;20		;12		;7
+brown	;out_brown	;25		;14		;8
+black	;out_black	;4		;2		;20
