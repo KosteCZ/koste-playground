@@ -1,4 +1,6 @@
 import java.awt.*;
+import java.awt.image.BufferedImage;
+
 import javax.swing.*;
 
 public class Main extends JPanel {
@@ -24,6 +26,20 @@ public class Main extends JPanel {
 
         drawCircle(g2d, origin, 380, true, true, 0x4488FF, 0);
         drawHexGridLoop(g2d, origin, 7, 50, 1); // 8);
+                
+        // changing color of image + transparent images overlay
+        BufferedImage bimg = ImageChangeColour.colorImage();
+        g2d.drawImage(bimg, null, 0, 0);
+        
+        bimg = ImageChangeColour.colorImage();
+        g2d.drawImage(bimg, null, 72, 34);
+        
+        bimg = ImageChangeColour.colorImage();
+        g2d.drawImage(bimg, null, 0, 68);
+        
+        bimg = ImageChangeColour.colorImage();
+        g2d.drawImage(bimg, null, 72, 100);
+        
     }
 
     private void drawHexGridLoop(Graphics g, Point origin, int size, int radius, int padding) {
