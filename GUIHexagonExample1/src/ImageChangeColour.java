@@ -14,7 +14,7 @@ public class ImageChangeColour {
 		BufferedImage image = null;
 		
 		try { 
-			InputStream in = new FileInputStream(new File("1.png"));
+			InputStream in = new FileInputStream(new File("Hex.png"));
 			
 			image = ImageIO.read(in);
 			
@@ -24,25 +24,15 @@ public class ImageChangeColour {
 		}
 		return colorImage(image);
 		
-	}	
+	}
 	
 	private static BufferedImage colorImage(BufferedImage image) {
 
        		int width = image.getWidth();
        		int height = image.getHeight();
 
-       		int color = Color.RED.getRGB();
-       		
-       		double random = Math.random() * 2;
-       		
-       		System.out.println("Random: " + random);
-       		
-     		if ( (random) < 1 ) {
-     			color = Color.BLUE.getRGB();
-    		} else {
-    			color = Color.GREEN.getRGB();
-    		}
-     		
+       		int color = Color.BLACK.getRGB();
+
      		for (int xx = 0; xx < width; xx++) {
        			for (int yy = 0; yy < height; yy++) {
        				Color originalColor = new Color(image.getRGB(xx, yy), true);
