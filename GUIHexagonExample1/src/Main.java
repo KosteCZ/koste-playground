@@ -25,7 +25,8 @@ public class Main extends JPanel {
         metrics = g.getFontMetrics();
 
         drawCircle(g2d, origin, 380, true, true, 0x4488FF, 0);
-        drawHexGridLoop(g2d, origin, 7, 50, 1); // 8);
+        //drawHexGridLoop(g2d, origin, 7, 50, 1); // 8);
+        drawHexGridLoop(g2d, origin, 7, 7, 1); // 8);
                 
         // changing color of image + transparent images overlay
         BufferedImage bimg = ImageChangeColour.colorImage();
@@ -42,7 +43,30 @@ public class Main extends JPanel {
         
     }
 
-    private void drawHexGridLoop(Graphics g, Point origin, int size, int radius, int padding) {
+    private void drawHexGridLoop(Graphics g, Point origin, int width, int height, int padding) {
+
+    	//double ang30 = Math.toRadians(30);
+        //double xOff = Math.cos(ang30) * (radius + padding);
+        //double yOff = Math.sin(ang30) * (radius + padding);
+        //int half = size / 2;
+
+        for (int col = 0; col < width; col++) {
+
+            for (int row = 0; row < (height + (((col % 2) == 1) ? 1 : 0)); row++) {
+            	
+                int xLbl = col - 35;
+                int yLbl = row - 35;
+                int x = (origin.x - 245) + row * 71 + (((col % 2) == 1) ? 0 : 35);
+                int y = (origin.y - 180) + col * 61;
+                int radius = 40;
+
+                drawHex(g, xLbl, yLbl, x, y, radius);
+                
+            }
+        }
+    }
+    
+    private void drawHexGridLoopOld(Graphics g, Point origin, int size, int radius, int padding) {
         double ang30 = Math.toRadians(30);
         double xOff = Math.cos(ang30) * (radius + padding);
         double yOff = Math.sin(ang30) * (radius + padding);
