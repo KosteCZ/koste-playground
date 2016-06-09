@@ -62,6 +62,7 @@ public class Map {
 		
 		int x = hex.getX();
 		int y = hex.getY();
+		System.out.println("Start: [" + x + "," + y + "]");
 		
 		// LEFT (-1,0)
 		do {
@@ -74,6 +75,9 @@ public class Map {
 		}
 		
 		// RIGHT (+1,0)
+		x = hex.getX();
+		y = hex.getY();
+		
 		do {
 			x++;
 		} while ( HexType.GRASS.equals(map[x][y]) );
@@ -84,6 +88,9 @@ public class Map {
 		}
 		
 		// TOP LEFT (-1,-1) || (0,-1)
+		x = hex.getX();
+		y = hex.getY();
+		
 		do {
 			if ((hex.getY() % 2) == 0) { x--; }
 			y--;
@@ -96,6 +103,9 @@ public class Map {
 		}
 		
 		// TOP RIGHT (0,-1) || (+1,-1)
+		x = hex.getX();
+		y = hex.getY();
+		
 		do {
 			if ((hex.getY() % 2) == 1) { x++; }
 			y--;
@@ -108,6 +118,9 @@ public class Map {
 		}
 		
 		// BOTTOM LEFT (-1,+1) || (0,+1)
+		x = hex.getX();
+		y = hex.getY();
+		
 		do {
 			if ((hex.getY() % 2) == 0) { x--; }
 			y++;
@@ -120,6 +133,9 @@ public class Map {
 		}
 		
 		// BOTTOM RIGHT (0,+1) || (+1,+1)
+		x = hex.getX();
+		y = hex.getY();
+		
 		do {
 			if ((hex.getY() % 2) == 1) { x++; }
 			y++;

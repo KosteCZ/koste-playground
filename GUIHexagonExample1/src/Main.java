@@ -38,6 +38,8 @@ public class Main extends JPanel {
         map.conquerHex(4, 5, players[0], 16);
         map.conquerHex(9, 9, players[1], 16);
         
+        map.getReachableHexes(map.getHexPosition(300, 300)); // 6,6
+        
     }
 
     @Override
