@@ -38,7 +38,8 @@ public class Main extends JPanel {
         map.conquerHex(4, 5, players[0], 16);
         map.conquerHex(9, 9, players[1], 16);
         
-        map.getReachableHexes(map.getHexPosition(300, 300)); // 6,6
+        //map.getReachableHexes(map.getHexPosition(300, 300)); // 6,6
+        map.getReachableHexes(map.getHexPosition(230, 300)); // 4,6
         
     }
 
@@ -92,6 +93,8 @@ public class Main extends JPanel {
     	            System.out.println( "Left mouse button clicked on point [" + event.getPoint().x + "," + event.getPoint().y + "]" );
     	            
     	            /*Hex hex =*/ map.getHexPosition(event.getPoint().x, event.getPoint().y);
+    	            map.getReachableHexes(map.getHexPosition(event.getPoint().x, event.getPoint().y));
+    	            System.out.println();
 
         	    }
 

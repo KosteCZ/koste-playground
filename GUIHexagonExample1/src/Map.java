@@ -16,8 +16,8 @@ public class Map {
 		
 		map = new Hex[width+3][height+2];
 		
-        for (int row = 1; row <= height; row++) {
-        	for (int col = 1; col <= (width + (((row % 2) == 0) ? 1 : 0)); col++) {
+        for (int row = 1; row <= width; row++) {
+        	for (int col = 1; col <= (height + (((row % 2) == 0) ? 1 : 0)); col++) {
         		map[col][row] = new Hex(col, row, HexType.EMPTY);
         	}
         }
@@ -34,8 +34,8 @@ public class Map {
 
 	public void paint(Graphics2D g) {
 		
-        for (int row = 1; row <= height; row++) {
-        	for (int col = 1; col <= (width + (((row % 2) == 0) ? 1 : 0)); col++) {
+        for (int row = 1; row <= width; row++) {
+        	for (int col = 1; col <= (height + (((row % 2) == 0) ? 1 : 0)); col++) {
         		if(map[col][row] != null) {
         			map[col][row].paint(g);
         		}
@@ -60,14 +60,18 @@ public class Map {
 		
 		List<Hex> hexes = new ArrayList<Hex>();
 		
-		int x = hex.getX();
-		int y = hex.getY();
-		System.out.println("Start: [" + x + "," + y + "]");
+		if ( hex == null || hex.getX() < 1 || hex.getX() > width || hex.getY() < 1 || hex.getY() > height ) {
+			return hexes;
+		}
 		
 		// LEFT (-1,0)
+		int x = hex.getX();
+		int y = hex.getY();
+//		System.out.println("Start: [" + x + "," + y + "]");
+		
 		do {
 			x--;
-		} while ( HexType.GRASS.equals(map[x][y]) );
+		} while ( map[x][y] != null && HexType.GRASS.equals(map[x][y].getHexType()) );
 		x++;
 		if (x != hex.getX() || y != hex.getY()) {
 			hexes.add(map[x][y]);
@@ -80,7 +84,7 @@ public class Map {
 		
 		do {
 			x++;
-		} while ( HexType.GRASS.equals(map[x][y]) );
+		} while ( map[x][y] != null && HexType.GRASS.equals(map[x][y].getHexType()) );
 		x--;
 		if (x != hex.getX() || y != hex.getY()) {
 			hexes.add(map[x][y]);
@@ -92,14 +96,14 @@ public class Map {
 		y = hex.getY();
 		
 		do {
-			if ((hex.getY() % 2) == 0) { x--; }
 			y--;
-		} while ( HexType.GRASS.equals(map[x][y]) );
-		if ((hex.getY() % 2) == 0) { x++; }
+			if ((y % 2) == 1) { x--; }
+		} while ( map[x][y] != null && HexType.GRASS.equals(map[x][y].getHexType()) );
+		if ((y % 2) == 1) { x++; }
 		y++;
 		if (x != hex.getX() || y != hex.getY()) {
 			hexes.add(map[x][y]);
-			System.out.println("LEFT: [" + x + "," + y + "]");
+			System.out.println("TOP LEFT: [" + x + "," + y + "]");
 		}
 		
 		// TOP RIGHT (0,-1) || (+1,-1)
@@ -107,14 +111,14 @@ public class Map {
 		y = hex.getY();
 		
 		do {
-			if ((hex.getY() % 2) == 1) { x++; }
 			y--;
-		} while ( HexType.GRASS.equals(map[x][y]) );
-		if ((hex.getY() % 2) == 1) { x++; }
+			if ((y % 2) == 0) { x++; }
+		} while ( map[x][y] != null && HexType.GRASS.equals(map[x][y].getHexType()) );
+		if ((y % 2) == 0) { x--; }
 		y++;
 		if (x != hex.getX() || y != hex.getY()) {
 			hexes.add(map[x][y]);
-			System.out.println("RIGHT: [" + x + "," + y + "]");
+			System.out.println("TOP RIGHT: [" + x + "," + y + "]");
 		}
 		
 		// BOTTOM LEFT (-1,+1) || (0,+1)
@@ -122,14 +126,14 @@ public class Map {
 		y = hex.getY();
 		
 		do {
-			if ((hex.getY() % 2) == 0) { x--; }
 			y++;
-		} while ( HexType.GRASS.equals(map[x][y]) );
-		if ((hex.getY() % 2) == 0) { x++; }
+			if ((y % 2) == 1) { x--; }
+		} while ( map[x][y] != null && HexType.GRASS.equals(map[x][y].getHexType()) );
+		if ((y % 2) == 1) { x++; }
 		y--;
 		if (x != hex.getX() || y != hex.getY()) {
 			hexes.add(map[x][y]);
-			System.out.println("LEFT: [" + x + "," + y + "]");
+			System.out.println("BOT LEFT: [" + x + "," + y + "]");
 		}
 		
 		// BOTTOM RIGHT (0,+1) || (+1,+1)
@@ -137,14 +141,14 @@ public class Map {
 		y = hex.getY();
 		
 		do {
-			if ((hex.getY() % 2) == 1) { x++; }
 			y++;
-		} while ( HexType.GRASS.equals(map[x][y]) );
-		if ((hex.getY() % 2) == 1) { x++; }
+			if ((y % 2) == 0) { x++; }
+		} while ( map[x][y] != null && HexType.GRASS.equals(map[x][y].getHexType()) );
+		if ((y % 2) == 0) { x--; }
 		y--;
 		if (x != hex.getX() || y != hex.getY()) {
 			hexes.add(map[x][y]);
-			System.out.println("RIGHT: [" + x + "," + y + "]");
+			System.out.println("BOT RIGHT: [" + x + "," + y + "]");
 		}
 		
 		System.out.println("Count: " + hexes.size());
@@ -206,7 +210,11 @@ public class Map {
 	    }
 		System.out.println("column: " + column + ", row: " + row);
 
-	    return map[column][row];
+		if ( column < 1 || column > width || row < 1 || row > height ) {
+			return null;
+		}
+	    
+		return map[column][row];
 		
 	}
 	
