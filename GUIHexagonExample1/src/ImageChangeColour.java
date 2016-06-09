@@ -9,29 +9,33 @@ import javax.imageio.ImageIO;
 
 public class ImageChangeColour {
 	
-	static BufferedImage colorImage() {
+	static BufferedImage getImage() {
+		return getImage("Hex");	
+	}
+	
+	static BufferedImage getImage(String name) {
 		
 		BufferedImage image = null;
 		
 		try { 
-			InputStream in = new FileInputStream(new File("Hex.png"));
+			InputStream in = new FileInputStream(new File(name + ".png"));
 			
 			image = ImageIO.read(in);
 			
-		} 
-		catch (IOException e) { 
+		} catch (IOException e) { 
 			System.err.println("Error: " + e);
 		}
-		return colorImage(image);
+		
+		return image;
 		
 	}
 	
-	private static BufferedImage colorImage(BufferedImage image) {
+	public static BufferedImage colorImage(BufferedImage image, Color color) {
 
        		int width = image.getWidth();
        		int height = image.getHeight();
 
-       		int color = Color.BLACK.getRGB();
+       		int colorInt = color.getRGB();
 
      		for (int xx = 0; xx < width; xx++) {
        			for (int yy = 0; yy < height; yy++) {
@@ -44,9 +48,10 @@ public class ImageChangeColour {
                     	image.setRGB(xx, yy, Color.BLUE.getRGB());
                 	}*/
                 
-       				if ( ( (originalColor.getRed() + originalColor.getGreen() + originalColor.getBlue() ) < 500 )  && originalColor.getAlpha() == 255) {
-                	
-       	    			image.setRGB(xx, yy, color);
+       				//if ( ( (originalColor.getRed() + originalColor.getGreen() + originalColor.getBlue() ) < 500 )  && originalColor.getAlpha() == 255) {
+       				if ( ( (originalColor.getRed() > originalColor.getGreen()) && (originalColor.getRed() > originalColor.getBlue() ))  && originalColor.getAlpha() == 255) {
+       	                	
+       	    			image.setRGB(xx, yy, colorInt);
        	    			
        		    	}
        			}

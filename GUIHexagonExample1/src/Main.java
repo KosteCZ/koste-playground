@@ -1,10 +1,14 @@
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.event.InputEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.awt.image.BufferedImage;
 
-import javax.swing.*;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 public class Main extends JPanel {
 	
@@ -15,24 +19,38 @@ public class Main extends JPanel {
     public static int HEX_WIDTH = 50;
     public static int HEX_WIDTH_HALF = HEX_WIDTH / 2;
     public static int HEX_HEIGHT = 44;
-
+    
+    Player[] players;
+    Map map;
+    
     private Font font = new Font("Arial", Font.BOLD, 18);
-    FontMetrics metrics;
 
     public Main() {
+    	
         setPreferredSize(new Dimension(WIDTH, HEIGHT));
+        
+        players = new Player[2];
+        players[0] = new Player("Hrac 1", Color.RED);
+        players[1] = new Player("Hrac 2", Color.BLUE);
+        
+        map = new Map(13, 13);
+        map.generateMap1();
+        map.conquerHex(4, 5, players[0], 16);
+        map.conquerHex(9, 9, players[1], 16);
+        
     }
 
     @Override
     public void paintComponent(Graphics g) {
+    	
         Graphics2D g2d = (Graphics2D) g;
 
         g2d.setFont(font);
         
         // changing color of image + transparent images overlay
         
-        BufferedImage bimg = ImageChangeColour.colorImage();
-        /*g2d.drawImage(bimg, null, 0, 0);
+        /* BufferedImage bimg = ImageChangeColour.getImage();
+        g2d.drawImage(bimg, null, 0, 0);
         
         bimg = ImageChangeColour.colorImage();
         g2d.drawImage(bimg, null, HEX_WIDTH, 0);
@@ -55,11 +73,9 @@ public class Main extends JPanel {
             }
         }*/
         
-        Map map = new Map(13, 13);
-        map.paint(g2d);
-        
         //TODO array of new objects - has x,y - know neighbours, can paint
         
+        map.paint(g2d);
         
 	    this.addMouseListener(new MouseAdapter() {
 	    //frame.addMouseListener(new MouseAdapter() {
@@ -72,6 +88,8 @@ public class Main extends JPanel {
 	    	    if ((event.getModifiers() & InputEvent.BUTTON1_MASK) != 0) {
 
     	            System.out.println( "Left mouse button clicked on point [" + event.getPoint().x + "," + event.getPoint().y + "]" );
+    	            
+    	            /*Hex hex =*/ map.getHexPosition(event.getPoint().x, event.getPoint().y);
 
         	    }
 
