@@ -3,9 +3,10 @@ import java.awt.image.BufferedImage;
 
 public class Hex {
 
-    public static int HEX_WIDTH = 50;
-    public static int HEX_WIDTH_HALF = HEX_WIDTH / 2;
-    public static int HEX_HEIGHT = 44;
+    public static final int HEX_HEIGHT_OVER = 15;
+	public static final int HEX_WIDTH = 50;
+    public static final int HEX_WIDTH_HALF = HEX_WIDTH / 2;
+    public static final int HEX_HEIGHT = 44;
 
     public static BufferedImage bImgEmpty = ImageChangeColour.getImage(HexType.EMPTY.name().toLowerCase());
     public static BufferedImage bImgGrass = ImageChangeColour.getImage(HexType.GRASS.name().toLowerCase());

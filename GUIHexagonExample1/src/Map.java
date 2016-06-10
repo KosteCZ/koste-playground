@@ -192,7 +192,7 @@ public class Map {
 		
 		// Work out if the point is above either of the hexagon's top edges
 		//int c = 0;
-		int c = 15; // height of top /\ part (or bottom part \/) of hex ( =  /|\  )
+		int c = Hex.HEX_HEIGHT_OVER; //15; // height of top /\ part (or bottom part \/) of hex ( =  /|\  )
 		//double m = 0.5;
 		double m = c / Hex.HEX_WIDTH_HALF;
 		

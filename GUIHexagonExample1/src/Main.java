@@ -3,23 +3,30 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.Polygon;
+import java.awt.TexturePaint;
 import java.awt.event.InputEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.geom.Rectangle2D;
+import java.awt.image.BufferedImage;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class Main extends JPanel {
 	
-    private static final long serialVersionUID = 1L;
-    private final int WIDTH = 950;
-    private final int HEIGHT = 670;
-    
+	private static final long serialVersionUID = 1L;
+
+	public static final String APP_TITLE = "Ovce: boj o pastviny"; 
+	public static final int WIDTH = 950;
+	public static final int HEIGHT = 670;    
     public static int HEX_WIDTH = 50;
     public static int HEX_WIDTH_HALF = HEX_WIDTH / 2;
     public static int HEX_HEIGHT = 44;
     
+	private static JFrame jFrame = new JFrame();
+	
     Player[] players;
     Map map;
     
@@ -46,6 +53,8 @@ public class Main extends JPanel {
     @Override
     public void paintComponent(Graphics g) {
     	
+		super.paintComponent(g);
+		
         Graphics2D g2d = (Graphics2D) g;
 
         g2d.setFont(font);
@@ -129,23 +138,63 @@ public class Main extends JPanel {
 		this.addMouseMotionListener(new MouseAdapter() {
 			
 	        public void mouseMoved(MouseEvent event) {
-	        	g2d.drawString("[" + event.getPoint().x + "," + event.getPoint().y + "]", 30, 30);
+
 	        	//System.out.println("[" + event.getPoint().x + "," + event.getPoint().y + "]");
-	        	//repaint();
-	        }
+	            
+	        	Graphics2D g2d = (Graphics2D) jFrame.getGraphics();
+	        	g2d.setFont(font);
+	        	g2d.drawString("a[" + event.getPoint().x + "," + event.getPoint().y + "]", 60, 230);	        	
+	        	
+	            Polygon p = new Polygon();
+	            for (int i = 0; i < 5; i++)
+	              p.addPoint((int) (100 + 50 * Math.cos(i * 2 * Math.PI / 5)),
+	                  (int) (100 + 50 * Math.sin(i * 2 * Math.PI / 5)));
+
+	            //g2d.drawPolygon(p);
+	            
+	            if ( p.contains(event.getPoint().x + 7, event.getPoint().y + 30) ) {
+	            	g2d.drawPolygon(p);
+	            //	g2d.drawString("in", 60, 280); 
+	            } else {
+	            	g2d.fillPolygon(p);
+		        //    g2d.drawString("out", 60, 280);
+	            }
+	        	
+	            /*
+	            BufferedImage bimg = ImageChangeColour.getImage(HexType.GRASS.name());
+	            Rectangle2D rect = new Rectangle2D.Double(0, 0, Hex.HEX_WIDTH, Hex.HEX_HEIGHT+Hex.HEX_HEIGHT_OVER);
+	            TexturePaint texturePaint = new TexturePaint(bimg, rect);
+	            
+	            Polygon p2 = new Polygon();
+	            p2.addPoint(7+Hex.HEX_WIDTH*4, 30+Hex.HEX_HEIGHT*2);
+	            p2.addPoint(7+Hex.HEX_WIDTH*5, 30+Hex.HEX_HEIGHT*2);
+	            p2.addPoint(7+Hex.HEX_WIDTH*5, 30+Hex.HEX_HEIGHT*3+Hex.HEX_HEIGHT_OVER);
+	            p2.addPoint(7+Hex.HEX_WIDTH*4, 30+Hex.HEX_HEIGHT*3+Hex.HEX_HEIGHT_OVER);
+	            		  
+	            g2d.draw(p2);
+	            
+	            g2d.setPaint(texturePaint);
+	            g2d.fill(p2);
+	            */
+	            
+	        	repaint();
+		        jFrame.repaint();
+	        	
+	        }	        
 	        
 	    });
 	    	        
    }
 
 	public static void main(String[] args) {
-        JFrame f = new JFrame();
-        Main p = new Main();
+        /*JFrame jFrame = new JFrame();*/
+        Main jPanelMain = new Main();
 
-        f.setContentPane(p);
-        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        f.pack();
-        f.setLocationRelativeTo(null);
-        f.setVisible(true);
+        jFrame.setContentPane(jPanelMain);
+        jFrame.setTitle(APP_TITLE);
+        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        jFrame.pack();
+        jFrame.setLocationRelativeTo(null);
+        jFrame.setVisible(true);
     }
 }
