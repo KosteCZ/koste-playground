@@ -37,7 +37,7 @@ public class Map {
 		
         for (int row = 1; row <= width; row++) {
         	for (int col = 1; col <= (height + (((row % 2) == 0) ? 1 : 0)); col++) {
-        		if(map[col][row] != null) {
+        		if( map[col][row] != null ) {
         			map[col][row].paint(g);
         		}
 			}	
@@ -56,7 +56,7 @@ public class Map {
 	public void clearAllSelectionAttributes() {
         for (int row = 1; row <= width; row++) {
         	for (int col = 1; col <= (height + (((row % 2) == 0) ? 1 : 0)); col++) {
-        		if(map[col][row] != null) {
+        		if( map[col][row] != null ) {
         			map[col][row].clearSelectionAttributes();
         		}
 			}	
@@ -102,6 +102,11 @@ public class Map {
 					
 						map[hex.getX()][hex.getY()].conquer(selectedHex.getOwner(), transferCount);
 						
+						if (selectedHexSheepCountNew == 1) {
+							selectedHex.getOwner().deadHexesAdd(selectedHex);
+							selectedHex.getOwner().liveHexesRemove(selectedHex);
+						}
+						
 						clearSelectedHexesForGUI();
 					
 						result = true;
@@ -132,6 +137,90 @@ public class Map {
 		selectedHex = null;
 	}
 	
+	public boolean hasReachableNeighbours(Hex hex) {
+		return getReachableNeighbours(hex).size() > 0;
+	}
+	
+	public List<Hex> getReachableNeighbours(Hex hex) {
+		
+		List<Hex> hexesNeighbours = new ArrayList<Hex>();
+		
+		if ( hex == null || hex.getX() < 1 || hex.getX() > width || hex.getY() < 1 || hex.getY() > height ) {
+			return hexesNeighbours;
+		}
+		
+		if ( !HexType.PLAYER.equals(hex.getHexType()) || hex.getSheepCount() < 2 ) {
+			return hexesNeighbours; 
+		}
+		
+		// LEFT (-1,0)
+		int x = hex.getX();
+		int y = hex.getY();
+		
+		x--;
+		
+		if ( map[x][y] != null && HexType.GRASS.equals(map[x][y].getHexType()) ) {
+			hexesNeighbours.add(map[x][y]);
+		}
+		
+		// RIGHT (+1,0)
+		x = hex.getX();
+		y = hex.getY();
+		
+		x++;
+		
+		if ( map[x][y] != null && HexType.GRASS.equals(map[x][y].getHexType()) ) {
+			hexesNeighbours.add(map[x][y]);
+		}
+		
+		// TOP LEFT (-1,-1) || (0,-1)
+		x = hex.getX();
+		y = hex.getY();
+		
+		y--;
+		if ((y % 2) == 1) { x--; }
+		
+		if ( map[x][y] != null && HexType.GRASS.equals(map[x][y].getHexType()) ){
+			hexesNeighbours.add(map[x][y]);
+		}
+		
+		// TOP RIGHT (0,-1) || (+1,-1)
+		x = hex.getX();
+		y = hex.getY();
+		
+		y--;
+		if ((y % 2) == 0) { x++; }
+		
+		if ( map[x][y] != null && HexType.GRASS.equals(map[x][y].getHexType()) ) {
+			hexesNeighbours.add(map[x][y]);
+		}
+		
+		// BOTTOM LEFT (-1,+1) || (0,+1)
+		x = hex.getX();
+		y = hex.getY();
+		
+		y++;
+		if ((y % 2) == 1) { x--; }
+		
+		if ( map[x][y] != null && HexType.GRASS.equals(map[x][y].getHexType()) ) {
+			hexesNeighbours.add(map[x][y]);
+		}
+		
+		// BOTTOM RIGHT (0,+1) || (+1,+1)
+		x = hex.getX();
+		y = hex.getY();
+		
+		y++;
+		if ((y % 2) == 0) { x++; }
+		
+		if ( map[x][y] != null && HexType.GRASS.equals(map[x][y].getHexType()) ) {
+			hexesNeighbours.add(map[x][y]);
+		}
+		
+		return hexesNeighbours;
+		
+	}
+	
 	public List<Hex> getReachableHexes(Hex hex) {
 		
 		clearSelectedHexesForGUI();
@@ -146,8 +235,6 @@ public class Map {
 		if ( !HexType.PLAYER.equals(hex.getHexType()) || hex.getSheepCount() < 2 ) {
 			return hexesTarget; 
 		}
-		
-		hex.setSelected(true);
 		
 		// LEFT (-1,0)
 		int x = hex.getX();
@@ -284,6 +371,8 @@ public class Map {
         System.err.println("- selected: " + countSelected);
 		
         
+		hex.setSelected(true);
+		
         selectedHex = hex;
         
         System.err.println("Selected HEX: " + hex.getX() + "," + hex.getY() );
@@ -296,7 +385,7 @@ public class Map {
 	// Solution from:  http://stackoverflow.com/questions/7705228/hexagonal-grids-how-do-you-find-which-hexagon-a-point-is-in
 	public Hex getHexPosition(int x, int y) {
 
-		System.out.println("x: " + x + ", y: " + y);
+//		System.out.println("x: " + x + ", y: " + y);
 		
 	    // Find the row and column of the box that the point falls in.
 	    int row = (int) (y / Hex.HEX_HEIGHT);
@@ -311,7 +400,7 @@ public class Map {
 	        column = (int) (x / Hex.HEX_WIDTH);
 	    }
 	    
-		System.out.println("column: " + column + ", row: " + row);
+//		System.out.println("column: " + column + ", row: " + row);
 		
 		// Work out the position of the point relative to the box it is in
 	    double relY = y - (row * Hex.HEX_HEIGHT);
@@ -323,7 +412,7 @@ public class Map {
 	        relX = x - (column * Hex.HEX_WIDTH);
 	    }
 		
-		System.out.println("relX: " + relX + ", relY: " + relY);
+//		System.out.println("relX: " + relX + ", relY: " + relY);
 		
 		// Work out if the point is above either of the hexagon's top edges
 		//int c = 0;
@@ -343,7 +432,7 @@ public class Map {
 	        column++;
 	        }
 	    }
-		System.out.println("column: " + column + ", row: " + row);
+//		System.out.println("column: " + column + ", row: " + row);
 
 		if ( column < 1 || column > width || row < 1 || row > height ) {
 			return null;
@@ -352,5 +441,5 @@ public class Map {
 		return map[column][row];
 		
 	}
-	
+
 }

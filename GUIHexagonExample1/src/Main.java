@@ -15,8 +15,9 @@ public class Main extends JPanel {
 	
 	private static final long serialVersionUID = 1L;
 
-	public static final String APP_TITLE = "Ovce: boj o pastviny"; 
-	public static final int WIDTH = 950;
+	public static final String APP_VERSION = "0.0.1"; 
+	public static final String APP_TITLE = "Ovce: boj o pastviny (autor: Jan Koščák, verze " + APP_VERSION + ")"; 
+	public static final int WIDTH = 1000;
 	public static final int HEIGHT = 670;    
     public static int HEX_WIDTH = 50;
     public static int HEX_WIDTH_HALF = HEX_WIDTH / 2;
@@ -29,14 +30,15 @@ public class Main extends JPanel {
 	private Hex lastClickedHex = null;
     
     private Font font = new Font("Arial", Font.BOLD, 18);
+	private Color themePenColor = Color.BLACK;
 
     public Main() {
     	
         setPreferredSize(new Dimension(WIDTH, HEIGHT));
         
         players = new Player[2];
-        players[0] = new Player("Hrac 1", Color.RED);
-        players[1] = new Player("Hrac 2", Color.BLUE);
+        players[0] = new Player("Hráč 1", Color.RED);
+        players[1] = new Player("Hráč 2", Color.BLUE);
         
         map = new Map(13, 13);
         map.generateMap1();
@@ -87,6 +89,20 @@ public class Main extends JPanel {
         
         map.paint(g2d);
         
+    	g2d.setColor(themePenColor);
+    	g2d.drawString("Na tahu je: ", 800, 60);	        	
+    	g2d.setColor(players[0].getColor());
+    	g2d.drawString(players[0].getName(), 800, 80);	        	
+    	g2d.setColor(themePenColor);
+    	g2d.drawString("Skóre: ", 800, 120);	        	
+
+    	for (int i = 0; i < players.length; i++) {
+        	g2d.setColor(players[i].getColor());
+        	g2d.drawString(players[i].getName() + " - mrtvé: " + players[i].deadHexesCount(), 800, 140 + i * 20);	        	
+        	g2d.drawString(players[i].getName() + " - živé:  " + players[i].liveHexesCount(), 800, 180 + i * 20);	        	
+        	g2d.setColor(themePenColor);
+		}
+        
 	    this.addMouseListener(new MouseAdapter() {
 	    //frame.addMouseListener(new MouseAdapter() {
 	        public void mouseClicked(MouseEvent event) {
@@ -97,7 +113,7 @@ public class Main extends JPanel {
 
 	    	    if ((event.getModifiers() & InputEvent.BUTTON1_MASK) != 0) {
 
-    	            System.out.println( "Left mouse button clicked on point [" + event.getPoint().x + "," + event.getPoint().y + "]" );
+//    	            System.out.println( "Left mouse button clicked on point [" + event.getPoint().x + "," + event.getPoint().y + "]" );
     	            
     	            Hex hex = map.getHexPosition(event.getPoint().x, event.getPoint().y);
     	            
@@ -106,14 +122,15 @@ public class Main extends JPanel {
     	            	boolean conquered = false;
     	            	conquered = map.doConquere(hex);
     	            	if (conquered == false ) {
-    	            		map.getReachableHexes(map.getHexPosition(event.getPoint().x, event.getPoint().y));
-    	            	}
-    	            
-    	            	lastClickedHex = hex;
+    	            		map.getReachableHexes(hex);
+    	                 	lastClickedHex = hex;
+    	              	} else {
+    	                  	lastClickedHex = null;
+    	             	}
     	            	
     	            }
     	            
-    	            System.out.println();
+//    	            System.out.println();
 
         	    }
 

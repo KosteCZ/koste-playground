@@ -99,10 +99,15 @@ public class Hex {
 		
 		boolean result = false;
 		
-		if (HexType.PLAYER != hexType && owner == null) {			
+		if ( HexType.PLAYER != hexType && owner == null && sheepCount >= 1 ) {			
 			hexType = HexType.PLAYER;		
 			owner = player;			
-			this.sheepCount = sheepCount;			
+			this.sheepCount = sheepCount;
+			if (sheepCount > 1) {
+				player.liveHexesAdd(this);
+			} else {
+				player.deadHexesAdd(this);
+			}
 			result = true;			
 		}
 		
