@@ -52,16 +52,32 @@ public class Map {
         }
 	}
 	
+	public void clearAllSelectionAttributes() {
+        for (int row = 1; row <= width; row++) {
+        	for (int col = 1; col <= (height + (((row % 2) == 0) ? 1 : 0)); col++) {
+        		if(map[col][row] != null) {
+        			map[col][row].clearSelectionAttributes();
+        		}
+			}	
+		}		
+	}
+	
+	
 	public boolean conquerHex(int col, int row, Player player, int sheepCount) {
 		return map[col][row].conquer(player, sheepCount);
 	}
 	
 	public List<Hex> getReachableHexes(Hex hex) {
 		
-		List<Hex> hexes = new ArrayList<Hex>();
+		clearAllSelectionAttributes();
+		
+		hex.setSelected(true);
+		
+		List<Hex> hexesPath = new ArrayList<Hex>();
+		List<Hex> hexesTarget = new ArrayList<Hex>();
 		
 		if ( hex == null || hex.getX() < 1 || hex.getX() > width || hex.getY() < 1 || hex.getY() > height ) {
-			return hexes;
+			return hexesTarget;
 		}
 		
 		// LEFT (-1,0)
@@ -71,10 +87,12 @@ public class Map {
 		
 		do {
 			x--;
+			if (map[x][y] != null) { hexesPath.add(map[x][y]); }
 		} while ( map[x][y] != null && HexType.GRASS.equals(map[x][y].getHexType()) );
+		if (map[x][y] != null) { hexesPath.remove(map[x][y]); }
 		x++;
 		if (x != hex.getX() || y != hex.getY()) {
-			hexes.add(map[x][y]);
+			hexesTarget.add(map[x][y]);
 			System.out.println("LEFT: [" + x + "," + y + "]");
 		}
 		
@@ -84,10 +102,12 @@ public class Map {
 		
 		do {
 			x++;
+			if (map[x][y] != null) { hexesPath.add(map[x][y]); }
 		} while ( map[x][y] != null && HexType.GRASS.equals(map[x][y].getHexType()) );
+		if (map[x][y] != null) { hexesPath.remove(map[x][y]); }
 		x--;
 		if (x != hex.getX() || y != hex.getY()) {
-			hexes.add(map[x][y]);
+			hexesTarget.add(map[x][y]);
 			System.out.println("RIGHT: [" + x + "," + y + "]");
 		}
 		
@@ -98,11 +118,13 @@ public class Map {
 		do {
 			y--;
 			if ((y % 2) == 1) { x--; }
+			if (map[x][y] != null) { hexesPath.add(map[x][y]); }
 		} while ( map[x][y] != null && HexType.GRASS.equals(map[x][y].getHexType()) );
+		if (map[x][y] != null) { hexesPath.remove(map[x][y]); }
 		if ((y % 2) == 1) { x++; }
 		y++;
 		if (x != hex.getX() || y != hex.getY()) {
-			hexes.add(map[x][y]);
+			hexesTarget.add(map[x][y]);
 			System.out.println("TOP LEFT: [" + x + "," + y + "]");
 		}
 		
@@ -113,11 +135,13 @@ public class Map {
 		do {
 			y--;
 			if ((y % 2) == 0) { x++; }
+			if (map[x][y] != null) { hexesPath.add(map[x][y]); }
 		} while ( map[x][y] != null && HexType.GRASS.equals(map[x][y].getHexType()) );
+		if (map[x][y] != null) { hexesPath.remove(map[x][y]); }
 		if ((y % 2) == 0) { x--; }
 		y++;
 		if (x != hex.getX() || y != hex.getY()) {
-			hexes.add(map[x][y]);
+			hexesTarget.add(map[x][y]);
 			System.out.println("TOP RIGHT: [" + x + "," + y + "]");
 		}
 		
@@ -128,11 +152,13 @@ public class Map {
 		do {
 			y++;
 			if ((y % 2) == 1) { x--; }
+			if (map[x][y] != null) { hexesPath.add(map[x][y]); }
 		} while ( map[x][y] != null && HexType.GRASS.equals(map[x][y].getHexType()) );
+		if (map[x][y] != null) { hexesPath.remove(map[x][y]); }
 		if ((y % 2) == 1) { x++; }
 		y--;
 		if (x != hex.getX() || y != hex.getY()) {
-			hexes.add(map[x][y]);
+			hexesTarget.add(map[x][y]);
 			System.out.println("BOT LEFT: [" + x + "," + y + "]");
 		}
 		
@@ -143,17 +169,53 @@ public class Map {
 		do {
 			y++;
 			if ((y % 2) == 0) { x++; }
+			if (map[x][y] != null) { hexesPath.add(map[x][y]); }
 		} while ( map[x][y] != null && HexType.GRASS.equals(map[x][y].getHexType()) );
+		if (map[x][y] != null) { hexesPath.remove(map[x][y]); }
 		if ((y % 2) == 0) { x--; }
 		y--;
 		if (x != hex.getX() || y != hex.getY()) {
-			hexes.add(map[x][y]);
+			hexesTarget.add(map[x][y]);
 			System.out.println("BOT RIGHT: [" + x + "," + y + "]");
 		}
 		
-		System.out.println("Count: " + hexes.size());
+		System.out.println("Count: " + hexesTarget.size());
 		
-		return hexes;
+		hexesPath.removeAll(hexesTarget);
+		
+		for (Hex hexTarget : hexesTarget) {
+			hexTarget.setTarget(true);
+		}
+		for (Hex hexPath : hexesPath) {
+			hexPath.setPath(true);
+		}
+		
+		
+		int countPath = 0;
+		int countTarget = 0;
+		int countSelected = 0;
+		
+        for (int row = 1; row <= width; row++) {
+        	for (int col = 1; col <= (height + (((row % 2) == 0) ? 1 : 0)); col++) {
+        		if(map[col][row] != null) {
+        			if(map[col][row].isPath()) {
+        				countPath++;
+        			}
+        			if(map[col][row].isTarget()) {
+            			countTarget++;
+        			}
+        			if(map[col][row].isSelected()) {
+                		countSelected++;
+        			}
+        		}
+			}	
+		}		
+        System.err.println("- path:     " + countPath);
+        System.err.println("- target:   " + countTarget);
+        System.err.println("- selected: " + countSelected);
+		
+        
+		return hexesTarget;
 		
 	}
 	

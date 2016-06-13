@@ -184,7 +184,10 @@ public class Main extends JPanel {
 	        
 	    });
 	    	        
-   }
+    	//repaint();
+        //jFrame.repaint();
+        
+  }
 
 	public static void main(String[] args) {
         /*JFrame jFrame = new JFrame();*/
