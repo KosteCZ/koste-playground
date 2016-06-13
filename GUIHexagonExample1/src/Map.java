@@ -8,6 +8,7 @@ public class Map {
 	private int width;
 	
 	private Hex[][] map;
+	private Hex selectedHex = null;
     
 	public Map(int height, int width){		
 		
@@ -62,16 +63,78 @@ public class Map {
 		}		
 	}
 	
+	public boolean doConquere(Hex hex) {
+	
+		boolean result = false;
+		
+		
+		System.err.println("111");
+		
+		System.err.println("111-111 selectedHex: " + selectedHex);
+		if ( selectedHex != null ) {
+			System.err.println("111-111 selectedHex X: " + selectedHex.getX());
+			System.err.println("111-111 selectedHex Y: " + selectedHex.getY());
+			System.err.println("111-111 selectedHex getSheepCount: " + selectedHex.getSheepCount());
+		}
+		
+		
+		if ( selectedHex != null && selectedHex.getSheepCount() >= 2 ) {
+		
+			System.err.println("222");
+			
+			if ( ! ( hex == null || hex.getX() < 1 || hex.getX() > width || hex.getY() < 1 || hex.getY() > height ) ) {
+				
+				System.err.println("333");
+				
+				if ( hex.isTarget() ) {
+				
+					System.err.println("444");
+					
+					int transferCount = selectedHex.getSheepCount() - 1;
+			
+					int selectedHexSheepCountNew = selectedHex.lowerSheepCountBy(transferCount);
+				
+					System.err.println("555 selectedHexSheepCountNew: " + selectedHexSheepCountNew);
+				
+					if (selectedHexSheepCountNew >= 1) {
+					
+						System.err.println("666");
+					
+						map[hex.getX()][hex.getY()].conquer(selectedHex.getOwner(), transferCount);
+						
+						clearSelectedHexesForGUI();
+					
+						result = true;
+					
+					}
+				
+				}
+			
+			}
+		
+		}
+		
+		return result;
+		
+	}
 	
 	public boolean conquerHex(int col, int row, Player player, int sheepCount) {
 		return map[col][row].conquer(player, sheepCount);
 	}
 	
-	public List<Hex> getReachableHexes(Hex hex) {
-		
+	public void clearSelectedHexesForGUI() {
 		clearAllSelectionAttributes();
 		
-		hex.setSelected(true);
+		if (selectedHex != null) {
+	    	System.err.println("! Selected HEX SET TO NULL: " + selectedHex.getX() + "," + selectedHex.getY() );
+		}
+	       
+		selectedHex = null;
+	}
+	
+	public List<Hex> getReachableHexes(Hex hex) {
+		
+		clearSelectedHexesForGUI();
 		
 		List<Hex> hexesPath = new ArrayList<Hex>();
 		List<Hex> hexesTarget = new ArrayList<Hex>();
@@ -79,6 +142,12 @@ public class Map {
 		if ( hex == null || hex.getX() < 1 || hex.getX() > width || hex.getY() < 1 || hex.getY() > height ) {
 			return hexesTarget;
 		}
+		
+		if ( !HexType.PLAYER.equals(hex.getHexType()) || hex.getSheepCount() < 2 ) {
+			return hexesTarget; 
+		}
+		
+		hex.setSelected(true);
 		
 		// LEFT (-1,0)
 		int x = hex.getX();
@@ -215,6 +284,10 @@ public class Map {
         System.err.println("- selected: " + countSelected);
 		
         
+        selectedHex = hex;
+        
+        System.err.println("Selected HEX: " + hex.getX() + "," + hex.getY() );
+       
 		return hexesTarget;
 		
 	}

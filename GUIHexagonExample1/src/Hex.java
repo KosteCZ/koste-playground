@@ -38,6 +38,23 @@ public class Hex {
 		return y;		
 	}
 
+	public int getSheepCount() {		
+		return sheepCount;		
+	}
+
+	public int lowerSheepCountBy( int count ) {
+		if ( (sheepCount - count) >= 1 ) { 
+			sheepCount = sheepCount - count;
+			return sheepCount;
+		} else {
+			return -1;
+		}
+	}
+
+	public Player getOwner() {		
+		return owner;		
+	}
+
 	public HexType getHexType() {		
 		return hexType;	
 	}
@@ -103,12 +120,13 @@ public class Hex {
 				g.drawImage(bImgGrass, null, x * HEX_WIDTH + ((((y + 1) % 2) == 1) ? 0 : HEX_WIDTH_HALF), y * HEX_HEIGHT);
 			}
 		} else if (HexType.PLAYER.equals(hexType)) {
+			int tAC = sheepCount < 10 ? 6 : 0; // text alignment constant (sheep count can be 1 or 2 digits)
 			if (isSelected()) {
 				g.drawImage(owner.getImageSelected(), null, x * HEX_WIDTH + ((((y + 1) % 2) == 1) ? 0 : HEX_WIDTH_HALF), y * HEX_HEIGHT);
-				g.drawString("" + sheepCount, 16 + x * HEX_WIDTH + ((((y + 1) % 2) == 1) ? 0 : HEX_WIDTH_HALF), 37 + y * HEX_HEIGHT);
+				g.drawString("" + sheepCount, 16 + tAC + x * HEX_WIDTH + ((((y + 1) % 2) == 1) ? 0 : HEX_WIDTH_HALF), 37 + y * HEX_HEIGHT);
 			} else {
 				g.drawImage(owner.getImage(), null, x * HEX_WIDTH + ((((y + 1) % 2) == 1) ? 0 : HEX_WIDTH_HALF), y * HEX_HEIGHT);
-				g.drawString("" + sheepCount, 16 + x * HEX_WIDTH + ((((y + 1) % 2) == 1) ? 0 : HEX_WIDTH_HALF), 37 + y * HEX_HEIGHT);
+				g.drawString("" + sheepCount, 16 + tAC + x * HEX_WIDTH + ((((y + 1) % 2) == 1) ? 0 : HEX_WIDTH_HALF), 37 + y * HEX_HEIGHT);
 			}
 		} else {
 			g.drawImage(bImgEmpty, null, x * HEX_WIDTH + ((((y + 1) % 2) == 1) ? 0 : HEX_WIDTH_HALF), y * HEX_HEIGHT);

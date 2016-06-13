@@ -4,12 +4,9 @@ import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Polygon;
-import java.awt.TexturePaint;
 import java.awt.event.InputEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.awt.geom.Rectangle2D;
-import java.awt.image.BufferedImage;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -27,8 +24,9 @@ public class Main extends JPanel {
     
 	private static JFrame jFrame = new JFrame();
 	
-    Player[] players;
-    Map map;
+	private Player[] players;
+	private Map map;
+	private Hex lastClickedHex = null;
     
     private Font font = new Font("Arial", Font.BOLD, 18);
 
@@ -46,7 +44,7 @@ public class Main extends JPanel {
         map.conquerHex(9, 9, players[1], 16);
         
         //map.getReachableHexes(map.getHexPosition(300, 300)); // 6,6
-        map.getReachableHexes(map.getHexPosition(230, 300)); // 4,6
+        //map.getReachableHexes(map.getHexPosition(230, 300)); // 4,6
         
     }
 
@@ -101,8 +99,20 @@ public class Main extends JPanel {
 
     	            System.out.println( "Left mouse button clicked on point [" + event.getPoint().x + "," + event.getPoint().y + "]" );
     	            
-    	            /*Hex hex =*/ map.getHexPosition(event.getPoint().x, event.getPoint().y);
-    	            map.getReachableHexes(map.getHexPosition(event.getPoint().x, event.getPoint().y));
+    	            Hex hex = map.getHexPosition(event.getPoint().x, event.getPoint().y);
+    	            
+    	            if ( lastClickedHex == null || (hex != null && (lastClickedHex.getX() != hex.getX() || lastClickedHex.getY() != hex.getY())) ) {
+    	            
+    	            	boolean conquered = false;
+    	            	conquered = map.doConquere(hex);
+    	            	if (conquered == false ) {
+    	            		map.getReachableHexes(map.getHexPosition(event.getPoint().x, event.getPoint().y));
+    	            	}
+    	            
+    	            	lastClickedHex = hex;
+    	            	
+    	            }
+    	            
     	            System.out.println();
 
         	    }
