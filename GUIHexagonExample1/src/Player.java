@@ -9,6 +9,7 @@ public class Player {
 	private Color color;
 	private BufferedImage image;
 	private BufferedImage imageSelected;
+	private boolean alive;
 	
 	private List<Hex> liveHexes = new ArrayList<Hex>();
 	private List<Hex> deadHexes = new ArrayList<Hex>();
@@ -19,6 +20,7 @@ public class Player {
 //		this.image = Hex.bImgPlayer;
 		this.image = ImageChangeColour.colorImage(Hex.bImgPlayer, color);
 		this.imageSelected = ImageChangeColour.colorImage(Hex.bImgPlayerSelected, color);
+		this.alive = true;
 	}
 
 	public String getName() {
@@ -37,14 +39,18 @@ public class Player {
 		return imageSelected;
 	}
 
-	/*public List<Hex> getLiveHexes() {
+	public List<Hex> getLiveHexes() {
 		return liveHexes;
-	}*/
+	}
 
 	public boolean liveHexesRemove(Hex hex) {
 		return liveHexes.remove(hex);
 	}
 
+	public void liveHexesRemoveAll(List<Hex> killHexes) {
+		liveHexes.removeAll(killHexes);
+	}
+	
 	public boolean liveHexesAdd(Hex hex) {
 		return liveHexes.add(hex);
 	}
@@ -67,5 +73,13 @@ public class Player {
 	public int deadHexesCount() {
 		return deadHexes.size();
 	}
+
+	public boolean isAlive() {
+		return alive;
+	}
 	
+	public void kill() {
+		alive = false;		
+	}
+
 }

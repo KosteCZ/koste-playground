@@ -63,6 +63,49 @@ public class Map {
 		}		
 	}
 	
+	/**
+	 * Kills hexes which should be dead (by rules of the game) belonging to specified players.
+	 * @param players players from which hexes will be checked
+	 * @return true if any of players (not hexes) died
+	 */
+	public boolean killPotentionallyDeadHexes( Player[] players ) {
+		
+		boolean result = false;
+		
+		for (int i = 0; i < players.length; i++) {
+			if ( players[i].isAlive() ) {
+				
+				List<Hex> liveHexes = players[i].getLiveHexes();
+				List<Hex> killHexes = new ArrayList<Hex>();
+				
+				for (Hex hex : liveHexes) {
+					if ( hex.getSheepCount() <= 1 ) {
+						hex.getOwner().deadHexesAdd(hex);
+						killHexes.add(hex);
+					} else {
+						if ( !hasReachableNeighbours(hex) ) {
+							hex.getOwner().deadHexesAdd(hex);
+							killHexes.add(hex);
+						}
+					}
+				}
+				
+				players[i].liveHexesRemoveAll(killHexes);
+			
+				int liveHexesCount = players[i].liveHexesCount();
+				if ( liveHexesCount == 0 ) {
+					players[i].kill();
+					result = true;
+				}
+				
+			}
+		}
+		
+		return result;
+				
+	}
+	
+	
 	public boolean doConquere(Hex hex) {
 	
 		boolean result = false;
@@ -233,6 +276,10 @@ public class Map {
 		}
 		
 		if ( !HexType.PLAYER.equals(hex.getHexType()) || hex.getSheepCount() < 2 ) {
+			return hexesTarget; 
+		}
+		
+		if ( !hasReachableNeighbours(hex) ) {
 			return hexesTarget; 
 		}
 		

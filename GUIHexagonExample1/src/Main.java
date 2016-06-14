@@ -90,14 +90,18 @@ public class Main extends JPanel {
         map.paint(g2d);
         
     	g2d.setColor(themePenColor);
-    	g2d.drawString("Na tahu je: ", 800, 60);	        	
+    	g2d.drawString("Na tahu je: ", 800, 60);
     	g2d.setColor(players[0].getColor());
     	g2d.drawString(players[0].getName(), 800, 80);	        	
     	g2d.setColor(themePenColor);
     	g2d.drawString("Skóre: ", 800, 120);	        	
 
     	for (int i = 0; i < players.length; i++) {
-        	g2d.setColor(players[i].getColor());
+        	if ( players[i].isAlive() ) {
+        		g2d.setColor(players[i].getColor());
+        	} else {
+        		g2d.setColor(Color.DARK_GRAY);
+        	}
         	g2d.drawString(players[i].getName() + " - mrtvé: " + players[i].deadHexesCount(), 800, 140 + i * 20);	        	
         	g2d.drawString(players[i].getName() + " - živé:  " + players[i].liveHexesCount(), 800, 180 + i * 20);	        	
         	g2d.setColor(themePenColor);
@@ -130,6 +134,8 @@ public class Main extends JPanel {
     	            	
     	            }
     	            
+    	            map.killPotentionallyDeadHexes( players );
+
 //    	            System.out.println();
 
         	    }
@@ -204,7 +210,7 @@ public class Main extends JPanel {
 	            g2d.fill(p2);
 	            */
 	            
-	        	repaint();
+	            repaint();
 		        jFrame.repaint();
 	        	
 	        }	        
