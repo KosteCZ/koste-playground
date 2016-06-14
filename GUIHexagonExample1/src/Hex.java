@@ -7,6 +7,8 @@ public class Hex {
 	public static final int HEX_WIDTH = 50;
     public static final int HEX_WIDTH_HALF = HEX_WIDTH / 2;
     public static final int HEX_HEIGHT = 44;
+    public static final String HEX_ARROW_LEFT = "arrow_left";
+    public static final String HEX_ARROW_RIGHT = "arrow_right";
 
     public static BufferedImage bImgPlayer = ImageChangeColour.getImage(HexType.PLAYER.name().toLowerCase());
     public static BufferedImage bImgPlayerSelected = ImageChangeColour.getImage(HexType.PLAYER.name().toLowerCase() + "_selected");
@@ -14,6 +16,8 @@ public class Hex {
     public static BufferedImage bImgGrass = ImageChangeColour.getImage(HexType.GRASS.name().toLowerCase());
     public static BufferedImage bImgGrassPath = ImageChangeColour.getImage(HexType.GRASS.name().toLowerCase() + "_path");
     public static BufferedImage bImgGrassTarget = ImageChangeColour.getImage(HexType.GRASS.name().toLowerCase() + "_target");
+    public static BufferedImage bImgArrowLeft = ImageChangeColour.getImage(HEX_ARROW_LEFT);
+    public static BufferedImage bImgArrowRight = ImageChangeColour.getImage(HEX_ARROW_RIGHT);
     
 	private int x;
 	private int y;
@@ -115,6 +119,27 @@ public class Hex {
 		
 	}
 
+	public void customPaint( Graphics2D g, int x, int y, String imageName ) {
+		
+		BufferedImage image = owner.getImageSelected();
+		if ( HEX_ARROW_LEFT.equals(imageName) ) {
+			image = bImgArrowLeft;
+			g.drawImage( image, null, x, y );
+		} else if ( HEX_ARROW_RIGHT.equals(imageName) ) {
+			image = bImgArrowRight;
+			g.drawImage( image, null, x, y );
+		}
+		
+	}
+	
+	public void customPaint( Graphics2D g, int x, int y, int sheepCount ) {
+		
+		int tAC = sheepCount < 10 ? 6 : 0; // text alignment constant (sheep count can be 1 or 2 digits)
+		g.drawImage( owner.getImageSelected(), null, x, y );
+		g.drawString( "" + sheepCount, 16 + tAC + x, 37 + y );
+			
+	}
+	
 	public void paint(Graphics2D g) {
 		if (HexType.GRASS.equals(hexType)) {
 			if (isPath()) {

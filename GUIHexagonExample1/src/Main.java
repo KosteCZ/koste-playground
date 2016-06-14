@@ -5,6 +5,8 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Polygon;
 import java.awt.event.InputEvent;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -28,6 +30,7 @@ public class Main extends JPanel {
 	private Player[] players;
 	private Map map;
 	private Hex lastClickedHex = null;
+	private int sendSheepsCount = 1;
     
     private Font font = new Font("Arial", Font.BOLD, 18);
 	private Color themePenColor = Color.BLACK;
@@ -106,6 +109,68 @@ public class Main extends JPanel {
         	g2d.drawString(players[i].getName() + " - živé:  " + players[i].liveHexesCount(), 800, 180 + i * 20);	        	
         	g2d.setColor(themePenColor);
 		}
+    	
+    	Hex selectedHex = map.getSelectedHex();
+    	
+    	if ( selectedHex != null ) {
+    		
+    		selectedHex.customPaint( g2d, 850, 264, selectedHex.getSheepCount() );
+    		selectedHex.customPaint( g2d, 825, 308, Hex.HEX_ARROW_LEFT );
+    		selectedHex.customPaint( g2d, 875, 308, Hex.HEX_ARROW_RIGHT );
+    		selectedHex.customPaint( g2d, 800, 352, selectedHex.getSheepCount() - sendSheepsCount );
+    		selectedHex.customPaint( g2d, 900, 352, sendSheepsCount );
+    		
+        	g2d.drawString("Dostupné klávesy:", 800, 450);
+        	boolean isLessThanTen = selectedHex.getSheepCount() < 10;
+        	int avalibleKeys = isLessThanTen ? selectedHex.getSheepCount() : 10;
+        	for (int i = 1; i < avalibleKeys; i++) {
+            	g2d.drawString("" + i, 800 + (i-1)*19, 470);				
+			}
+        	if (selectedHex.getSheepCount() > 10) { g2d.drawString("a=10", 800 + 0 * 60,   490); }
+        	if (selectedHex.getSheepCount() > 11) { g2d.drawString("b=11", 800 + 1 * 60+1, 490); }
+        	if (selectedHex.getSheepCount() > 12) { g2d.drawString("c=12", 800 + 2 * 60+1, 490); }
+        	if (selectedHex.getSheepCount() > 13) { g2d.drawString("d=13", 800 + 0 * 60,   510); }
+        	if (selectedHex.getSheepCount() > 14) { g2d.drawString("e=14", 800 + 1 * 60+1, 510); }
+        	if (selectedHex.getSheepCount() > 15) { g2d.drawString("f=15", 800 + 2 * 60+5, 510); }
+    	}
+    	
+    	jFrame.addKeyListener(new KeyAdapter() {
+    		public void keyPressed(KeyEvent event) {
+
+       			//System.out.println("KEY!!!");
+       			//System.out.println("KEY: " + event.getKeyChar());
+       			
+       			if ( selectedHex != null ) {
+       				
+       				try {
+       					
+       					String key = String.valueOf(event.getKeyChar());
+       					
+           				if ( "a".equals(key) ) { key = "10"; }
+           				if ( "b".equals(key) ) { key = "11"; }
+           				if ( "c".equals(key) ) { key = "12"; }
+           				if ( "d".equals(key) ) { key = "13"; }
+           				if ( "e".equals(key) ) { key = "14"; }
+           				if ( "f".equals(key) ) { key = "15"; }
+           					
+       					int potencialSendSheepsCount = Integer.valueOf( key );
+       				
+       					if (potencialSendSheepsCount > 0 && potencialSendSheepsCount < selectedHex.getSheepCount()) {
+       				
+       						sendSheepsCount = potencialSendSheepsCount;
+       					
+       					} else {	
+           					sendSheepsCount = 1;	
+           				}
+       				} catch (Exception e) {
+       					sendSheepsCount = 1;
+       				}
+       			} else {	
+       				sendSheepsCount = 1;	
+       			}
+
+    		}
+    	}); 
         
 	    this.addMouseListener(new MouseAdapter() {
 	    //frame.addMouseListener(new MouseAdapter() {
@@ -115,7 +180,7 @@ public class Main extends JPanel {
 	        	//System.out.println( "RowForWidth("+ event.getPoint().x +"): " + gameMap.getRowForWidth( event.getPoint().x ) );
 	        	//System.out.println( "ColumnForHeight("+ event.getPoint().y +"): " + gameMap.getColumnForHeight( event.getPoint().y ) );
 
-	    	    if ((event.getModifiers() & InputEvent.BUTTON1_MASK) != 0) {
+	    	    if ( (event.getModifiers() & InputEvent.BUTTON1_MASK) != 0 ) {
 
 //    	            System.out.println( "Left mouse button clicked on point [" + event.getPoint().x + "," + event.getPoint().y + "]" );
     	            
@@ -124,12 +189,14 @@ public class Main extends JPanel {
     	            if ( lastClickedHex == null || (hex != null && (lastClickedHex.getX() != hex.getX() || lastClickedHex.getY() != hex.getY())) ) {
     	            
     	            	boolean conquered = false;
-    	            	conquered = map.doConquere(hex);
+    	            	conquered = map.doConquere( hex, sendSheepsCount );
     	            	if (conquered == false ) {
-    	            		map.getReachableHexes(hex);
+    	            		map.getReachableHexes( hex );
     	                 	lastClickedHex = hex;
+    	                 	sendSheepsCount = 1;
     	              	} else {
     	                  	lastClickedHex = null;
+    	                  	sendSheepsCount = 1;
     	             	}
     	            	
     	            }

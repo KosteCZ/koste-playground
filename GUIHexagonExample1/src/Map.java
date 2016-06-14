@@ -32,6 +32,10 @@ public class Map {
 	public int getWidth() {
 		return width;
 	}
+	
+	public Hex getSelectedHex() {
+		return selectedHex;
+	}
 
 	public void paint(Graphics2D g) {
 		
@@ -106,7 +110,7 @@ public class Map {
 	}
 	
 	
-	public boolean doConquere(Hex hex) {
+	public boolean doConquere( Hex hex, int sendSheepsCount ) {
 	
 		boolean result = false;
 		
@@ -132,10 +136,8 @@ public class Map {
 				if ( hex.isTarget() ) {
 				
 					System.err.println("444");
-					
-					int transferCount = selectedHex.getSheepCount() - 1;
 			
-					int selectedHexSheepCountNew = selectedHex.lowerSheepCountBy(transferCount);
+					int selectedHexSheepCountNew = selectedHex.lowerSheepCountBy(sendSheepsCount);
 				
 					System.err.println("555 selectedHexSheepCountNew: " + selectedHexSheepCountNew);
 				
@@ -143,7 +145,7 @@ public class Map {
 					
 						System.err.println("666");
 					
-						map[hex.getX()][hex.getY()].conquer(selectedHex.getOwner(), transferCount);
+						map[hex.getX()][hex.getY()].conquer(selectedHex.getOwner(), sendSheepsCount);
 						
 						if (selectedHexSheepCountNew == 1) {
 							selectedHex.getOwner().deadHexesAdd(selectedHex);
