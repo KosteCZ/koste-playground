@@ -9,15 +9,16 @@ public class Hex {
     public static final int HEX_HEIGHT = 44;
     public static final String HEX_ARROW_LEFT = "arrow_left";
     public static final String HEX_ARROW_RIGHT = "arrow_right";
+    public static final String RESOURCES_PATH = "img/";
 
-    public static BufferedImage bImgPlayer = ImageChangeColour.getImage(HexType.PLAYER.name().toLowerCase());
-    public static BufferedImage bImgPlayerSelected = ImageChangeColour.getImage(HexType.PLAYER.name().toLowerCase() + "_selected");
-    public static BufferedImage bImgEmpty = ImageChangeColour.getImage(HexType.EMPTY.name().toLowerCase());
-    public static BufferedImage bImgGrass = ImageChangeColour.getImage(HexType.GRASS.name().toLowerCase());
-    public static BufferedImage bImgGrassPath = ImageChangeColour.getImage(HexType.GRASS.name().toLowerCase() + "_path");
-    public static BufferedImage bImgGrassTarget = ImageChangeColour.getImage(HexType.GRASS.name().toLowerCase() + "_target");
-    public static BufferedImage bImgArrowLeft = ImageChangeColour.getImage(HEX_ARROW_LEFT);
-    public static BufferedImage bImgArrowRight = ImageChangeColour.getImage(HEX_ARROW_RIGHT);
+    public static BufferedImage bImgPlayer = ImageChangeColour.getImage(RESOURCES_PATH + HexType.PLAYER.name().toLowerCase());
+    public static BufferedImage bImgPlayerSelected = ImageChangeColour.getImage(RESOURCES_PATH + HexType.PLAYER.name().toLowerCase() + "_selected");
+    public static BufferedImage bImgEmpty = ImageChangeColour.getImage(RESOURCES_PATH + HexType.EMPTY.name().toLowerCase());
+    public static BufferedImage bImgGrass = ImageChangeColour.getImage(RESOURCES_PATH + HexType.GRASS.name().toLowerCase());
+    public static BufferedImage bImgGrassPath = ImageChangeColour.getImage(RESOURCES_PATH + HexType.GRASS.name().toLowerCase() + "_path");
+    public static BufferedImage bImgGrassTarget = ImageChangeColour.getImage(RESOURCES_PATH + HexType.GRASS.name().toLowerCase() + "_target");
+    public static BufferedImage bImgArrowLeft = ImageChangeColour.getImage(RESOURCES_PATH + HEX_ARROW_LEFT);
+    public static BufferedImage bImgArrowRight = ImageChangeColour.getImage(RESOURCES_PATH + HEX_ARROW_RIGHT);
     
 	private int x;
 	private int y;
