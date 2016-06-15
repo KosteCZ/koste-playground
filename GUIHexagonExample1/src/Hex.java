@@ -28,6 +28,7 @@ public class Hex {
 	private boolean selected = false;
 	private boolean target = false;
 	private boolean path = false;
+	private boolean marked = false; // marked in final computing of the largest connected area 
 	
 	public Hex(int x, int y, HexType hexType) {		
 		this.x = x;
@@ -98,8 +99,16 @@ public class Hex {
 		this.target = false;
 		this.path = false;
 	}
-		
 
+	public boolean isMarked() {
+		return marked;
+	}
+
+	public void mark() {
+		this.marked = true;
+	}
+
+	
 	public boolean conquer(Player player, int sheepCount) {
 		
 		boolean result = false;

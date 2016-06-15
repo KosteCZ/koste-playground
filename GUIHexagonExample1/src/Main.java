@@ -105,8 +105,8 @@ public class Main extends JPanel {
         	} else {
         		g2d.setColor(Color.DARK_GRAY);
         	}
-        	g2d.drawString(players[i].getName() + " - mrtvé: " + players[i].deadHexesCount(), 800, 140 + i * 20);	        	
-        	g2d.drawString(players[i].getName() + " - živé:  " + players[i].liveHexesCount(), 800, 180 + i * 20);	        	
+        	g2d.drawString(players[i].getName() + " - mrtvé: " + players[i].getDeadHexesCount(), 800, 140 + i * 20);	        	
+        	g2d.drawString(players[i].getName() + " - živé:  " + players[i].getLiveHexesCount(), 800, 180 + i * 20);	        	
         	g2d.setColor(themePenColor);
 		}
     	
@@ -132,6 +132,21 @@ public class Main extends JPanel {
         	if (selectedHex.getSheepCount() > 13) { g2d.drawString("d=13", 800 + 0 * 60,   510); }
         	if (selectedHex.getSheepCount() > 14) { g2d.drawString("e=14", 800 + 1 * 60+1, 510); }
         	if (selectedHex.getSheepCount() > 15) { g2d.drawString("f=15", 800 + 2 * 60+5, 510); }
+    	}
+    	
+    	boolean allPlayersDead = true;
+    	for (int i = 0; i < players.length; i++) {
+			if ( players[i].isAlive() ) {
+				allPlayersDead = false;
+				break;
+			}
+		}
+    	if ( allPlayersDead ) {
+    		Player[] playersScoreTable = map.computeFinalScore( players );
+    		g2d.setColor(playersScoreTable[0].getColor());
+    		g2d.drawString("1. " + players[0].getName() + ": " + playersScoreTable[0].getDeadHexesCount() + ", " + playersScoreTable[0].getLargestAreaHexCount(), 800, 550);
+    		g2d.setColor(playersScoreTable[1].getColor());
+    		g2d.drawString("2. " + players[1].getName() + ": " + playersScoreTable[1].getDeadHexesCount() + ", " + playersScoreTable[1].getLargestAreaHexCount(), 800, 570);
     	}
     	
     	jFrame.addKeyListener(new KeyAdapter() {
@@ -174,7 +189,7 @@ public class Main extends JPanel {
         
 	    this.addMouseListener(new MouseAdapter() {
 	    //frame.addMouseListener(new MouseAdapter() {
-	        public void mouseClicked(MouseEvent event) {
+	        public void mousePressed(MouseEvent event) {
 	            //System.out.println(event.getPoint());
 
 	        	//System.out.println( "RowForWidth("+ event.getPoint().x +"): " + gameMap.getRowForWidth( event.getPoint().x ) );
@@ -182,7 +197,7 @@ public class Main extends JPanel {
 
 	    	    if ( (event.getModifiers() & InputEvent.BUTTON1_MASK) != 0 ) {
 
-//    	            System.out.println( "Left mouse button clicked on point [" + event.getPoint().x + "," + event.getPoint().y + "]" );
+//    	            System.out.println( "Left mouse button pressed on point [" + event.getPoint().x + "," + event.getPoint().y + "]" );
     	            
     	            Hex hex = map.getHexPosition(event.getPoint().x, event.getPoint().y);
     	            
@@ -209,13 +224,13 @@ public class Main extends JPanel {
 
         	    if ((event.getModifiers() & InputEvent.BUTTON2_MASK) != 0) {
 
-    	            System.out.println( "Center mouse button clicked on point [" + event.getPoint().x + "," + event.getPoint().y + "]" );
+    	            System.out.println( "Center mouse button pressed on point [" + event.getPoint().x + "," + event.getPoint().y + "]" );
 
         	    }
 
         	    if ((event.getModifiers() & InputEvent.BUTTON3_MASK) != 0) {
 
-    	            System.out.println( "Right mouse button clicked on point [" + event.getPoint().x + "," + event.getPoint().y + "]" );
+    	            System.out.println( "Right mouse button pressed on point [" + event.getPoint().x + "," + event.getPoint().y + "]" );
 
         	    }
         	    

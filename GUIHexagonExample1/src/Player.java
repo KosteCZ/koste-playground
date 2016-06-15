@@ -3,13 +3,14 @@ import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Player {
+public class Player implements Comparable<Player> {
 
 	private String name;
 	private Color color;
 	private BufferedImage image;
 	private BufferedImage imageSelected;
 	private boolean alive;
+	private int largestAreaHexCount;
 	
 	private List<Hex> liveHexes = new ArrayList<Hex>();
 	private List<Hex> deadHexes = new ArrayList<Hex>();
@@ -21,6 +22,7 @@ public class Player {
 		this.image = ImageChangeColour.colorImage(Hex.bImgPlayer, color);
 		this.imageSelected = ImageChangeColour.colorImage(Hex.bImgPlayerSelected, color);
 		this.alive = true;
+		this.largestAreaHexCount = 0;
 	}
 
 	public String getName() {
@@ -55,12 +57,13 @@ public class Player {
 		return liveHexes.add(hex);
 	}
 
-	public int liveHexesCount() {
+	public int getLiveHexesCount() {
 		return liveHexes.size();
 	}
-	/*public List<Hex> getDeadHexes() {
+	
+	public List<Hex> getDeadHexes() {
 		return deadHexes;
-	}*/
+	}
 
 	public boolean deadHexesRemove(Hex hex) {
 		return deadHexes.remove(hex);
@@ -70,16 +73,36 @@ public class Player {
 		return deadHexes.add(hex);
 	}
 
-	public int deadHexesCount() {
+	public int getDeadHexesCount() {
 		return deadHexes.size();
 	}
 
+	public int getLargestAreaHexCount() {
+		return largestAreaHexCount;
+	}
+	
+	public void setLargestAreaHexCount( int largestAreaHexCount ) {
+		this.largestAreaHexCount = largestAreaHexCount;
+	}
+	
 	public boolean isAlive() {
 		return alive;
 	}
 	
 	public void kill() {
 		alive = false;		
+	}
+	
+	public int compareTo( Player comparePlayer ) {
+		
+		int compareDeadHexesCount = ((Player) comparePlayer).getDeadHexesCount(); 
+		
+		//ascending order
+		//return this.deadHexesCount() - compareDeadHexesCount;
+		
+		//descending order
+		return compareDeadHexesCount - this.getDeadHexesCount();
+		
 	}
 
 }

@@ -1,5 +1,6 @@
 import java.awt.Graphics2D;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Map {
@@ -67,6 +68,61 @@ public class Map {
 		}		
 	}
 	
+	public Player[] computeFinalScore( Player[] players ) {
+		
+		Player[] playersScoreTable = new Player[players.length];
+		
+		System.arraycopy( players, 0, playersScoreTable, 0, players.length );
+		
+		for (int i = 0; i < playersScoreTable.length; i++) {
+			computeLargestConnectedAreaFor( playersScoreTable[i] );
+		}
+				
+		Arrays.sort( playersScoreTable );
+		
+		return playersScoreTable;
+		
+	}
+	
+	public void computeLargestConnectedAreaFor( Player player ) {
+		
+		for ( Hex hex : player.getDeadHexes() ) {
+			
+			if ( !hex.isMarked() ) {
+				
+				int currentAreaHexCount = markConnectedHexes( hex, player );
+				
+				if ( currentAreaHexCount > player.getLargestAreaHexCount() ) {
+					player.setLargestAreaHexCount( currentAreaHexCount );
+				}
+				
+			}
+			
+		}
+	}
+	
+	public int markConnectedHexes( Hex hex, Player player ) {
+		
+		int currentHexCount = 0;
+		
+		if ( hex.getOwner().equals( player ) && !hex.isMarked() ) {
+		
+			currentHexCount = 1;
+			
+			hex.mark();
+			
+			List<Hex> reachableHexes = getReachableNeighbours( hex, HexType.PLAYER );
+			
+			for ( Hex hex2 : reachableHexes ) {
+				currentHexCount = currentHexCount + markConnectedHexes( hex2, player );
+			}
+			
+		}
+		
+		return currentHexCount;
+		
+	}
+	
 	/**
 	 * Kills hexes which should be dead (by rules of the game) belonging to specified players.
 	 * @param players players from which hexes will be checked
@@ -96,7 +152,7 @@ public class Map {
 				
 				players[i].liveHexesRemoveAll(killHexes);
 			
-				int liveHexesCount = players[i].liveHexesCount();
+				int liveHexesCount = players[i].getLiveHexesCount();
 				if ( liveHexesCount == 0 ) {
 					players[i].kill();
 					result = true;
@@ -113,37 +169,16 @@ public class Map {
 	public boolean doConquere( Hex hex, int sendSheepsCount ) {
 	
 		boolean result = false;
-		
-		
-		System.err.println("111");
-		
-		System.err.println("111-111 selectedHex: " + selectedHex);
-		if ( selectedHex != null ) {
-			System.err.println("111-111 selectedHex X: " + selectedHex.getX());
-			System.err.println("111-111 selectedHex Y: " + selectedHex.getY());
-			System.err.println("111-111 selectedHex getSheepCount: " + selectedHex.getSheepCount());
-		}
-		
-		
+	
 		if ( selectedHex != null && selectedHex.getSheepCount() >= 2 ) {
-		
-			System.err.println("222");
 			
 			if ( ! ( hex == null || hex.getX() < 1 || hex.getX() > width || hex.getY() < 1 || hex.getY() > height ) ) {
 				
-				System.err.println("333");
-				
 				if ( hex.isTarget() ) {
 				
-					System.err.println("444");
-			
 					int selectedHexSheepCountNew = selectedHex.lowerSheepCountBy(sendSheepsCount);
-				
-					System.err.println("555 selectedHexSheepCountNew: " + selectedHexSheepCountNew);
-				
+								
 					if (selectedHexSheepCountNew >= 1) {
-					
-						System.err.println("666");
 					
 						map[hex.getX()][hex.getY()].conquer(selectedHex.getOwner(), sendSheepsCount);
 						
@@ -175,18 +210,18 @@ public class Map {
 	public void clearSelectedHexesForGUI() {
 		clearAllSelectionAttributes();
 		
-		if (selectedHex != null) {
+		/*if (selectedHex != null) {
 	    	System.err.println("! Selected HEX SET TO NULL: " + selectedHex.getX() + "," + selectedHex.getY() );
-		}
+		}*/
 	       
 		selectedHex = null;
 	}
 	
-	public boolean hasReachableNeighbours(Hex hex) {
-		return getReachableNeighbours(hex).size() > 0;
+	public boolean hasReachableNeighbours( Hex hex ) {
+		return getReachableNeighbours( hex, HexType.GRASS ).size() > 0;
 	}
 	
-	public List<Hex> getReachableNeighbours(Hex hex) {
+	private List<Hex> getReachableNeighbours( Hex hex, HexType hexType ) {
 		
 		List<Hex> hexesNeighbours = new ArrayList<Hex>();
 		
@@ -194,7 +229,7 @@ public class Map {
 			return hexesNeighbours;
 		}
 		
-		if ( !HexType.PLAYER.equals(hex.getHexType()) || hex.getSheepCount() < 2 ) {
+		if ( !HexType.PLAYER.equals(hex.getHexType()) /*|| hex.getSheepCount() < 2*/ ) {
 			return hexesNeighbours; 
 		}
 		
@@ -204,7 +239,7 @@ public class Map {
 		
 		x--;
 		
-		if ( map[x][y] != null && HexType.GRASS.equals(map[x][y].getHexType()) ) {
+		if ( map[x][y] != null && hexType.equals(map[x][y].getHexType()) ) {
 			hexesNeighbours.add(map[x][y]);
 		}
 		
@@ -214,7 +249,7 @@ public class Map {
 		
 		x++;
 		
-		if ( map[x][y] != null && HexType.GRASS.equals(map[x][y].getHexType()) ) {
+		if ( map[x][y] != null && hexType.equals(map[x][y].getHexType()) ) {
 			hexesNeighbours.add(map[x][y]);
 		}
 		
@@ -225,7 +260,7 @@ public class Map {
 		y--;
 		if ((y % 2) == 1) { x--; }
 		
-		if ( map[x][y] != null && HexType.GRASS.equals(map[x][y].getHexType()) ){
+		if ( map[x][y] != null && hexType.equals(map[x][y].getHexType()) ){
 			hexesNeighbours.add(map[x][y]);
 		}
 		
@@ -236,7 +271,7 @@ public class Map {
 		y--;
 		if ((y % 2) == 0) { x++; }
 		
-		if ( map[x][y] != null && HexType.GRASS.equals(map[x][y].getHexType()) ) {
+		if ( map[x][y] != null && hexType.equals(map[x][y].getHexType()) ) {
 			hexesNeighbours.add(map[x][y]);
 		}
 		
@@ -247,7 +282,7 @@ public class Map {
 		y++;
 		if ((y % 2) == 1) { x--; }
 		
-		if ( map[x][y] != null && HexType.GRASS.equals(map[x][y].getHexType()) ) {
+		if ( map[x][y] != null && hexType.equals(map[x][y].getHexType()) ) {
 			hexesNeighbours.add(map[x][y]);
 		}
 		
@@ -258,7 +293,7 @@ public class Map {
 		y++;
 		if ((y % 2) == 0) { x++; }
 		
-		if ( map[x][y] != null && HexType.GRASS.equals(map[x][y].getHexType()) ) {
+		if ( map[x][y] != null && hexType.equals(map[x][y].getHexType()) ) {
 			hexesNeighbours.add(map[x][y]);
 		}
 		
