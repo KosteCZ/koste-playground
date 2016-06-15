@@ -11,6 +11,7 @@ public class Player implements Comparable<Player> {
 	private BufferedImage imageSelected;
 	private boolean alive;
 	private int largestAreaHexCount;
+	private int finalPosition;
 	
 	private List<Hex> liveHexes = new ArrayList<Hex>();
 	private List<Hex> deadHexes = new ArrayList<Hex>();
@@ -23,6 +24,7 @@ public class Player implements Comparable<Player> {
 		this.imageSelected = ImageChangeColour.colorImage(Hex.bImgPlayerSelected, color);
 		this.alive = true;
 		this.largestAreaHexCount = 0;
+		this.finalPosition = 0;
 	}
 
 	public String getName() {
@@ -45,16 +47,16 @@ public class Player implements Comparable<Player> {
 		return liveHexes;
 	}
 
-	public boolean liveHexesRemove(Hex hex) {
-		return liveHexes.remove(hex);
+	public boolean liveHexesRemove( Hex hex ) {
+		return liveHexes.remove( hex );
 	}
 
-	public void liveHexesRemoveAll(List<Hex> killHexes) {
-		liveHexes.removeAll(killHexes);
+	public void liveHexesRemoveAll( List<Hex> killHexes ) {
+		liveHexes.removeAll( killHexes );
 	}
 	
-	public boolean liveHexesAdd(Hex hex) {
-		return liveHexes.add(hex);
+	public boolean liveHexesAdd( Hex hex ) {
+		return liveHexes.add( hex );
 	}
 
 	public int getLiveHexesCount() {
@@ -65,12 +67,12 @@ public class Player implements Comparable<Player> {
 		return deadHexes;
 	}
 
-	public boolean deadHexesRemove(Hex hex) {
-		return deadHexes.remove(hex);
+	public boolean deadHexesRemove( Hex hex ) {
+		return deadHexes.remove( hex );
 	}
 
-	public boolean deadHexesAdd(Hex hex) {
-		return deadHexes.add(hex);
+	public boolean deadHexesAdd( Hex hex ) {
+		return deadHexes.add( hex );
 	}
 
 	public int getDeadHexesCount() {
@@ -85,6 +87,14 @@ public class Player implements Comparable<Player> {
 		this.largestAreaHexCount = largestAreaHexCount;
 	}
 	
+	public int getFinalPosition() {
+		return finalPosition;
+	}
+
+	public void setFinalPosition( int finalPosition ) {
+		this.finalPosition = finalPosition;
+	}
+
 	public boolean isAlive() {
 		return alive;
 	}
@@ -93,15 +103,21 @@ public class Player implements Comparable<Player> {
 		alive = false;		
 	}
 	
+	public int getScore() {
+		return countScore( this );
+	}
+	
+	private int countScore( Player player ) {
+		int score = ( player.getDeadHexesCount() * 100 ) + player.getLargestAreaHexCount();
+		return score;
+	}
+	
 	public int compareTo( Player comparePlayer ) {
 		
-		int compareDeadHexesCount = ((Player) comparePlayer).getDeadHexesCount(); 
-		
-		//ascending order
-		//return this.deadHexesCount() - compareDeadHexesCount;
+		int compareScore = countScore( comparePlayer ); 
 		
 		//descending order
-		return compareDeadHexesCount - this.getDeadHexesCount();
+		return compareScore - countScore( this );
 		
 	}
 

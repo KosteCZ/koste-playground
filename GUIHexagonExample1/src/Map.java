@@ -80,6 +80,18 @@ public class Map {
 				
 		Arrays.sort( playersScoreTable );
 		
+		for (int i = 0; i < playersScoreTable.length; i++) {
+			playersScoreTable[i].setFinalPosition(i + 1);
+		}
+		
+		if ( playersScoreTable.length >= 2 ) {
+			for (int i = 1; i < playersScoreTable.length; i++) {
+				if ( playersScoreTable[i].getScore() == playersScoreTable[i-1].getScore() ) {
+					playersScoreTable[i].setFinalPosition( playersScoreTable[i-1].getFinalPosition() );
+				}
+			}
+		}
+		
 		return playersScoreTable;
 		
 	}

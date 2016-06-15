@@ -143,10 +143,10 @@ public class Main extends JPanel {
 		}
     	if ( allPlayersDead ) {
     		Player[] playersScoreTable = map.computeFinalScore( players );
-    		g2d.setColor(playersScoreTable[0].getColor());
-    		g2d.drawString("1. " + players[0].getName() + ": " + playersScoreTable[0].getDeadHexesCount() + ", " + playersScoreTable[0].getLargestAreaHexCount(), 800, 550);
-    		g2d.setColor(playersScoreTable[1].getColor());
-    		g2d.drawString("2. " + players[1].getName() + ": " + playersScoreTable[1].getDeadHexesCount() + ", " + playersScoreTable[1].getLargestAreaHexCount(), 800, 570);
+    		for (int i = 0; i < playersScoreTable.length; i++) {
+        		g2d.setColor(playersScoreTable[i].getColor());
+        		g2d.drawString(playersScoreTable[i].getFinalPosition() + ". " + players[i].getName() + ": " + playersScoreTable[i].getDeadHexesCount() + ", " + playersScoreTable[i].getLargestAreaHexCount(), 800, 550 + (i * 20));
+			}
     	}
     	
     	jFrame.addKeyListener(new KeyAdapter() {
