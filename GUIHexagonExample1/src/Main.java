@@ -3,7 +3,6 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.awt.Polygon;
 import java.awt.event.InputEvent;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
@@ -31,6 +30,8 @@ public class Main extends JPanel {
 	private Map map;
 	private Hex lastClickedHex = null;
 	private int sendSheepsCount = 1;
+	private int currentPlayer = -1;
+	private boolean allPlayersDead = true;
     
     private Font font = new Font("Arial", Font.BOLD, 18);
 	private Color themePenColor = Color.BLACK;
@@ -44,13 +45,43 @@ public class Main extends JPanel {
         players[1] = new Player("Hráč 2", Color.BLUE);
         
         map = new Map(13, 13);
-        map.generateMap1();
-        map.conquerHex(4, 5, players[0], 16);
-        map.conquerHex(9, 9, players[1], 16);
+        //map.generateMap1();
+        //map.conquerHex(4, 5, players[0], 16);
+        //map.conquerHex(9, 9, players[1], 16);
+        map.generateMap2();
+        map.conquerHex(5, 5, players[0], 16);
+        map.conquerHex(9, 8, players[1], 16);
+        currentPlayer = 0;
+        allPlayersDead = false;
         
         //map.getReachableHexes(map.getHexPosition(300, 300)); // 6,6
         //map.getReachableHexes(map.getHexPosition(230, 300)); // 4,6
         
+    }
+    
+    private void checkIfAreAllPlayerDead() {
+    	if ( !allPlayersDead ) {
+    		boolean allPlayersDead = true;
+    		for (int i = 0; i < players.length; i++) {
+    			if ( players[i].isAlive() ) {
+    				allPlayersDead = false;
+    				break;
+    			}
+    		}
+    		if ( allPlayersDead ) {
+    			this.allPlayersDead = true;
+    		}
+    	}
+    }
+    
+    private void nextPlayer() {
+    	checkIfAreAllPlayerDead();
+    	if ( !allPlayersDead ) {
+    		currentPlayer = ((currentPlayer + 1) < players.length) ? (currentPlayer + 1) : 0;
+    		if ( !players[currentPlayer].isAlive() ) {
+    			nextPlayer();
+    		}
+    	}
     }
 
     @Override
@@ -94,10 +125,12 @@ public class Main extends JPanel {
         
     	g2d.setColor(themePenColor);
     	g2d.drawString("Na tahu je: ", 800, 60);
-    	g2d.setColor(players[0].getColor());
-    	g2d.drawString(players[0].getName(), 800, 80);	        	
+    	if (currentPlayer > -1 ) {
+    		g2d.setColor(players[currentPlayer].getColor());
+    		g2d.drawString(players[currentPlayer].getName(), 800, 80);	
+    	}
     	g2d.setColor(themePenColor);
-    	g2d.drawString("Skóre: ", 800, 120);	        	
+    	g2d.drawString("Pomocné údaje: ", 800, 120);	        	
 
     	for (int i = 0; i < players.length; i++) {
         	if ( players[i].isAlive() ) {
@@ -134,19 +167,16 @@ public class Main extends JPanel {
         	if (selectedHex.getSheepCount() > 15) { g2d.drawString("f=15", 800 + 2 * 60+5, 510); }
     	}
     	
-    	boolean allPlayersDead = true;
-    	for (int i = 0; i < players.length; i++) {
-			if ( players[i].isAlive() ) {
-				allPlayersDead = false;
-				break;
-			}
-		}
+    	checkIfAreAllPlayerDead();
     	if ( allPlayersDead ) {
+    		g2d.setColor(Color.BLACK);
+        	g2d.drawString("Finální skóre: ", 800, 530);	        	
     		Player[] playersScoreTable = map.computeFinalScore( players );
     		for (int i = 0; i < playersScoreTable.length; i++) {
         		g2d.setColor(playersScoreTable[i].getColor());
-        		g2d.drawString(playersScoreTable[i].getFinalPosition() + ". " + players[i].getName() + ": " + playersScoreTable[i].getDeadHexesCount() + ", " + playersScoreTable[i].getLargestAreaHexCount(), 800, 550 + (i * 20));
+        		g2d.drawString(playersScoreTable[i].getFinalPosition() + ". " + players[i].getName() + ": " + playersScoreTable[i].getDeadHexesCount() + " (" + playersScoreTable[i].getLargestAreaHexCount() + ")", 800, 550 + (i * 20));
 			}
+    		currentPlayer = -1;
     	}
     	
     	jFrame.addKeyListener(new KeyAdapter() {
@@ -201,19 +231,24 @@ public class Main extends JPanel {
     	            
     	            Hex hex = map.getHexPosition(event.getPoint().x, event.getPoint().y);
     	            
-    	            if ( lastClickedHex == null || (hex != null && (lastClickedHex.getX() != hex.getX() || lastClickedHex.getY() != hex.getY())) ) {
+    	            if ( ( hex != null ) && ( ( !hex.getHexType().equals(HexType.PLAYER) ) || ( hex.getOwner() == players[currentPlayer] ) ) ) {
     	            
-    	            	boolean conquered = false;
-    	            	conquered = map.doConquere( hex, sendSheepsCount );
-    	            	if (conquered == false ) {
-    	            		map.getReachableHexes( hex );
-    	                 	lastClickedHex = hex;
-    	                 	sendSheepsCount = 1;
-    	              	} else {
-    	                  	lastClickedHex = null;
-    	                  	sendSheepsCount = 1;
-    	             	}
+    	            	if ( lastClickedHex == null || ((lastClickedHex.getX() != hex.getX() || lastClickedHex.getY() != hex.getY())) ) {
+    	            
+    	            		boolean conquered = false;
+    	            		conquered = map.doConquere( hex, sendSheepsCount );
+    	            		if (conquered == false ) {
+    	            			map.getReachableHexes( hex );
+    	                 		lastClickedHex = hex;
+    	                 		sendSheepsCount = 1;
+    	              		} else {
+    	                  		lastClickedHex = null;
+    	                  		sendSheepsCount = 1;
+    	                  		nextPlayer();
+    	              		}
     	            	
+    	            	}
+    	            
     	            }
     	            
     	            map.killPotentionallyDeadHexes( players );
@@ -256,6 +291,10 @@ public class Main extends JPanel {
 
 	        	//System.out.println("[" + event.getPoint().x + "," + event.getPoint().y + "]");
 	            
+	        	
+	        	
+	        	// ** MOZNO POUZIT PRO TVORBU MAPY **
+	        	/*
 	        	Graphics2D g2d = (Graphics2D) jFrame.getGraphics();
 	        	g2d.setFont(font);
 	        	g2d.drawString("a[" + event.getPoint().x + "," + event.getPoint().y + "]", 60, 230);	        	
@@ -274,6 +313,10 @@ public class Main extends JPanel {
 	            	g2d.fillPolygon(p);
 		        //    g2d.drawString("out", 60, 280);
 	            }
+	            */
+	        	
+	        	
+	        	
 	        	
 	            /*
 	            BufferedImage bimg = ImageChangeColour.getImage(HexType.GRASS.name());

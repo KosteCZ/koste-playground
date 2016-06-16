@@ -58,6 +58,41 @@ public class Map {
         }
 	}
 	
+	public void generateMap2() {
+		map[5][4].setHexType(HexType.GRASS);
+		map[6][4].setHexType(HexType.GRASS);
+		map[8][4].setHexType(HexType.GRASS);
+		map[9][4].setHexType(HexType.GRASS);
+		map[5][5].setHexType(HexType.GRASS);
+		map[6][5].setHexType(HexType.GRASS);
+		map[7][5].setHexType(HexType.GRASS);
+		map[8][5].setHexType(HexType.GRASS);
+		map[9][5].setHexType(HexType.GRASS);
+		map[5][6].setHexType(HexType.GRASS);
+		map[6][6].setHexType(HexType.GRASS);
+		map[7][6].setHexType(HexType.GRASS);
+		map[9][6].setHexType(HexType.GRASS);
+		map[10][6].setHexType(HexType.GRASS);
+		map[4][7].setHexType(HexType.GRASS);
+		map[5][7].setHexType(HexType.GRASS);
+		map[6][7].setHexType(HexType.GRASS);
+		map[7][7].setHexType(HexType.GRASS);
+		map[8][7].setHexType(HexType.GRASS);
+		map[9][7].setHexType(HexType.GRASS);
+		map[4][8].setHexType(HexType.GRASS);
+		map[5][8].setHexType(HexType.GRASS);
+		map[7][8].setHexType(HexType.GRASS);
+		map[8][8].setHexType(HexType.GRASS);
+		map[9][8].setHexType(HexType.GRASS);
+		map[4][9].setHexType(HexType.GRASS);
+		map[5][9].setHexType(HexType.GRASS);
+		map[6][9].setHexType(HexType.GRASS);
+		map[7][9].setHexType(HexType.GRASS);
+		map[8][9].setHexType(HexType.GRASS);
+		map[6][10].setHexType(HexType.GRASS);
+		map[7][10].setHexType(HexType.GRASS);
+	}
+	
 	public void clearAllSelectionAttributes() {
         for (int row = 1; row <= width; row++) {
         	for (int col = 1; col <= (height + (((row % 2) == 0) ? 1 : 0)); col++) {
