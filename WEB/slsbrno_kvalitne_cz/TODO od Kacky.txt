@@ -1,0 +1,14 @@
+Admin table
+- tucne cislice u ecoins
+- mezera mezi tlacitky + a -
+- pridat +-5 tlacitka doprava
+- participants a ecoins napisy odsadit doleva a ne na stred
+- zahlavy stejne jako u profile
+(ohlaseni)
+
+Statistika
+- serazena, jen read only-bez +-1, +-5
+
+Odhlášení
+
+Na vsech strankach: Elsa Brno IT Law + oznaceni autora
