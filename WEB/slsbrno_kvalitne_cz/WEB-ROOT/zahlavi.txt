@@ -1,0 +1,16 @@
+    <div id="top"> <!-- style="background-color:#CCEEFF"> -->
+      <table>
+        <tr>
+          <td><font color="#000099"><b>Summer Law School</b></font></td>
+          <td rowspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+          <td rowspan="3"><img src="logo2micro_clear.png"></td>
+        </tr>
+        <tr>
+          <td><font color="#000099"><b>IT Law</b></font></td>
+        </tr>
+        <tr>
+          <td><font color="#000099"><b>Brno 2016</b></font></td>
+        </tr>
+      </table>
+      <hr>
+    </div>

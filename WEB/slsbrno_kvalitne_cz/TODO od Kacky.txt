@@ -1,9 +1,9 @@
 Admin table
-- tucne cislice u ecoins
-- mezera mezi tlacitky + a -
+- tucne cislice u ecoins - DONE
+- mezera mezi tlacitky + a -  - uz je?
 - pridat +-5 tlacitka doprava
-- participants a ecoins napisy odsadit doleva a ne na stred
-- zahlavy stejne jako u profile
+- participants a ecoins napisy odsadit doleva a ne na stred - DONE
+- zahlavy stejne jako u profile - DONE - resp.: udelat inportem/includem !!! viz php include nahore - login
 (ohlaseni)
 
 Statistika

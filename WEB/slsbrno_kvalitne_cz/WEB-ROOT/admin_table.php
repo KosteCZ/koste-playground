@@ -20,11 +20,15 @@ if ( $_SESSION["is_admin"] != true ) {
   
   <center>
   
+<?php
+include "zahlavi.txt";
+?>
+
     <table border="0" cellspacing="0" cellpadding="3">
       <tr>
         <th></th> 
-        <th>Participant</th> 
-        <th colspan="3">E-coins</th>
+        <th align="left">Participant</th> 
+        <th align="left" colspan="3">E-coins</th>
       </tr> 
   
 <?php
@@ -57,7 +61,7 @@ if ( $_SESSION["is_admin"] != true ) {
       } 
       echo "        <td>" . $row_number . "." . "</td>\n"; 
       echo "        <td>" . $name . " " . $surname . "</td>\n"; 
-      echo "        <td align=\"right\"><div id=\"div_" . $login . "\">" . $ecoins . "</div></td>\n"; 
+      echo "        <td align=\"right\"><div id=\"div_" . $login . "\"><b>" . $ecoins . "</b></div></td>\n"; 
 //      echo "        <td>" . "<button type=\"button\" onclick=\"alert('DODELAT! (+1)')\"><b>+</b></button>" . "</td>\n"; 
       echo "        <td>" . "<input class=\"button_" . $login . "_plus\" type=\"button\" value=\"+\" />" . "</td>\n"; 
 //      echo "        <td>" . "<button type=\"button\" onclick=\"alert('DODELAT! (-1)')\"><b>&minus;</b></button>" . "</td>\n"; 

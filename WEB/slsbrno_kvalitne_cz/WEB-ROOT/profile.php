@@ -51,20 +51,11 @@ if ( $_SESSION["is_admin"] == true ) {
     <!--  <h3 class="page-header">Summer Law School</h3>
       <h3>IT Law</h3>
       <h3>Brno 2016</h3>  -->
-      <table>
-        <tr>
-          <td><b>Summer Law School</b></td>
-          <td rowspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td rowspan="3"><img src="logo2micro_clear.png"></td>
-        </tr>
-        <tr>
-          <td><b>IT Law</b></td>
-        </tr>
-        <tr>
-          <td><b>Brno 2016</b></td>
-        </tr>
-      </table>
-      <hr>
+      
+<?php
+include "zahlavi.txt";
+?>
+      
       <br />
       <img src="photos\2.jpg">
       <br />
