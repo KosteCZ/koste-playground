@@ -56,7 +56,7 @@ if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
         //echo "Login: " . $row["login"]. ", name: " . $row["name"]. " " . $row["surname"]. ", ecoins: " . $row["ecoins"]. "<br>";
-        echo $row["ecoins"];
+        echo "<b>" . $row["ecoins"] . "</b>";
     }
 } else {
     //echo "0 results";

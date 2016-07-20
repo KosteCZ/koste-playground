@@ -1,12 +1,12 @@
 <?php
 include "login.php";
 ?>
-<?php
+<?php /*
 //echo "is_admin: " . $_SESSION["is_admin"];
 if ( $_SESSION["is_admin"] != true ) {
   header("Location: profile.php");
   exit();
-}
+} */
 ?><!DOCTYPE html>
 <html lang="en">
   <head>
@@ -24,28 +24,54 @@ if ( $_SESSION["is_admin"] != true ) {
 include "zahlavi.txt";
 ?>
 
+<?php
+
+  $sql = "SELECT `ecoins`, count(`login`) as `count` FROM `user` WHERE `is_admin` = false GROUP BY `ecoins` ORDER BY `ecoins` DESC;";
+
+  $result = $conn->query($sql);
+
+  $array = array();
+
+  if ($result->num_rows > 0 ) {
+  
+    while($rowData = $result->fetch_array()) {
+    
+      $ecoins = $rowData['ecoins'];
+      $count  = $rowData['count'];
+      
+//      echo "---" . $ecoins . " - " . $count . "---\n"; 
+
+      $array[$ecoins] = $count;   
+  
+    }
+    
+  }
+
+?>
+
     <table border="0" cellspacing="0" cellpadding="3">
       <tr>
         <th></th> 
         <th align="left">Participant</th> 
-        <th align="left" colspan="3">E-coins</th>
+        <th align="left" colspan="1">E-coins</th>
       </tr> 
-  
+
 <?php
 
-  $sql = "SELECT `id`, `login`, `name`, `surname`, `ecoins` FROM `user` WHERE `is_admin` = false;";
+  $sql = "SELECT `login`, `name`, `surname`, `ecoins` FROM `user` WHERE `is_admin` = false ORDER BY `ecoins` DESC;";
   
   $result = $conn->query($sql);
     
   if ($result->num_rows > 0 ) {
   
-    $row_number = 0;
+    $rowNumber = 0;
+    $userPlace = 0;
+    $lastUserEcoins = -1;
   
     while($rowData = $result->fetch_array()) {
     
-      $row_number = $row_number + 1;
+      $rowNumber = $rowNumber + 1;
 
-      $id = $rowData['id'];
       $login = $rowData['login'];
       $name = $rowData['name'];
       $surname = $rowData['surname'];
@@ -54,43 +80,36 @@ include "zahlavi.txt";
       /*echo "Name: " . $name . "<br />";    
       echo "Surname: " . $surname . "<br />";    
       echo "Ecoins: " . $ecoins . "<br />"; */
+      
+      if ( $ecoins <> $lastUserEcoins ) {
+      
+         $lastUserEcoins = $ecoins;
+         $userPlace = $rowNumber;
+      
+      }
        
-      if ( ($row_number % 2) == 0 ) {
+      if ( ($rowNumber % 2) == 0 ) {
         echo "      <tr bgcolor=\"#CCEEFF\">\n";
       } else {
         echo "      <tr bgcolor=\"#AADDFF\">\n";
-      } 
-      echo "        <td>" . $row_number . "." . "</td>\n"; 
-      echo "        <td><a href=\"photos\\" . $id . ".jpg\">" . $name . " " . $surname . "</a></td>\n"; 
+      }                                                
+      if ( $array[$ecoins] == 1 ) {
+        echo "        <td>" . $userPlace . "." . "</td>\n";
+      } else if ( $array[$ecoins] > 1 ) {
+        echo "        <td>" . $userPlace . "-" . ($userPlace+$array[$ecoins]-1) . "." . "</td>\n";
+      } else {
+        echo "        <td>" . $userPlace . "." . "</td>\n";
+      }   
+      if ( $_SESSION["auth_login"] == $login ) {
+        echo "        <td><b>" . $name . " " . $surname . "</b></td>\n"; 
+      } else {
+        echo "        <td>" . $name . " " . $surname . "</td>\n"; 
+      }  
       echo "        <td align=\"right\"><div id=\"div_" . $login . "\"><b>" . $ecoins . "</b></div></td>\n"; 
-//      echo "        <td>" . "<button type=\"button\" onclick=\"alert('DODELAT! (+1)')\"><b>+</b></button>" . "</td>\n"; 
-      echo "        <td>" . "<input class=\"button_" . $login . "_plus\" type=\"button\" value=\"+\" />" . "</td>\n"; 
-//      echo "        <td>" . "<button type=\"button\" onclick=\"alert('DODELAT! (-1)')\"><b>&minus;</b></button>" . "</td>\n"; 
-      echo "        <td>" . "<input class=\"button_" . $login . "_minus\" type=\"button\" value=\"&minus;\" />" . "</td>\n"; 
       echo "      </tr>\n"; 
       echo "      <tr height=\"5\" bgcolor=\"#FFFFFF\">\n";
       echo "        <td colspan=\"5\"></td>\n";
       echo "      </tr>\n";
-      
-      echo "      <script> ";
-      echo "$(\".button_" . $login . "_plus\").click(function(e) { ";
-      echo "var user_login = \"" . $login . "\"; ";
-      echo "var user_operation = \"+\"; ";
-      echo "$.ajax({url: \"db_user_plus_minus_1.php\", data: { input_login : user_login , input_operation : user_operation }, success: function(result){ ";
-      echo "$(\"#div_" . $login . "\").html(result); ";
-      echo "}}); ";
-      echo "}); ";
-      echo "</script>\n";
-      
-      echo "      <script> ";
-      echo "$(\".button_" . $login . "_minus\").click(function(e) { ";
-      echo "var user_login = \"" . $login . "\"; ";
-      echo "var user_operation = \"-\"; ";
-      echo "$.ajax({url: \"db_user_plus_minus_1.php\", data: { input_login : user_login , input_operation : user_operation }, success: function(result){ ";
-      echo "$(\"#div_" . $login . "\").html(result); ";
-      echo "}}); ";
-      echo "}); ";
-      echo "</script>\n";
       
     }
     
@@ -107,6 +126,9 @@ include "zahlavi.txt";
 ?>
 
     </table>
+    <br />
+    <a href="profile.php">Back to profile</a>  
+    <br />
     <br />
 
     <!--<center>
@@ -134,8 +156,8 @@ include "zahlavi.txt";
 <?php
 include "zapati.txt";
 ?>
-
-  </center>
+    
+  </center> 
   
   </body>
 </html>

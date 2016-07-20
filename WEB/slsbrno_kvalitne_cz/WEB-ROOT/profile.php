@@ -24,7 +24,7 @@ if ( $_SESSION["is_admin"] == true ) {
   
 <?php
 
-  $sql = "SELECT `name`, `surname`, `ecoins` FROM `user` WHERE `login` = '" . $_SESSION["auth_login"] . "' AND `password` = '" . $_SESSION["auth_password"] . "';";
+  $sql = "SELECT `id`, `name`, `surname`, `ecoins` FROM `user` WHERE `login` = '" . $_SESSION["auth_login"] . "' AND `password` = '" . $_SESSION["auth_password"] . "';";
   
   $result = $conn->query($sql);
     
@@ -32,6 +32,7 @@ if ( $_SESSION["is_admin"] == true ) {
   
     $row = $result->fetch_assoc();
     
+    $id = $row['id'];
     $name = $row['name'];
     $surname = $row['surname'];
     $ecoins = $row['ecoins'];
@@ -52,28 +53,36 @@ if ( $_SESSION["is_admin"] == true ) {
       <h3>IT Law</h3>
       <h3>Brno 2016</h3>  -->
       
+  <center>
 <?php
 include "zahlavi.txt";
 ?>
+  </center>
       
       <br />
-      <img src="photos\2.jpg">
+      <?php echo "<img src=\"photos\\" . $id . ".jpg\" height=\"205\" width=\"160\" border=\"4\" style=\"border-style:double\">" . "\n"; ?>
       <br />
       <br />
       <p><b><?php echo "" . $name . " " . $surname . "<br />"; ?></b></p>  
       <p><b><?php echo "E-coins: " . $ecoins . "<br />"; ?></b></p> 
       <br />
       <br />
-      <table>
+      <table width="100%">
         <tr>
-          <td><a href="#">Programme</a></td>
-          <td><a href="#">Contacts</a></td>
+          <td width="33%" align="left"  ><a href="statistics.php">Statistics</a></td>
+          <td width="*"   align="center"><a href="#">Programme</a></td>
+          <td width="33%" align="right" ><a href="contacts.php">Contacts</a></td>
         </tr>
       </table>
       <br />
       <br />
-      <br />
-      <br />
+
+  <center>
+<?php
+include "zapati.txt";
+?>
+  </center>
+
     <!--</center>-->
   </body>
 </html>

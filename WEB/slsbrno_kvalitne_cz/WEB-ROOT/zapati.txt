@@ -1,0 +1,23 @@
+    <div id="bottom"> <!-- style="background-color:#CCEEFF"> -->
+      <hr>
+      <table>
+        <tr>
+          <td><font color="#000099"><b>ELSA Brno</b></font></td>
+<!--          <td rowspan="3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> -->
+<!--          <td rowspan="3"><img src="logo2micro_clear.png"></td> -->
+        </tr>
+        <tr>
+          <td><font color="#000099"><b>Author: Jan Koščák</b></font></td>
+        </tr>
+        <tr>
+          <td><font color="#000099"><b>The author takes no responsibility</b></font></td>
+        </tr>
+        <tr>
+          <td><font color="#000099"><b>for (mis)using of this site.</b></font></td>
+        </tr>
+      </table>
+
+      <hr>
+      <p>Advertisment:</p> 
+ 
+    </div>
