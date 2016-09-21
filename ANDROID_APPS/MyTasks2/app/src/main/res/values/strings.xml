@@ -9,4 +9,11 @@
     <string name="new_note_text_hint">Enter new note text...</string>
     <string name="button_save_new_note">Save</string>
     <string name="button_cancel_new_note">Cancel</string>
+
+    <string name="edit_note_text_hint">Enter new note text...</string>
+    <string name="button_save_edited_note_text">Save</string>
+    <string name="button_cancel_edited_note_text">Cancel</string>
+
+    <string name="menu_notes_edit">Edit</string>
+    <string name="menu_notes_delete">Delete</string>
 </resources>

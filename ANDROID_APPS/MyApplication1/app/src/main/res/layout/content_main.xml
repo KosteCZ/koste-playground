@@ -9,19 +9,11 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="cz.koscak.jan.mytasks2.MainActivity"
-    tools:showIn="@layout/app_bar_main">
+    tools:context="cz.koscak.jan.myapplication1.MainActivity"
+    tools:showIn="@layout/activity_main">
 
-    <!-- <TextView
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" /> -->
-
-    <ListView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/tasks_listview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-    </ListView>
-
+        android:text="Hello World! My first attempt!" />
 </RelativeLayout>

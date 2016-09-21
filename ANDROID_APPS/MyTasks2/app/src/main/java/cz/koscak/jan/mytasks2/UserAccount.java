@@ -55,6 +55,10 @@ public class UserAccount {
             }
         }
 
+        if (username == null || username.isEmpty()) {
+             username = "testAndroidUser";
+        }
+
     }
 
     public String getUsername() {

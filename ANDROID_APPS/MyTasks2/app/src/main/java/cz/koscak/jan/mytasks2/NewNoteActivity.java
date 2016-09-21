@@ -42,7 +42,8 @@ public class NewNoteActivity extends AppCompatActivity {
         }
 
         // TOAST / for debug purposes
-        Toast.makeText(getApplicationContext(), "TEXT: " + text, Toast.LENGTH_LONG).show();
+        //Toast.makeText(getApplicationContext(), "TEXT: " + text, Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), "Note created.", Toast.LENGTH_LONG).show();
 
         finish();
     }

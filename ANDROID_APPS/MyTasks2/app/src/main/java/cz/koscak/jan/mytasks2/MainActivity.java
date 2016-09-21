@@ -1,10 +1,11 @@
 package cz.koscak.jan.mytasks2;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.util.Log;
+import android.view.ContextMenu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,17 +15,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.ViewGroup;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
-import android.widget.LinearLayout;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.Toast;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    List<Note> notes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,15 +57,100 @@ public class MainActivity extends AppCompatActivity
 
         UserAccount.setContext(this);
 
-        getNotesAndAddCheckBoxes();
+        loadNotes();
+    }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        loadNotes();
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        loadNotes();
+    }
+
+    public void loadNotes() {
+        notes = getNotesAndAddCheckBoxes();
+
+        ListView listView = (ListView) findViewById(R.id.tasks_listview);
+        final ArrayAdapter<Note> adapter = new InteractiveArrayAdapter(this, notes);
+        listView.setAdapter(adapter);
+
+        registerForContextMenu(listView);
+    }
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View view, ContextMenu.ContextMenuInfo menuInfo) {
+        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) menuInfo;
+        //_listPosition = info.position;      // Get Index of long-clicked item
+
+        super.onCreateContextMenu(menu, view, menuInfo);
+
+        //Log.i("LONG CLICK", "SUCCESS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 7");
+        //Toast.makeText(view.getContext(), "Long click noticed. 14X", Toast.LENGTH_SHORT).show();
+
+        MenuInflater inflater = getMenuInflater();
+        //menu.setHeaderIcon(R.drawable.icon);
+        //menu.setHeaderTitle("Note menu");
+        inflater.inflate(R.menu.context_menu_notes_list, menu);
+        /*
+        menu.setHeaderTitle("Choose Action");   // Context-menu title
+        menu.add(0, v.getId(), 0, "Edit");  // Add element "Edit"
+        menu.add(0, v.getId(), 1, "Delete");        // Add element "Delete"
+        */
+    }
+
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+        String actionEdit = getResources().getString(R.string.menu_notes_edit);
+        String actionDelete = getResources().getString(R.string.menu_notes_delete);
+        if(actionEdit .equals(item.getTitle())) { // "Edit" chosen
+
+            AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+            int index = info.position;
+            View view = info.targetView;
+            int id = notes.get(index).getId();
+
+            Log.i("LONG CLICK", "EDIT NOTE !!!");
+            //Toast.makeText(MainActivity.this, "EDIT !!!", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(MainActivity.this, "EDIT !!! Index: " + index + ", view: " + view, Toast.LENGTH_SHORT).show();
+
+            String noteText = notes.get(index).getText();
+            //Toast.makeText(MainActivity.this, "EDIT !!! Text: " + noteText, Toast.LENGTH_SHORT).show();
+
+            Intent intent = new Intent(this, EditNoteTextActivity.class);
+            intent.putExtra(EditNoteTextActivity.PARAM_ID, id);
+            intent.putExtra(EditNoteTextActivity.PARAM_TEXT, noteText);
+            startActivity(intent);
+
+        } else if(actionDelete .equals(item.getTitle())) { // "Delete" chosen
+
+            AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+
+            int index = info.position;
+            int id = notes.get(index).getId();
+
+            Log.i("LONG CLICK - DELETE", "Deleting note with id=" + id + "...");
+
+            deleteNote(id);
+            Toast.makeText(MainActivity.this, "Note deleted!", Toast.LENGTH_SHORT).show();
+
+            loadNotes();
+
+        } else {
+            return false;
+        }
+        return true;
     }
 
     public void startNewNoteActivity() {
-
         Intent intent = new Intent(this, NewNoteActivity.class);
         startActivity(intent);
-
     }
 
     @Override
@@ -92,6 +179,22 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            //String text = "Settings button clicked!\n<No action associated yet.>";
+            String text = "Barvy:\n"
+                    + "Honza - zelená\n"
+                    + "Kačka - růžová\n"
+                    + "Petra - červená\n"
+                    + "Kuba - modrá\n"
+                    + "Kotuč - žlutá\n"
+                    + "Test - šedá\n"
+                    + "Ostatní - bílá";
+            Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
+            return true;
+        }
+
+        if (id == R.id.action_refresh) {
+            Toast.makeText(this, "Tasks refreshed.", Toast.LENGTH_SHORT).show();
+            loadNotes();
             return true;
         }
 
@@ -123,11 +226,37 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    private void getNotesAndAddCheckBoxes() {
+    static String deleteNote(int id) {
 
         String text = "...nothing happened...";
         try {
-            text = new SOAPCommunication().execute("").get();
+            text = new SOAPDeleteNote().execute(String.valueOf(id)).get();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+        return text;
+    }
+
+    static String updateNoteState(int id, int state) {
+
+        String text = "...nothing happened...";
+        try {
+            text = new SOAPUpdateStateOfNote().execute(String.valueOf(id),String.valueOf(state)).get();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+        return text;
+    }
+
+    private List<Note> getNotesAndAddCheckBoxes() {
+
+        String text = "...nothing happened...";
+        try {
+            text = new SOAPListNotes().execute("").get();
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
@@ -138,67 +267,8 @@ public class MainActivity extends AppCompatActivity
 
         List<Note> notes = noteParser.parseAnswer(text);
 
-        /*CheckBox checkBox1 = (CheckBox) findViewById(R.id.checkBox1);
-        checkBox1.setText(text);
+        return notes;
 
-        CheckBox checkBox2 = (CheckBox) findViewById(R.id.checkBox2);
-        String checkBox2Text = "";
-        for(int i = 0; i < notes.size(); i++) {
-            checkBox2Text = checkBox2Text + notes.get(i) + "\n\n";
-        }
-        checkBox2.setText(checkBox2Text);*/
-
-        final LinearLayout mainLayout = (LinearLayout) findViewById(R.id.main_linear_layout);
-
-        List<MyTaskCheckBox> checkBoxes = new ArrayList<MyTaskCheckBox>();
-
-        for(int i = 0; i < notes.size(); i++) {
-
-            final MyTaskCheckBox checkBox = new MyTaskCheckBox(this);
-            checkBox.setText(/*"!!! " + i + " " + */notes.get(i).getText());
-            checkBox.setPadding(2, 2, 2, 2);
-            if (1 <= notes.get(i).getState()) {
-                checkBox.setChecked(true);
-            } else {
-                checkBox.setChecked(false);
-            }
-            setCheckBoxBgColor(checkBox, notes.get(i).getCreator());
-
-            checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-                @Override
-                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    if ( isChecked ) {
-                        checkBox.setBackgroundColor(Color.parseColor("#E3FFE3"));
-//                        setCheckBoxBgColor((MyTaskCheckBox) buttonView, ((MyTaskCheckBox) buttonView).getNote().getCreator());
-                    } else {
-                        buttonView.setBackgroundColor(Color.TRANSPARENT);
-                    }
-
-                }
-            });
-            checkBoxes.add(checkBox);
-
-            mainLayout.addView(checkBox,
-                    new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
-                            ViewGroup.LayoutParams.WRAP_CONTENT) );
-
-            if (i < (notes.size() - 1)) {
-                View v = new View(this);
-                v.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 5));
-                v.setBackgroundColor(Color.parseColor("#E3E3E3"));
-                mainLayout.addView(v);
-            }
-
-        }
     }
 
-    private void setCheckBoxBgColor(CheckBox checkBox, String resolver) {
-        String USER_PETRA = "";
-        String USER_HONZA = "xkoscak@gmail.com";
-        String USER_TEST = "";
-
-        if (USER_HONZA.equals(resolver)) {
-            checkBox.setBackgroundColor(Color.parseColor("#E3FFE3"));
-        }
-    }
 }

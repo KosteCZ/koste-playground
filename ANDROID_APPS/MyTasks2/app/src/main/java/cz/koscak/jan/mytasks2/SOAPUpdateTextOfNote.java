@@ -11,20 +11,39 @@ import org.ksoap2.transport.HttpTransportSE;
 /**
  * Created by jkoscak on 9. 9. 2016.
  */
-public class SOAPCommunication extends AsyncTask<String, Void, String> {
+public class SOAPUpdateTextOfNote extends AsyncTask<String, Void, String> {
 
-    protected String doInBackground(String... urls) {
+    public static String NAMESPACE = "http://ws.jan.koscak.cz/";
+    public static String methodName = "updateNoteText";
+    public static String URL = "http://jws-xkoscak.rhcloud.com/greeting";
 
-        String NAMESPACE = "http://ws.jan.koscak.cz/";
-        String methodName = "listAllNotes";
-        String URL = "http://jws-xkoscak.rhcloud.com/greeting"; //?wsdl";
+    /**
+     * Update note (determined by id) text.
+     *
+     * @param args id, text
+     * @return information about processing
+     */
+    protected String doInBackground(String... args) {
 
         //Initialize soap request + add parameters
         SoapObject request = new SoapObject(NAMESPACE, methodName);
 
         //Use this to add parameters
-        //request.addProperty("username", SOAP_USER_NAME);
-        //request.addProperty("apiKey", SOAP_USER_NAME);
+        int id = Integer.valueOf(args[0]);
+        String text = args[1];
+
+        UserAccount userAccount = UserAccount.newInstance();
+
+        String modifier = userAccount.getUsername();
+
+        String device = UserAndDeviceInfo.getDeviceNameAndAndroidVersion();
+
+        request.addProperty(Note.ATTR_ID, id);
+        request.addProperty(Note.ATTR_TEXT, text);
+        request.addProperty(Note.ATTR_MODIFIER, modifier);
+        request.addProperty(Note.ATTR_DEVICE, device);
+
+        Log.i("WS-UPDATE(text)", "id=" + id + ", text='" + text + "', device='" + device + "'" + ", modifier='" + modifier + "'");
 
         //Declare the version of the SOAP request
         SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
@@ -34,6 +53,7 @@ public class SOAPCommunication extends AsyncTask<String, Void, String> {
 
         //Needed to make the internet call
         HttpTransportSE androidHttpTransport = new HttpTransportSE(URL);
+        androidHttpTransport.setXmlVersionTag("<?xml version=\"1.0\" encoding=\"utf-8\"?>");
 
         //Passing Parameters in request
         //PropertyInfo stringArrayPropertyInfo = new PropertyInfo();

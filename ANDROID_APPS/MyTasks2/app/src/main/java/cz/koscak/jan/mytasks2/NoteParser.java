@@ -49,14 +49,18 @@ public class NoteParser {
         String valueState = parseOneParameter(text, Note.ATTR_STATE);
         String valueTag = parseOneParameter(text, Note.ATTR_TAG);
         String valueDevice = parseOneParameter(text, Note.ATTR_DEVICE);
+        String valueModificationDate = parseOneParameter(text, Note.ATTR_MODIFICATION_DATE_J);
+        String valueModifier = parseOneParameter(text, Note.ATTR_MODIFIER);
 
         String noteString = valueId + "\n" + valueCreationDate + "\n" + valueCreator
                 + "\n" + valueText + "\n" + valueState + "\n" + valueTag + "\n"
-                + valueDevice;
+                + valueDevice + "\n" + valueModificationDate + "\n" + valueModifier;
 
         Log.i("parseOneNote", noteString);
 
-        Note note = new Note(Integer.valueOf(valueId), convertStringToTimestamp(valueCreationDate), valueCreator, valueText, Integer.valueOf(valueState), valueTag, valueDevice);
+        Note note = new Note(Integer.valueOf(valueId), convertStringToTimestamp(valueCreationDate),
+                valueCreator, valueText, Integer.valueOf(valueState), valueTag, valueDevice,
+                convertStringToTimestamp(valueModificationDate), valueModifier);
 
         //String note = text;
 
